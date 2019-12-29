@@ -18,4 +18,4 @@ This article provides introduction to Docker, how it differs from Virtual Machin
 
 ## Slides
 
-{{<slideshare zXI72Qw84LTKaz>}}
+{{<slideshare BQjYUZr8vfa66W>}}
