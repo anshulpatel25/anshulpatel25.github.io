@@ -9,7 +9,7 @@ sudo: false
 go: 1.12.4
 
 install:
-  - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.62.0/hugo_extended_0.62.0_Linux-64bit.tar.gz | tar -zxf - -C /tmp/
+  - curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.68.0/hugo_extended_0.68.0_Linux-64bit.tar.gz | tar -zxf - -C /tmp/
   - ls /tmp/
   - export PATH="/tmp:$PATH"
 script: cd personal_website && hugo --theme=coder
