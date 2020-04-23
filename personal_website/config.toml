@@ -28,6 +28,8 @@ googleAnalytics = "UA-93926186-1"
     hideCredits = false
     hideCopyright = false
 
+    googleAdSense = "ca-pub-9106060768694845"
+
     # Git Commit in Footer, uncomment the line below to enable it.
     # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
