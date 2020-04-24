@@ -15,6 +15,8 @@ pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-93926186-1"
 
+enableRobotsTXT = true
+
 [params]
     author = "Anshul Patel"
     description = "Anshul Patel's personal website"
