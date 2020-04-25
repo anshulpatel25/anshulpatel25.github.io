@@ -19,7 +19,7 @@ enableRobotsTXT = true
 
 [params]
     author = "Anshul Patel"
-    description = "Anshul Patel's personal website"
+    description = "Geek, Gamer, Techie"
     keywords = "personal,geek,gamer,techie"
     info = "Geek, Gamer, Techie"
     avatarurl = "images/anshul_infostretch.jpg"
