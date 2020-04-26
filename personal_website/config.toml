@@ -104,7 +104,7 @@ enableRobotsTXT = true
         [[languages.en.menu.main]]
         name = "About"
         weight = 1
-        url = "/files/anshulpatel.pdf"
+        url = "/about/"
 
         [[languages.en.menu.main]]
         name = "Blog"
