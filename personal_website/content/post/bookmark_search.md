@@ -51,6 +51,14 @@ Develop a solution which can provide full text search across your bookmarked lin
 
 ![bookmark_search_flow](/img/bookmark-search-flow.png)
 
+
+## Searching
+
+* Open the Kibana Dashboard and switch the Query type from **KQL** to **Lucene** and search from your curated bookmark content.
+
+![search_kibana](/img/search_kibana.png)
+
+
 ## Setup Instructions and Source Code
 
 * https://github.com/anshulpatel25/bookmark-search
