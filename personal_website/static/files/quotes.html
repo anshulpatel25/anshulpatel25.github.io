@@ -523,6 +523,90 @@
             {
                 "quote": "You can change who you are, but you cannot run from yourself.",
                 "author": "Star Wars Clone Wars"
+            },
+            {
+                "quote": "Fear is the path to the dark side. Fear leads to anger; anger leads to hate; hate leads to suffering. I sense much fear in you.",
+                "author": "Yoda"
+            },
+            {
+                "quote": "In my experience there is no such thing as luck.",
+                "author": "Obi-Wan Kenobi"
+            },
+            {
+                "quote": "Be careful not to choke on your aspirations.",
+                "author": "Darth Vader"
+            },
+            {
+                "quote": "Do. Or do not. There is no try.",
+                "author": "Yoda"
+            },
+            {
+                "quote": "Truly wonderful the mind of child is.",
+                "author": "Yoda"
+            },
+            {
+                "quote": "Many of the truths that we cling to depend on our point of view.",
+                "author": "Obi-Wan Kenobi"
+            },
+            {
+                "quote": "Your focus determines your reality.",
+                "author": "Qui-Gon Jinn"
+            },
+            {
+                "quote": "There’s always a bigger fish.",
+                "author": "Qui-Gon Jinn"
+            },
+            {
+                "quote": "The ability to speak does not make you intelligent.",
+                "author": "Qui-Gon Jinn"
+            },
+            {
+                "quote": "Who’s the more foolish: the fool, or the fool who follows him?",
+                "author": "Obi-Wan Kenobi"
+            },
+            {
+                "quote": "I’ve got a bad feeling about this.",
+                "author": "Han Solo"
+            },
+            {
+                "quote": "A great leap forward often requires first taking two steps back.",
+                "author": "Obi-Wan Kenobi"
+            },
+            {
+                "quote": "You don’t have to look tough to be tough.",
+                "author": "Ahsoka Tano"
+            },
+            {
+                "quote": "Sometimes we must let go of our pride and do what is requested of us.",
+                "author": "Padmé Amidala"
+            },
+            {
+                "quote": "I find your lack of faith disturbing.",
+                "author": "Darth Vader"
+            },
+            {
+                "quote": "Your eyes can deceive you; don't trust them.",
+                "author": "Obi-Wan Kenobi"
+            },
+            {
+                "quote": "Greed can be a very powerful ally.",
+                "author": "Qui-Gon Jinn"
+            },
+            {
+                "quote": "Always pass on what you have learned.",
+                "author": "Yoda"
+            },
+            {
+                "quote": "Train yourself to let go of everything you fear to lose.",
+                "author": "Yoda"
+            },
+            {
+                "quote": "If you want to be successful in a particular field, perseverance is one of the key qualities.",
+                "author": "George Lucas"
+            },
+            {
+                "quote": "Never tell me the odds.",
+                "author": "Han Solo"
             }
         ];
 
@@ -540,7 +624,12 @@
                 quoteIndex = 0;
             }
             var obj = data[quoteIndex];
-            document.getElementById("section-container").innerHTML = "<h1 class='quote'>" + obj.quote + "</h1><h3 class='quote author'> - " + obj.author + "</h3>";
+            document.getElementById("section-container").innerHTML =
+                "<h1 class='quote'>" +
+                obj.quote +
+                "</h1><h3 class='quote author'> - " +
+                obj.author +
+                "</h3>";
             quoteIndex++;
             localStorage.setItem("quoteIndex", quoteIndex);
         }
