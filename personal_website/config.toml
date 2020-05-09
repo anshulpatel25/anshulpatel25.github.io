@@ -116,6 +116,11 @@ enableRobotsTXT = true
         weight = 3
         url = "/meetups/"
 
+        [[languages.en.menu.main]]
+        name = "Quotes"
+        weight = 3
+        url = "/files/quotes.html"
+
     [languages.in-gj]
         languagename = "અમદાવાદી ગુજરાતી"
         title = "અંશુલ પટેલ"
