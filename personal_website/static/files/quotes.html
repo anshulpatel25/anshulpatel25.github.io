@@ -675,8 +675,8 @@
         .btn {
             margin-top: 200px;
             position: fixed;
-            background-color: var(--txt-color);
-            color: var(--bg-color);
+            background-color: var(--bg-color);
+            color: var(--txt-color);
             border-color: var(--txt-color);
             text-align: center;
             display: inline-block;
@@ -687,16 +687,26 @@
             font-family: var(--font-family);
         }
 
-        .btn:hover {
-            background: var(--txt-color) radial-gradient(circle, transparent 1%, var(--txt-color) 1%) center/15000%;
-            color: var(--bg-color);
-            transition: background 1.0s;
-        }
+        .btn:hover,
         .btn:active {
-            background-color: var(--bg-color);
-            background-size: 100%;
-            transition: background 0s;
+            background-color: var(--txt-color);
             color: var(--bg-color);
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .btn:hover {
+                background: var(--bg-color) radial-gradient(circle, transparent 1%, var(--bg-color) 1%) center/15000%;
+                color: var(--txt-color);
+                transition: background 0.8s;
+            }
+
+            .btn:active {
+                background-color: var(--txt-color);
+                background-size: 100%;
+                transition: background 0s;
+                color: var(--bg-color);
+            }
         }
     </style>
 </head>
