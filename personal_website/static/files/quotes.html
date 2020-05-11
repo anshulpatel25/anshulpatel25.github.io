@@ -2,6 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Curated Quotes</title>
     <script>
         var data = [
             {
@@ -189,10 +190,6 @@
                 "author": "Star Wars Clone Wars"
             },
             {
-                "quote": "Where there's a will, there's a way.",
-                "author": "Star Wars Clone Wars"
-            },
-            {
                 "quote": "A child stolen is a hope lost.",
                 "author": "Star Wars Clone Wars"
             },
@@ -286,10 +283,6 @@
             },
             {
                 "quote": "Understanding is honoring the truth beneath the surface.",
-                "author": "Star Wars Clone Wars"
-            },
-            {
-                "quote": "Who's the more foolish, the fool or the fool who follows him?",
                 "author": "Star Wars Clone Wars"
             },
             {
@@ -603,6 +596,10 @@
             {
                 "quote": "Never tell me the odds.",
                 "author": "Han Solo"
+            },
+            {
+                "quote": "Knowledge is niether good nor bad, morality lies in its application.",
+                "author": "Anshul Patel"
             }
         ];
 
@@ -623,9 +620,9 @@
             document.getElementById("section-container").innerHTML =
                 "<h1 class='quote'>" +
                 obj.quote +
-                "</h1><h3 class='quote author'> - " +
+                "</h1><h2 class='quote author'> - " +
                 obj.author +
-                "</h3>";
+                "</h2>";
             quoteIndex++;
             localStorage.setItem("quoteIndex", quoteIndex);
         }
@@ -662,7 +659,7 @@
         }
 
         .quote.author {
-            font-size: 25px;
+            font-size: 20px;
         }
 
         @keyframes slow-load {
