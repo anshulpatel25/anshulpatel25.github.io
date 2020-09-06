@@ -16,6 +16,6 @@ My meetup talk discusses about conducting Chaos Engineering experiments using Gr
 
 ## Pictures
 
-![chaos_meetup_!](/meetup_pics/chaos_meetup_2_1.jpeg)
+![chaos_meetup_1](/meetup_pics/chaos_meetup_2_1.jpeg)
 ![chaos_meetup_2](/meetup_pics/chaos_meetup_2_2.jpeg)
 ![chaos_meetup_3](/meetup_pics/chaos_meetup_2_3.jpeg)
