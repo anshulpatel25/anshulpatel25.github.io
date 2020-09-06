@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="Anshul Patel">
+    <meta name="description" content="Software Architects are required to analyze business and domain requirements that balances all concerns optimally. When building software, architects must determine the most import &quot;-ilities&quot;(concerns).">
+    <meta name="keywords" content="personal,geek,gamer,techie">
+
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Sofware Architecture Concerns"/>
+<meta name="twitter:description" content="Software Architects are required to analyze business and domain requirements that balances all concerns optimally. When building software, architects must determine the most import &quot;-ilities&quot;(concerns)."/>
+
+    <meta property="og:title" content="Sofware Architecture Concerns" />
+<meta property="og:description" content="Software Architects are required to analyze business and domain requirements that balances all concerns optimally. When building software, architects must determine the most import &quot;-ilities&quot;(concerns)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.anshulpatel.in/post/software_architecture_concerns/" />
+<meta property="article:published_time" content="2017-12-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-12-26T00:00:00+00:00" />
+
+
+    
+      <base href="http://www.anshulpatel.in/post/software_architecture_concerns/">
+    
+
+    <title>
+  Sofware Architecture Concerns · Anshul Patel
+</title>
+
+    
+      <link rel="canonical" href="http://www.anshulpatel.in/post/software_architecture_concerns/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="http://www.anshulpatel.in/css/coder.min.6b2226bd9c0fa6ea0c3eb613b074869199b42ff23534af9eba76651ca16cf74c.css" integrity="sha256-ayImvZwPpuoMPrYTsHSGkZm0L/I1NK&#43;eunZlHKFs90w=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    
+
+    <script type="text/javascript">
+      window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=8CUK8JJ25" async="async"></script>
+
+    
+
+    <link rel="icon" type="image/png" href="http://www.anshulpatel.in/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://www.anshulpatel.in/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.68.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light"
+        onload=""
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="http://www.anshulpatel.in/">
+      Anshul Patel
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://www.anshulpatel.in/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://www.anshulpatel.in/post/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://www.anshulpatel.in/meetups/">Meetups</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="http://www.anshulpatel.in/files/quotes.html">Quotes</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="http://www.anshulpatel.in/in-gj/">અમદાવાદી ગુજરાતી</a>
+            </li>
+          
+        
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Sofware Architecture Concerns</h1>
+    </header>
+
+    <p>Software Architects are required to analyze business and domain requirements that balances all concerns optimally. When building software, architects must determine the most import <strong>&quot;-ilities&quot;(concerns)</strong>.</p>
+
+<table class="table-striped">
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>accessibility</td>
+<td>accountability</td>
+<td>accuracy</td>
+<td>adaptability</td>
+<td>administrability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>affordability</td>
+<td>agility</td>
+<td>auditability</td>
+<td>autonomy</td>
+<td>availability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>compatibility</td>
+<td>composability</td>
+<td>configurability</td>
+<td>correctness</td>
+<td>credibility</td>
+<td></td>
+</tr>
+
+<tr>
+<td>customizability</td>
+<td>debugability</td>
+<td>degradability</td>
+<td>determinability</td>
+<td>demonstrability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>dependability</td>
+<td>deployability</td>
+<td>discoverability</td>
+<td>distributability</td>
+<td>durability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>effectiveness</td>
+<td>efficiency</td>
+<td>usability</td>
+<td>extensibility</td>
+<td>failure</td>
+<td>transparency</td>
+</tr>
+
+<tr>
+<td>fault</td>
+<td>tolerance</td>
+<td>fidelity</td>
+<td>flexibility</td>
+<td>inspectability</td>
+<td>installability</td>
+</tr>
+
+<tr>
+<td>integrity</td>
+<td>interoperability</td>
+<td>learnability</td>
+<td>maintainability</td>
+<td>manageability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>mobility</td>
+<td>modifiability</td>
+<td>modularity</td>
+<td>operability</td>
+<td>orthogonality</td>
+<td></td>
+</tr>
+
+<tr>
+<td>portability</td>
+<td>precision</td>
+<td>predictability</td>
+<td>process</td>
+<td>capabilities</td>
+<td>performability</td>
+</tr>
+
+<tr>
+<td>provability</td>
+<td>recoverability</td>
+<td>relevance</td>
+<td>reliability</td>
+<td>repeatability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>reproducibility</td>
+<td>resilience</td>
+<td>responsiveness</td>
+<td>reusability</td>
+<td>robustness</td>
+<td></td>
+</tr>
+
+<tr>
+<td>safety</td>
+<td>scalability</td>
+<td>seamlessness</td>
+<td>self-sustainability</td>
+<td>serviceability</td>
+<td></td>
+</tr>
+
+<tr>
+<td>securability</td>
+<td>simplicity</td>
+<td>stability</td>
+<td>standards</td>
+<td>compliance</td>
+<td>survivability</td>
+</tr>
+
+<tr>
+<td>sustainability</td>
+<td>tailorability</td>
+<td>testability</td>
+<td>timeliness</td>
+<td>traceability</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>Many of the <strong>&quot;-ilities&quot;(concerns)</strong> often oppose one another. (For eg: Achieving high performance and extreme scalability can be difficult at the same time). These clashes requires balance which often leads to <strong>tradeoffs</strong>.</p>
+
+<p>Software Architect plays crucial role to maintain the much required equilibrium of above concerns to achieve the end goal.</p>
+
+    <div id="329634253">
+      <script type="text/javascript">
+        try {
+          window._mNHandle.queue.push(function () {
+            window._mNDetails.loadTag("329634253", "300x250", "329634253");
+          });
+        }
+        catch (error) { }
+      </script>
+    </div>
+
+  </article>
+</section>
+
+  
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>In my spare time, I plan World Domination from a secret villainous lair.</p>
+      
+      
+        ©
+        
+        2020
+         Anshul Patel 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-93926186-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
+
+  </body>
+
+</html>
