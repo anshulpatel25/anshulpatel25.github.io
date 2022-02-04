@@ -1,0 +1,167 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=author content="Anshul Patel">
+<meta name=description content="Inspec is an IT Security and Compliance-as-code framework for validating compliance.">
+<meta name=keywords content="personal,geek,gamer,techie">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Compliance-as-Code: Developing Inspec Library">
+<meta name=twitter:description content="Inspec is an IT Security and Compliance-as-code framework for validating compliance.">
+<meta property="og:title" content="Compliance-as-Code: Developing Inspec Library">
+<meta property="og:description" content="Inspec is an IT Security and Compliance-as-code framework for validating compliance.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.anshulpatel.in/post/inspec_custom_resource/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2018-02-05T00:00:00+00:00">
+<meta property="article:modified_time" content="2018-02-05T00:00:00+00:00">
+<base href=http://www.anshulpatel.in/post/inspec_custom_resource/>
+<title>
+Compliance-as-Code: Developing Inspec Library · Anshul Patel
+</title>
+<link rel=canonical href=http://www.anshulpatel.in/post/inspec_custom_resource/>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.13.0/css/all.css integrity=sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous>
+<link rel=stylesheet href=http://www.anshulpatel.in/css/coder.min.6b2226bd9c0fa6ea0c3eb613b074869199b42ff23534af9eba76651ca16cf74c.css integrity="sha256-ayImvZwPpuoMPrYTsHSGkZm0L/I1NK+eunZlHKFs90w=" crossorigin=anonymous media=screen>
+<script type=text/javascript>window._mNHandle=window._mNHandle||{},window._mNHandle.queue=window._mNHandle.queue||[],medianet_versionId="3121199"</script>
+<script src="https://contextual.media.net/dmedianet.js?cid=8CUK8JJ25" async></script>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-16x16.png sizes=16x16>
+<meta name=generator content="Hugo 0.92.1">
+</head>
+<body class=colorscheme-light>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=http://www.anshulpatel.in/>
+Anshul Patel
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/post/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/meetups/>Meetups</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/files/quotes.html>Quotes</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=http://www.anshulpatel.in/in-gj/>અમદાવાદી ગુજરાતી</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container page">
+<article>
+<header>
+<h1>Compliance-as-Code: Developing Inspec Library</h1>
+</header>
+<p>Inspec is an IT Security and Compliance-as-code framework for validating compliance.</p>
+<h2 id=what-and-why-inspec>What and Why Inspec?</h2>
+<ul>
+<li>Transforms your security and compliance into the code.</li>
+<li>Codifies agreements.</li>
+<li>Provides facility to add context(descriptions, tags, impact) to your tests/code.</li>
+<li>Tests the desired state of infrastructure.</li>
+</ul>
+<h2 id=features-of-inspec>Features of Inspec</h2>
+<ul>
+<li>Platform agnostic.</li>
+<li>FOSS(Free Open Source Software)</li>
+<li>Ability to run tests on local or remote system irrespective of operating systems.</li>
+<li>Provides facility to create custom resources and share them.</li>
+</ul>
+<h2 id=develop-custom-resourceslibrary-for-inspec>Develop Custom Resources/Library for Inspec</h2>
+<p>Let&rsquo;s go through sample resource which basically tests whether the given string is palindrome or not.</p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#fff;font-weight:700>class</span> PalindromeResource &lt; Inspec.resource(<span style=color:#ff0;font-weight:700>1</span>)
+  <span style=color:#fff;font-weight:700>name</span> <span style=color:#0ff;font-weight:700>&#39;palin_drome&#39;</span>
+  desc <span style=color:#0ff;font-weight:700>&#39;This resource checks whether the attribute is palindrome or not&#39;</span>
+  example <span style=color:#0ff;font-weight:700>&#39;
+</span><span style=color:#0ff;font-weight:700>    describe palin_drome() do
+</span><span style=color:#0ff;font-weight:700>      it { should be_palindrome }
+</span><span style=color:#0ff;font-weight:700>      its(size) { should &gt; 5 }
+</span><span style=color:#0ff;font-weight:700>    end
+</span><span style=color:#0ff;font-weight:700>  &#39;</span></code></pre></div>
+<ul>
+<li>Every custom resource should inherit from <code>Inspec.resource</code>. <code>1</code> specifies the version of class to inherit from.</li>
+<li><code>name</code> specifies the name with which control file will call the resource with.</li>
+<li><code>desc</code> is used to give description regarding the resource.</li>
+<li><code>example</code> is used to provide an example on how to use the resource.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>  <span style=color:#fff;font-weight:700>def</span> initialize(attribute)
+    @params = {}
+    @attribute = attribute
+    @params[<span style=color:#0ff;font-weight:700>&#39;size&#39;</span>] = attribute.length
+  <span style=color:#fff;font-weight:700>end</span>
+
+  <span style=color:#fff;font-weight:700>def</span> palindrome?
+    @attribute == @attribute.reverse
+  <span style=color:#fff;font-weight:700>end</span>
+
+  <span style=color:#fff;font-weight:700>def</span> method_missing(<span style=color:#fff;font-weight:700>name</span>)
+    <span style=color:#fff;font-weight:700>return</span> @params[<span style=color:#fff;font-weight:700>name</span>.to_s]
+  <span style=color:#fff;font-weight:700>end</span></code></pre></div>
+<ul>
+<li>
+<p><code>initalize</code> method defines the constructor for the resource class. In our method we are declaring <code>params</code> and <code>attribute</code> class variables. We are also defining the <code>size</code> hash key for the <code>params</code> which stores the length of the <code>attribute</code>.</p>
+</li>
+<li>
+<p><code>palindrome</code> method returns the whether the boolean value which indicates whether the resource is palindrome or not. It will be used with <a href=https://www.inspec.io/docs/reference/matchers/>Inspec matchers</a> to develop a control.</p>
+</li>
+<li>
+<p><code>method_missing</code> is meta-method used by Inspec to expose the <code>parameters</code> which will be used by <a href=https://www.inspec.io/docs/reference/dsl_inspec/>Inspec DSL</a>. For our palindrome resource, we are only passing single parameter <code>size</code>.</p>
+</li>
+</ul>
+<h3 id=example-control-file-for-our-custom-resource>Example Control file for our Custom resource</h3>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#007f7f># encoding: utf-8</span>
+<span style=color:#007f7f># copyright: 2018, Anshul Patel</span>
+
+<span style=color:#007f7f># you add controls here</span>
+control <span style=color:#0ff;font-weight:700>&#39;Palindrome-1.0&#39;</span> <span style=color:#fff;font-weight:700>do</span>
+  impact <span style=color:#ff0;font-weight:700>1</span>.<span style=color:#ff0;font-weight:700>0</span>
+  title <span style=color:#0ff;font-weight:700>&#39;Palindrome Resource&#39;</span>
+  desc <span style=color:#0ff;font-weight:700>&#39;Palindrome Resource&#39;</span>
+  describe palin_drome(<span style=color:#0ff;font-weight:700>&#34;saras&#34;</span>)  <span style=color:#fff;font-weight:700>do</span>
+    it { should be_palindrome }
+    its(<span style=color:#0ff;font-weight:700>&#39;size&#39;</span>) {should &gt; <span style=color:#ff0;font-weight:700>3</span> }
+  <span style=color:#fff;font-weight:700>end</span>
+<span style=color:#fff;font-weight:700>end</span></code></pre></div>
+<ul>
+<li>In the above example, we develop a control which checks whether the string <code>saras</code> is palindrome or not and whether its <code>size</code> is greater than 3 or not.</li>
+</ul>
+<p><strong>Example GitHub Repository</strong> : <a href=https://github.com/anshulpatel25/palindrome-inspec>https://github.com/anshulpatel25/palindrome-inspec</a></p>
+<h2 id=references>References</h2>
+<ul>
+<li><a href=https://www.inspec.io/docs/>https://www.inspec.io/docs/</a></li>
+</ul>
+<div id=329634253>
+<script type=text/javascript>try{window._mNHandle.queue.push(function(){window._mNDetails.loadTag("329634253","300x250","329634253")})}catch(a){}</script>
+</div>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>In my spare time, I plan World Domination from a secret villainous lair.</p>
+©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-93926186-1','auto'),ga('send','pageview'))</script>
+</body>
+</html>

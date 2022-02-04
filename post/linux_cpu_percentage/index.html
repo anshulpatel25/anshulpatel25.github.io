@@ -1,0 +1,155 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=author content="Anshul Patel">
+<meta name=description content="This article discusses the internals about how Linux calculates CPU utilization for a process.">
+<meta name=keywords content="personal,geek,gamer,techie">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="How Linux calculates CPU utilization">
+<meta name=twitter:description content="This article discusses the internals about how Linux calculates CPU utilization for a process.">
+<meta property="og:title" content="How Linux calculates CPU utilization">
+<meta property="og:description" content="This article discusses the internals about how Linux calculates CPU utilization for a process.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.anshulpatel.in/post/linux_cpu_percentage/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2019-05-17T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-05-17T00:00:00+00:00">
+<base href=http://www.anshulpatel.in/post/linux_cpu_percentage/>
+<title>
+How Linux calculates CPU utilization · Anshul Patel
+</title>
+<link rel=canonical href=http://www.anshulpatel.in/post/linux_cpu_percentage/>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.13.0/css/all.css integrity=sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous>
+<link rel=stylesheet href=http://www.anshulpatel.in/css/coder.min.6b2226bd9c0fa6ea0c3eb613b074869199b42ff23534af9eba76651ca16cf74c.css integrity="sha256-ayImvZwPpuoMPrYTsHSGkZm0L/I1NK+eunZlHKFs90w=" crossorigin=anonymous media=screen>
+<script type=text/javascript>window._mNHandle=window._mNHandle||{},window._mNHandle.queue=window._mNHandle.queue||[],medianet_versionId="3121199"</script>
+<script src="https://contextual.media.net/dmedianet.js?cid=8CUK8JJ25" async></script>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-16x16.png sizes=16x16>
+<meta name=generator content="Hugo 0.92.1">
+</head>
+<body class=colorscheme-light>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=http://www.anshulpatel.in/>
+Anshul Patel
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/post/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/meetups/>Meetups</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/files/quotes.html>Quotes</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=http://www.anshulpatel.in/in-gj/>અમદાવાદી ગુજરાતી</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container page">
+<article>
+<header>
+<h1>How Linux calculates CPU utilization</h1>
+</header>
+<p>This article discusses the internals about how Linux calculates CPU utilization for a process.</p>
+<h2 id=what-is-real-time-and-process-time>What is Real time and Process time?</h2>
+<p><strong>Real Time</strong>: It is an actual elapsed time that we observe on the wall clock.</p>
+<p><strong>Process Time</strong>: It is the amount of CPU time used by a process.</p>
+<h2 id=what-are-jiffies>What are Jiffies?</h2>
+<ul>
+<li>Process Time in Linux is measured in Jiffies. Jiffies are measured in <em>&ldquo;HZ&rdquo;</em>.</li>
+<li>Jiffies value can be fetched via <code>sysconf(_SC_CLK_TCK)</code> system call.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#007f7f>#!/usr/bin/env python3</span>
+<span style=color:#fff;font-weight:700>import</span> os
+<span style=color:#fff;font-weight:700>print</span>(os.sysconf(os.sysconf_names[<span style=color:#0ff;font-weight:700>&#39;SC_CLK_TCK&#39;</span>]))
+<span style=color:#007f7f># 100</span>
+<span style=color:#007f7f># 1 second = 100 Jiffies</span></code></pre></div>
+<h2 id=how-to-fetch-jiffies-in-linux>How to fetch Jiffies in Linux?</h2>
+<ul>
+<li>Total Jiffies for all CPU(s) and individual CPU can be fetched from <code>/proc/stat</code>.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ cat /proc/stat | grep cpu
+
+<span style=color:#007f7f># CPU    user    nice    system    idle    iowait    irq    softirq    steal    guest    guest_nice</span>
+
+cpu     <span style=color:#ff0;font-weight:700>365430</span>    <span style=color:#ff0;font-weight:700>546</span>    <span style=color:#ff0;font-weight:700>105481</span>    <span style=color:#ff0;font-weight:700>2862563</span>    <span style=color:#ff0;font-weight:700>1252</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>10568</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu0    <span style=color:#ff0;font-weight:700>47076</span>    <span style=color:#ff0;font-weight:700>48</span>    <span style=color:#ff0;font-weight:700>15238</span>    <span style=color:#ff0;font-weight:700>743800</span>    <span style=color:#ff0;font-weight:700>329</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>2116</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu1    <span style=color:#ff0;font-weight:700>43550</span>    <span style=color:#ff0;font-weight:700>43</span>    <span style=color:#ff0;font-weight:700>14460</span>    <span style=color:#ff0;font-weight:700>303602</span>    <span style=color:#ff0;font-weight:700>26</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>1584</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu2    <span style=color:#ff0;font-weight:700>46679</span>    <span style=color:#ff0;font-weight:700>39</span>    <span style=color:#ff0;font-weight:700>12309</span>    <span style=color:#ff0;font-weight:700>302736</span>    <span style=color:#ff0;font-weight:700>21</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>1053</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu3    <span style=color:#ff0;font-weight:700>46041</span>    <span style=color:#ff0;font-weight:700>72</span>    <span style=color:#ff0;font-weight:700>12112</span>    <span style=color:#ff0;font-weight:700>303436</span>    <span style=color:#ff0;font-weight:700>15</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>636</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu4    <span style=color:#ff0;font-weight:700>46400</span>    <span style=color:#ff0;font-weight:700>90</span>    <span style=color:#ff0;font-weight:700>13997</span>    <span style=color:#ff0;font-weight:700>300582</span>    <span style=color:#ff0;font-weight:700>568</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>661</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu5    <span style=color:#ff0;font-weight:700>46818</span>    <span style=color:#ff0;font-weight:700>16</span>    <span style=color:#ff0;font-weight:700>13045</span>    <span style=color:#ff0;font-weight:700>301880</span>    <span style=color:#ff0;font-weight:700>188</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>2931</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu6    <span style=color:#ff0;font-weight:700>44507</span>    <span style=color:#ff0;font-weight:700>31</span>    <span style=color:#ff0;font-weight:700>12307</span>    <span style=color:#ff0;font-weight:700>302683</span>    <span style=color:#ff0;font-weight:700>64</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>1213</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>
+cpu7    <span style=color:#ff0;font-weight:700>44356</span>    <span style=color:#ff0;font-weight:700>58</span>    <span style=color:#ff0;font-weight:700>12010</span>    <span style=color:#ff0;font-weight:700>303840</span>    <span style=color:#ff0;font-weight:700>38</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>370</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span>    <span style=color:#ff0;font-weight:700>0</span></code></pre></div>
+<ul>
+<li>Jiffies for a particular process can be fetched from <code>/proc/{pid}/stat</code>.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cat /proc/3465/stat | awk <span style=color:#0ff;font-weight:700>&#39;{print $14, $15, $16, $17}&#39;</span>
+
+<span style=color:#007f7f># User    System    User(Waited for Children)    System(Waited for Children)</span>
+
+<span style=color:#ff0;font-weight:700>59175</span>    <span style=color:#ff0;font-weight:700>13926</span>    <span style=color:#ff0;font-weight:700>52717</span>    <span style=color:#ff0;font-weight:700>10318</span></code></pre></div>
+<ul>
+<li>Total and Process CPU time (User + System) can be sampled across pre-defined time interval to obtain the utilization.</li>
+</ul>
+<p><em>For eg</em>: If Total CPU time (User + System) across 8 cores is 450 Jiffies <em>(sampled per second)</em> and Process CPU time (User + System + User of Children + System of Children) is 50 Jiffies <em>(sampled per second)</em>, then utilization in percentage can be calculated as follows:</p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># Percentage = (100 * Process Jiffies)/Total CPU Jiffies
+
+(100 * 50)/450 = 11.111%
+</code></pre></div><ul>
+<li>Jiffies can be converted to Real Time (seconds) via <code>(Jiffies/100) as 1 second = 100 Jiffies</code>, it may be greater than Real Time if a Process utilizes more than one CPU or Core.</li>
+</ul>
+<p><strong>Golang Snippet</strong></p>
+<p>This Golang snippet samples CPU utilization per second.</p>
+<script type=application/javascript src=https://gist.github.com/anshulpatel25/c596e322d8e64b2bd547d5bfa7bd59f2.js></script>
+<p><strong>Output</strong></p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ go run main.go
+
+Enter the PID:3465
+
+Logging CPU % <span style=color:#fff;font-weight:700>for</span> PID <span style=color:#ff0;font-weight:700>3465</span>
+2.564103%
+3.947368%
+0.000000%
+0.000000%
+4.166667%
+0.000000%
+1.190476%
+3.773585%</code></pre></div>
+<div id=329634253>
+<script type=text/javascript>try{window._mNHandle.queue.push(function(){window._mNDetails.loadTag("329634253","300x250","329634253")})}catch(a){}</script>
+</div>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>In my spare time, I plan World Domination from a secret villainous lair.</p>
+©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-93926186-1','auto'),ga('send','pageview'))</script>
+</body>
+</html>

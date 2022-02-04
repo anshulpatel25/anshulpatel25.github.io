@@ -1,0 +1,42 @@
++++
+author = "Anshul Patel"
+date = 2017-12-26
+showthedate = true
+title = "Sofware Architecture Concerns"
+tags = [
+    "devops",
+    "scalability",
+    "sitereliability",
+    "softwarearchitecture"
+    ]
++++
+
+Software Architects are required to analyze business and domain requirements that balances all concerns optimally. When building software, architects must determine the most import **"-ilities"(concerns)**.
+
+<!--more-->
+
+
+ {.table-striped}
+
+|                 |                  |                 |                     |                  |                |
+|-----------------|------------------|-----------------|---------------------|------------------|----------------|
+| accessibility   | accountability   | accuracy        | adaptability        | administrability |                |
+| affordability   | agility          | auditability    | autonomy            | availability     |                |
+| compatibility   | composability    | configurability | correctness         | credibility      |                |
+| customizability | debugability     | degradability   | determinability     | demonstrability  |                |
+| dependability   | deployability    | discoverability | distributability    | durability       |                |
+| effectiveness   | efficiency       | usability       | extensibility       | failure          | transparency   |
+| fault           | tolerance        | fidelity        | flexibility         | inspectability   | installability |
+| integrity       | interoperability | learnability    | maintainability     | manageability    |                |
+| mobility        | modifiability    | modularity      | operability         | orthogonality    |                |
+| portability     | precision        | predictability  | process             | capabilities     | performability  |
+| provability     | recoverability   | relevance       | reliability         | repeatability    |                |
+| reproducibility | resilience       | responsiveness  | reusability         | robustness       |                |
+| safety          | scalability      | seamlessness    | self-sustainability | serviceability   |                |
+| securability    | simplicity       | stability       | standards           | compliance       | survivability  |
+| sustainability  | tailorability    | testability     | timeliness          | traceability     |                |
+
+
+Many of the **"-ilities"(concerns)** often oppose one another. (For eg: Achieving high performance and extreme scalability can be difficult at the same time). These clashes requires balance which often leads to **tradeoffs**.
+
+Software Architect plays crucial role to maintain the much required equilibrium of above concerns to achieve the end goal.

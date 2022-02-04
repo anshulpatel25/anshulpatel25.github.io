@@ -1,0 +1,165 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=author content="Anshul Patel">
+<meta name=description content="Traditionally, Linux Kernel distinguishes its processes with the following two categories:
+
+
+Privileged Processes: These processes allow the user to bypass all Kernel permission checks.
+
+
+Unprivileged Processes: These processes are subject to full permission checks, such as the effective UID, GID, and supplementary group list.
+
+">
+<meta name=keywords content="personal,geek,gamer,techie">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Linux Kernel Capabilities Explained">
+<meta name=twitter:description content="Traditionally, Linux Kernel distinguishes its processes with the following two categories:
+
+
+Privileged Processes: These processes allow the user to bypass all Kernel permission checks.
+
+
+Unprivileged Processes: These processes are subject to full permission checks, such as the effective UID, GID, and supplementary group list.
+
+">
+<meta property="og:title" content="Linux Kernel Capabilities Explained">
+<meta property="og:description" content="Traditionally, Linux Kernel distinguishes its processes with the following two categories:
+
+
+Privileged Processes: These processes allow the user to bypass all Kernel permission checks.
+
+
+Unprivileged Processes: These processes are subject to full permission checks, such as the effective UID, GID, and supplementary group list.
+
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.anshulpatel.in/post/linux_kernel_capabilities/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2017-07-17T00:00:00+00:00">
+<meta property="article:modified_time" content="2017-07-17T00:00:00+00:00">
+<base href=http://www.anshulpatel.in/post/linux_kernel_capabilities/>
+<title>
+Linux Kernel Capabilities Explained · Anshul Patel
+</title>
+<link rel=canonical href=http://www.anshulpatel.in/post/linux_kernel_capabilities/>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.13.0/css/all.css integrity=sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous>
+<link rel=stylesheet href=http://www.anshulpatel.in/css/coder.min.6b2226bd9c0fa6ea0c3eb613b074869199b42ff23534af9eba76651ca16cf74c.css integrity="sha256-ayImvZwPpuoMPrYTsHSGkZm0L/I1NK+eunZlHKFs90w=" crossorigin=anonymous media=screen>
+<script type=text/javascript>window._mNHandle=window._mNHandle||{},window._mNHandle.queue=window._mNHandle.queue||[],medianet_versionId="3121199"</script>
+<script src="https://contextual.media.net/dmedianet.js?cid=8CUK8JJ25" async></script>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-16x16.png sizes=16x16>
+<meta name=generator content="Hugo 0.92.1">
+</head>
+<body class=colorscheme-light>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=http://www.anshulpatel.in/>
+Anshul Patel
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/post/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/meetups/>Meetups</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/files/quotes.html>Quotes</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=http://www.anshulpatel.in/in-gj/>અમદાવાદી ગુજરાતી</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container page">
+<article>
+<header>
+<h1>Linux Kernel Capabilities Explained</h1>
+</header>
+<p>Traditionally, Linux Kernel distinguishes its processes with the following <a href=https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process>two categories</a>:</p>
+<ul>
+<li>
+<p><strong>Privileged Processes</strong>: These processes allow the user to bypass all Kernel permission checks.</p>
+</li>
+<li>
+<p><strong>Unprivileged Processes</strong>: These processes are subject to full permission checks, such as the effective UID, GID, and supplementary group list.</p>
+</li>
+</ul>
+<p>Granting full privileged access to a user process might induce system abuse, like unauthorized changes of data, backdoors, changing ACL, etc.</p>
+<p>Linux 2.2 shipped with a solution called Capabilities. Capabilities allows the developer to grant binaries/files specific permissions.</p>
+<h3 id=example>Example</h3>
+<p>Let&rsquo;s say we want to start a Simple HTTP Server module of Python on port 80 with a non-privileged user. If we try to start the process without granting any capabilities, we will get the following error:</p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer <span style=color:#ff0;font-weight:700>80</span>
+Traceback (most recent call last):
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/runpy.py&#34;</span>, line 174, in _run_module_as_main
+    <span style=color:#0ff;font-weight:700>&#34;__main__&#34;</span>, fname, loader, pkg_name)
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/runpy.py&#34;</span>, line 72, in _run_code
+    <span style=color:#fff;font-weight:700>exec</span> code in run_globals
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/SimpleHTTPServer.py&#34;</span>, line 235, in &lt;module&gt;
+    test()
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/SimpleHTTPServer.py&#34;</span>, line 231, in <span style=color:#fff;font-weight:700>test</span>
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/BaseHTTPServer.py&#34;</span>, line 606, in <span style=color:#fff;font-weight:700>test</span>
+    httpd = ServerClass(server_address, HandlerClass)
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/SocketServer.py&#34;</span>, line 417, in __init__
+    self.server_bind()
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/BaseHTTPServer.py&#34;</span>, line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/SocketServer.py&#34;</span>, line 431, in server_bind
+    self.socket.bind(self.server_address)
+  File <span style=color:#0ff;font-weight:700>&#34;/usr/lib/python2.7/socket.py&#34;</span>, line 228, in meth
+    <span style=color:#fff;font-weight:700>return</span> getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied</code></pre></div>
+<p>Let&rsquo;s add the <code>CAP_NET_BIND_SERVICE</code> capability to our Python binary.</p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo setcap <span style=color:#0ff;font-weight:700>&#39;CAP_NET_BIND_SERVICE+ep&#39;</span> /usr/bin/python2.7</code></pre></div>
+<p>The above command states that we are adding the <code>CAP_NET_BIND_SERVICE</code> capability to our <code>/usr/bin/python2.7</code> file. <code>+ep</code> indicates that the file is Effective and Permitted ( &ldquo;-&rdquo; would remove it).</p>
+<p>Now let&rsquo;s try to run the Python Simple HTTP Server module again on port 80:</p>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer <span style=color:#ff0;font-weight:700>80</span>
+Serving HTTP on 0.0.0.0 port <span style=color:#ff0;font-weight:700>80</span> ...
+172.28.128.1 - - [06/Jul/2017 11:30:13] <span style=color:#0ff;font-weight:700>&#34;GET / HTTP/1.1&#34;</span> <span style=color:#ff0;font-weight:700>200</span> -
+172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File not found
+172.28.128.1 - - [06/Jul/2017 11:30:13] <span style=color:#0ff;font-weight:700>&#34;GET /favicon.ico HTTP/1.1&#34;</span> <span style=color:#ff0;font-weight:700>404</span> -
+172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File not found
+172.28.128.1 - - [06/Jul/2017 11:30:13] <span style=color:#0ff;font-weight:700>&#34;GET /favicon.ico HTTP/1.1&#34;</span> <span style=color:#ff0;font-weight:700>404</span> -</code></pre></div>
+<p>We are now able to serve traffic over privileged port 80 with a non-privileged user.</p>
+<p>At the time of writing this article, there are over 40 capabilities which can be assigned per requirement.</p>
+<p>There are 3 modes for <a href=https://www.insecure.ws/linux/getcap_setcap.html>Capabilities</a>:</p>
+<p><strong>e: Effective</strong> - This indicates that the capability is &ldquo;activated.&rdquo;</p>
+<p><strong>p: Permitted</strong> - This indicates that the capability can be used.</p>
+<p><strong>i: Inherited</strong> - This indicates that the capability is inherited by child elements/subprocesses.</p>
+<p>Capabilities provide a concise and efficient way to assign privileged permissions to non-privileged users.</p>
+<div id=329634253>
+<script type=text/javascript>try{window._mNHandle.queue.push(function(){window._mNDetails.loadTag("329634253","300x250","329634253")})}catch(a){}</script>
+</div>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>In my spare time, I plan World Domination from a secret villainous lair.</p>
+©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-93926186-1','auto'),ga('send','pageview'))</script>
+</body>
+</html>

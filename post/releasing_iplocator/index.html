@@ -1,0 +1,132 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="en">
+<meta name=author content="Anshul Patel">
+<meta name=description content="IPLocator is tool which provides meta information regarding domain location such as ASN, ISP, ISP Latitude, ISP Longitude, Country, Timezone, etc ..">
+<meta name=keywords content="personal,geek,gamer,techie">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Site Reliability: Releasing IPLocator utility">
+<meta name=twitter:description content="IPLocator is tool which provides meta information regarding domain location such as ASN, ISP, ISP Latitude, ISP Longitude, Country, Timezone, etc ..">
+<meta property="og:title" content="Site Reliability: Releasing IPLocator utility">
+<meta property="og:description" content="IPLocator is tool which provides meta information regarding domain location such as ASN, ISP, ISP Latitude, ISP Longitude, Country, Timezone, etc ..">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.anshulpatel.in/post/releasing_iplocator/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2018-07-03T00:00:00+00:00">
+<meta property="article:modified_time" content="2018-07-03T00:00:00+00:00">
+<base href=http://www.anshulpatel.in/post/releasing_iplocator/>
+<title>
+Site Reliability: Releasing IPLocator utility · Anshul Patel
+</title>
+<link rel=canonical href=http://www.anshulpatel.in/post/releasing_iplocator/>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel=stylesheet>
+<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.13.0/css/all.css integrity=sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin=anonymous>
+<link rel=stylesheet href=http://www.anshulpatel.in/css/coder.min.6b2226bd9c0fa6ea0c3eb613b074869199b42ff23534af9eba76651ca16cf74c.css integrity="sha256-ayImvZwPpuoMPrYTsHSGkZm0L/I1NK+eunZlHKFs90w=" crossorigin=anonymous media=screen>
+<script type=text/javascript>window._mNHandle=window._mNHandle||{},window._mNHandle.queue=window._mNHandle.queue||[],medianet_versionId="3121199"</script>
+<script src="https://contextual.media.net/dmedianet.js?cid=8CUK8JJ25" async></script>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=http://www.anshulpatel.in/images/favicon-16x16.png sizes=16x16>
+<meta name=generator content="Hugo 0.92.1">
+</head>
+<body class=colorscheme-light>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=http://www.anshulpatel.in/>
+Anshul Patel
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fas fa-bars"></i></label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/post/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/meetups/>Meetups</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=http://www.anshulpatel.in/files/quotes.html>Quotes</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=http://www.anshulpatel.in/in-gj/>અમદાવાદી ગુજરાતી</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container page">
+<article>
+<header>
+<h1>Site Reliability: Releasing IPLocator utility</h1>
+</header>
+<p>IPLocator is tool which provides meta information regarding domain location such as ASN, ISP, ISP Latitude, ISP Longitude, Country, Timezone, etc ..</p>
+<h2 id=why>Why?</h2>
+<ul>
+<li>To find location related information, I had to search for such webapp on Google and then browse to that website to get the details.</li>
+<li>To simplify the above process and to sharp up my Golang skill, decided to write this utility.</li>
+</ul>
+<h2 id=compile-and-installation>Compile and Installation</h2>
+<ul>
+<li>Clone the code</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ git clone https://github.com/anshulpatel25/iplocator.git</code></pre></div>
+<ul>
+<li>Compile the code</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ go build -o iplocator</code></pre></div>
+<ul>
+<li>For Linux/Mac, add executable permission and move in the <code>/usr/bin</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ chmod +x iplocator &amp;&amp; mv iplocator /usr/bin</code></pre></div>
+<h2 id=usage>Usage</h2>
+<ul>
+<li>Running the utility</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>λ iplocator.exe paytm.com
+As AS16509 Amazon.com, Inc.
+City Singapore
+Country Singapore
+CountryCode SG
+Isp Amazon.com
+Lat 1.2931
+Lon 103.8558
+Org Amazon.com
+Query 52.220.83.85
+Region <span style=color:#ff0;font-weight:700>01</span>
+RegionName Central Singapore Community Development Council
+Status success
+Timezone Asia/Singapore
+Zip </code></pre></div>
+<h2 id=resources>Resources</h2>
+<ul>
+<li><a href=https://github.com/anshulpatel25/iplocator><strong>iplocator</strong></a></li>
+<li><a href=https://github.com/anshulpatel25/iplocator/issues><strong>Issues</strong></a></li>
+</ul>
+<div id=329634253>
+<script type=text/javascript>try{window._mNHandle.queue.push(function(){window._mNDetails.loadTag("329634253","300x250","329634253")})}catch(a){}</script>
+</div>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p>In my spare time, I plan World Domination from a secret villainous lair.</p>
+©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-93926186-1','auto'),ga('send','pageview'))</script>
+</body>
+</html>
