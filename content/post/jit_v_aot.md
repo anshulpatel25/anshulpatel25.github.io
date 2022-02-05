@@ -60,5 +60,3 @@ JIT continuously analyzes the code and performs dynamic compilation of only requ
 * It performs adaptive and dynamic optimization at runtime to increase the execution performance.
 * As it continuosly profiles and analyzes the code, it has extra CPU and Memory usage.
 * Application/Program startup is relatively slow.
-
-

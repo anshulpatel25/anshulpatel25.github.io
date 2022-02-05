@@ -60,11 +60,10 @@ Region 01
 RegionName Central Singapore Community Development Council
 Status success
 Timezone Asia/Singapore
-Zip 
+Zip
 {{< /highlight >}}
 
 ## Resources
 
 - [**iplocator**](https://github.com/anshulpatel25/iplocator)
 - [**Issues**](https://github.com/anshulpatel25/iplocator/issues)
-

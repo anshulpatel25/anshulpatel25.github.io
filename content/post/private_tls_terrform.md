@@ -19,9 +19,9 @@ This article discusses the creation of Self-signed CA and TLS certificates using
 
 ## How TLS Works?
 
-TLS is an industry standward way to add encryption for data in transist. 
+TLS is an industry standward way to add encryption for data in transist.
 
-* Certificate Authority (CA) is an entity responsible for issuing TLS certificates to websites or services. 
+* Certificate Authority (CA) is an entity responsible for issuing TLS certificates to websites or services.
 
 * Private CA is developed by creating public/private key pair. Public portion is then published which is called CA certificate. Private Key is kept securely else attacker can use the Private Key to issue invalide/malicious TLS certificates.
 
@@ -56,5 +56,3 @@ Above example code creates the following:
 ### Diagram
 
 ![private-tls](/img/private_tls.png)
-
-
