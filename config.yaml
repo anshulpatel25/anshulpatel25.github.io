@@ -1,0 +1,38 @@
+baseURL: "http://www.anshulpatel.in"
+
+title: "Anshul Patel"
+
+languageCode: "en"
+defaultContentLanguage: "en"
+
+
+paginate: 10
+enableEmoji: true
+
+params:
+  author: "Anshul Patel"
+  description: "Anshul Patel's personal website"
+  keywords: "geek, gamer, techie, blog, engineer"
+  info:
+    - Geek, Gamer, Techie
+  avatarURL: "images/anshul.jpg"
+  dateFormat: "May 12, 1953"
+  colorScheme: "auto"
+
+languages:
+  en:
+    languageName: ":uk:"
+    menu:
+      main:
+        - name: "About"
+          weight: 1
+          url: "/about/"
+        - name: "Blog"
+          weight: 2
+          url: "/blog/"
+        - name: "Meetups"
+          weight: 3
+          url: "/meetups/"
+
+theme:
+  - github.com/luizdepra/hugo-coder

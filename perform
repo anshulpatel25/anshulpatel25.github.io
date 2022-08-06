@@ -1,0 +1,15 @@
+#!/bin/bash
+
+server() {
+    hugo server
+}
+
+get_modules() {
+    hugo mod get -u
+}
+
+main() {
+    "${@}"
+}
+
+main "${@}"

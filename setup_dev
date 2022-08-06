@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -eu
+
+readonly HUGO_VERSION="0.101.0"
+readonly LOCAL_BIN="./.bin"
+
+install_hugo() {
+  local -r hugo_install_location="${LOCAL_BIN}/hugo"
+  if [[ -f "${hugo_install_location}" ]]; then
+    echo "INFO: Hugo already installed"
+  else
+    curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" -o "${LOCAL_BIN}/hugo.tar.gz"
+    tar zxf "${LOCAL_BIN}/hugo.tar.gz" -C "${LOCAL_BIN}"
+    echo "INFO: Installed Hugo"
+  fi
+    
+}
+
+prerequisite() {
+  mkdir -p "${LOCAL_BIN}"
+}
+
+main() {
+  prerequisite
+  install_hugo
+}
+
+main
