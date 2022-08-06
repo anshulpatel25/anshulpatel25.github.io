@@ -9,6 +9,8 @@ defaultContentLanguage: "en"
 paginate: 10
 enableEmoji: true
 
+googleAnalytics: "UA-93926186-1"
+
 params:
   author: "Anshul Patel"
   description: "Anshul Patel's personal website"
@@ -30,6 +32,9 @@ languages:
         - name: "Meetups"
           weight: 1
           url: "/meetups/"
+        - name: "About"
+          weight: 2
+          url: "/about/"
 
 theme:
   - github.com/luizdepra/hugo-coder
