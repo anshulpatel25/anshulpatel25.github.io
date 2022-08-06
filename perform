@@ -4,7 +4,7 @@ server() {
     hugo server
 }
 
-get_modules() {
+update_modules() {
     hugo mod get -u
 }
 

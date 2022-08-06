@@ -18,6 +18,8 @@ params:
   avatarURL: "images/anshul.jpg"
   dateFormat: "May 12, 1953"
   colorScheme: "auto"
+  customCSS:
+    - "css/fonts.css"
 
 languages:
   en:
@@ -36,3 +38,8 @@ languages:
 
 theme:
   - github.com/luizdepra/hugo-coder
+
+module:
+  mounts:
+    - source: assets
+      target: assets

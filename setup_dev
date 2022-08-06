@@ -14,7 +14,7 @@ install_hugo() {
     tar zxf "${LOCAL_BIN}/hugo.tar.gz" -C "${LOCAL_BIN}"
     echo "INFO: Installed Hugo"
   fi
-    
+
 }
 
 prerequisite() {
