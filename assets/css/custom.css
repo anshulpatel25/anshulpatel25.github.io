@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-.about * {
-  font-family: 'Open Sans';
-}
-
 .slideshare {
   position: relative;
   overflow: hidden;
