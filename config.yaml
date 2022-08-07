@@ -22,7 +22,22 @@ params:
   colorScheme: "auto"
   customCSS:
     - "css/custom.css"
+    - "css/fork-awesome.css"
   footerQuote: "In my spare time, I plan World Domination from a secret villainous lair 🦹‍♂️."
+  social:
+    - name: "Github"
+      icon: "fa fa-2x fa-github"
+      weight: 1
+      url: "https://github.com/anshulpatel25"
+    - name: "Linkedin"
+      icon: "fa fa-2x fa-linkedin"
+      weight: 2
+      url: "https://www.linkedin.com/in/anshul-patel-29a95635"
+    - name: "Email"
+      icon: "fa fa-2x fa-envelope"
+      weight: 3
+      url: "mailto:anshulpatel25@gmail.com"
+
 
 languages:
   en:
