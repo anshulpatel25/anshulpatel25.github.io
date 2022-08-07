@@ -23,7 +23,7 @@ params:
   customCSS:
     - "css/custom.css"
     - "css/fork-awesome.css"
-  footerQuote: "In my spare time, I plan World Domination from a secret villainous lair 🦹‍♂️."
+  footerQuote: "In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️."
   social:
     - name: "Github"
       icon: "fa fa-2x fa-github"
@@ -44,11 +44,14 @@ languages:
     languageName: ":uk:"
     menu:
       main:
-        - name: "Meetups"
+        - name: "Posts"
           weight: 1
+          url: "/posts/"
+        - name: "Meetups"
+          weight: 2
           url: "/meetups/"
         - name: "About"
-          weight: 2
+          weight: 3
           url: "/about/"
 
 theme:
