@@ -1,0 +1,96 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="To understand the cloud-native, we should first understand the definition of
+the cloud.
+NIST
+defines cloud computing characteristics as follows:
+
+Rapid elasticity
+On-demand self-service
+Broad network access
+Resource pooling
+Measured service
+"><meta name=keywords content="geek,gamer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="What are cloud-native applications?"><meta name=twitter:description content="To understand the cloud-native, we should first understand the definition of
+the cloud.
+NIST
+defines cloud computing characteristics as follows:
+
+Rapid elasticity
+On-demand self-service
+Broad network access
+Resource pooling
+Measured service
+"><meta property="og:title" content="What are cloud-native applications?"><meta property="og:description" content="To understand the cloud-native, we should first understand the definition of
+the cloud.
+NIST
+defines cloud computing characteristics as follows:
+
+Rapid elasticity
+On-demand self-service
+Broad network access
+Resource pooling
+Measured service
+"><meta property="og:type" content="article"><meta property="og:url" content="http://www.anshulpatel.in/posts/cloud_native/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-08-09T00:00:00+05:30"><meta property="article:modified_time" content="2019-08-09T00:00:00+05:30"><title>Anshul Patel</title><link rel=canonical href=http://www.anshulpatel.in/posts/cloud_native/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.6b1a4fbc48955b72aea7913e43fabeb45e8bc120da5aa41b598dd33adcac4b59.css integrity="sha256-axpPvEiVW3Kup5E+Q/q+tF6LwSDaWqQbWY3TOtysS1k=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.39e41a7f16bdf8cb16e43cae7d714fa1016f1d2d2898a5b3f27f42c9979204e2.css integrity="sha256-OeQafxa9+MsW5DyufXFPoQFvHS0omKWz8n9CyZeSBOI=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/custom.min.cba2e9ecbfbcddfea52dc5e68065efce9cca76e279bc68b4f5c7dfca261c3e59.css integrity="sha256-y6Lp7L+83f6lLcXmgGXvzpzKduJ5vGi09cffyiYcPlk=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/fork-awesome.min.49b1c8033d3155bda3e09f65a136c3f8f73e70c3c2a327239e239950a9684f6e.css integrity="sha256-SbHIAz0xVb2j4J9loTbD+Pc+cMPCoycjniOZUKloT24=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Anshul Patel</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/meetups/>Meetups</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://www.anshulpatel.in/posts/cloud_native/>What are cloud-native applications?</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-08-09T00:00:00+05:30>August 09, 2019</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/scalability/>scalability</a></span>
+<span class=separator>•</span>
+<span class=tag><a href=/tags/highavailability/>highavailability</a></span>
+<span class=separator>•</span>
+<span class=tag><a href=/tags/cloud/>cloud</a></span></div></div></header><div><p>To understand the cloud-native, we should first understand the definition of
+the cloud.</p><p><a href=https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf>NIST</a>
+defines cloud computing characteristics as follows:</p><ul><li>Rapid elasticity</li><li>On-demand self-service</li><li>Broad network access</li><li>Resource pooling</li><li>Measured service</li></ul><p><img src=/images/cloud_native_meme.jpg alt=cloud_native_meme></p><p>Cloud-Native applications should be the applications which are designed and
+implemented to use and take advantage of the above cloud computing
+characteristics.</p><p>Cloud-Native applications should have the following characteristics:</p><h3 id=immutable-packaging--execution>Immutable Packaging & Execution
+<a class=heading-link href=#immutable-packaging--execution><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Machine Images (For eg: AMI) and Container Images (For eg: Docker Image)
+allows us to bake the library dependencies along with the application.
+This allows the development to take advantage of <code>Rapid Elasticity</code>.</li><li>Containers can be much more efficient than VMs as multiple containers can be
+executed on a single VM, hence further optimizing <code>Resource Pooling</code>
+characteristics.</li><li>Functions as service (For eg: Lambda) can further optimize <code>Resource Pooling</code>.</li></ul><h3 id=decoupled-configurations--secrets>Decoupled Configurations & Secrets
+<a class=heading-link href=#decoupled-configurations--secrets><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Immutability and elasticity make it difficult to add configuration as part of
+code, hence centralized K/V store (For eg: Hashicorp Consul) and
+secrets engine (For eg: Hashicorp Vault, AWS KMS) should be implemented.</li><li>The application should fetch the secrets and K/V from the above engines,
+providing on-demand flexibility to append, update secrets and K/V.</li></ul><h3 id=statelessness--statefulness>Statelessness & Statefulness
+<a class=heading-link href=#statelessness--statefulness><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li><code>Rapid Elasticity</code> makes it somewhat difficult to couple data with the
+applications. The stateful landscape is still work-in-progress and unstable.
+Till the time it becomes stable, applications should use external storage,
+queuing and search engine systems
+(For eg: Redis, RabbitMQ, Kafka, MySQL, Cassandra, Elasticsearch, etc).</li></ul><h3 id=modular-applications>Modular Applications
+<a class=heading-link href=#modular-applications><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Problem with monoliths was that even if we need to scale only one module
+( For eg: Payment), we need to replicate/scale the whole monolith which
+defeats the purpose of <code>Resource Pooling</code></li><li>Microservices and MicroFrontends can provide better <code>Resource Pooling</code> by
+running containers/functions on the same VMs. Also scaling Microservices
+becomes easy as it is independent/loosely coupled and performs single
+functionality of the domain. (For eg: In Ecommerce domain, single
+functionality can be Payment, Checkout, Carts, Orders, Shipping, etc).
+Most of the modern-day storage systems are multi-tenant, hence multiple
+applications can take advantage of this
+multi-tenancy (<code>Resource Pooling</code>)characteristics.</li></ul><h3 id=polyglot-paradigm>Polyglot Paradigm
+<a class=heading-link href=#polyglot-paradigm><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Probably the best thing of using this paradigm. As dependencies are packaged
+along with the application and are isolated from the underlying execution
+environment, the development team can use their language of choice to write
+their modules and achieve their use case.</li></ul><h3 id=centralized-logging>Centralized Logging
+<a class=heading-link href=#centralized-logging><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Due to <code>Rapid Elasticity</code>, it can be difficult for the development team
+to track down the problematic machine and view its logs, as it wouldn&rsquo;t be
+secure as well as convenient to hand out production machine access
+(For eg: SSH) to different development teams.</li><li>Almost all major cloud providers provide a service which can ingest log or
+log-like data. (For eg: Cloudwatch logs, ELK)</li><li>Applications should forward their logs to centralized logging service.</li><li><code>On-demand self-service</code> centralized logging solution can be used by
+development teams to securely and conveniently access the production logs.</li></ul><h3 id=managed-via-devops--sre-processes>Managed via DevOps & SRE processes
+<a class=heading-link href=#managed-via-devops--sre-processes><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Apps should use Continuous Integration</li><li>Apps should use Continuous Delivery & Deployment via declarative
+infrastructure-as-code, configuration management.</li><li>Important metrics should be <code>Measured</code> for monitoring and
+observing application.</li><li>Deployment patterns such as Rolling, Blue/Green, Canary should be practiced.</li><li>Blameless postmortem should be promoted during application outage to
+make the application more resilient and robust.</li></ul><h3 id=automation>Automation
+<a class=heading-link href=#automation><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>All the processes, tools which are used for development, deployment and
+maintenance of the apps should be automated or have API(s) for automation
+via custom scripts.</li></ul><h3 id=api-centric>API centric
+<a class=heading-link href=#api-centric><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Applications use well defined lightweight API on top of common protocols
+(For eg: REST, gRPC) for exchanging the data. The protocols used are
+intentionally language independent to support Polyglot Paradigm.</li><li>API centric approach also promotes <code>Broad network access</code>, hence same API(s)
+can be consumed by Mobiles, IoT devices, Servers and Development teams which
+then can use it for their scenarios.</li></ul></div><footer></footer></article></section></div><footer class=footer><section>In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️.</section><section class=container>©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js integrity="sha256-I2BJOV3DaC+ycZZAhylY4S8fJAZ7sJwyeyM+YpDH7aw="></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-93926186-1","auto"),ga("send","pageview"))</script></body></html>

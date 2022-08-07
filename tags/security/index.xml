@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>security on Anshul Patel</title><link>http://www.anshulpatel.in/tags/security/</link><description>Recent content in security on Anshul Patel</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 09 Dec 2018 00:00:00 +0530</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Create Self-Signed CA and TLS certificates using Terraform</title><link>http://www.anshulpatel.in/posts/private_tls_terrform/</link><pubDate>Sun, 09 Dec 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/private_tls_terrform/</guid><description>&lt;p>This article discusses the creation of Self-signed CA and TLS certificates using
+Terrform&lt;/p></description></item><item><title>Linux Kernel Capabilities Explained</title><link>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</link><pubDate>Mon, 17 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</guid><description>&lt;p>Traditionally, Linux Kernel distinguishes its processes with the following&lt;/p>
+&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process">two categories&lt;/a>:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Privileged Processes&lt;/strong>: These processes allow the user to bypass all Kernel
+permission checks.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Unprivileged Processes&lt;/strong>: These processes are subject to full permission
+checks, such as the effective UID, GID, and supplementary group list.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>HTTP Strict Transport Security(HSTS)</title><link>http://www.anshulpatel.in/posts/hsts/</link><pubDate>Fri, 13 Jan 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/hsts/</guid><description>&lt;p>HSTS is an opt-in security specified by a web application through the use of a
+special response header.&lt;/p>
+&lt;p>When the browser receives this header, the browser prevents all communication
+over HTTP to that specified domain. Instead the browser will send all
+communication over HTTPS.&lt;/p></description></item><item><title>Denial of Service(DoS): Attacks and Mitigation</title><link>http://www.anshulpatel.in/posts/ddos_attack_mitigation/</link><pubDate>Thu, 24 Nov 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/ddos_attack_mitigation/</guid><description>&lt;p>&lt;a href="http://www.akamai.com/us/en/multimedia/documents/state-of-the-internet/q3-2016-state-of-the-internet-security-report-infographic.pdf">2016 saw 71%&lt;/a>
+rise in Denial of Service attacks with biggest attack of 623 Gbps and mega
+attacks averaging around 100 Gbps.&lt;/p>
+&lt;p>If unprepared, Denial of Service can result in
+&lt;a href="http://blog.radware.com/security/2013/05/how-much-can-a-ddos-attack-cost-your-business/">Financial losses, Reputational Damage, Customer Attrition and Legal Pursuits&lt;/a>.&lt;/p></description></item></channel></rss>

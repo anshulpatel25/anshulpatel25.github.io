@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devops on Anshul Patel</title><link>http://www.anshulpatel.in/tags/devops/</link><description>Recent content in devops on Anshul Patel</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 11 Dec 2016 00:00:00 +0530</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>Semantic Versioning Simplified</title><link>http://www.anshulpatel.in/posts/semantic_versioning/</link><pubDate>Sun, 11 Dec 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/semantic_versioning/</guid><description>&lt;p>Software Versioning makes it easy and convenient to track, test, deploy, patch,
+and rollback features, enhancements and bug/fixes across variety of
+environmentsin &lt;a href="https://youtu.be/XM1HRy7aJxE">Software Supply Chain&lt;/a>.&lt;/p>
+&lt;p>Semantic Versioning provides an efficient and effective framework to version
+the software products, so that the infamous
+&lt;a href="https://en.wikipedia.org/wiki/Dependency_hell">Dependency Hell&lt;/a>
+can be avoided.&lt;/p></description></item></channel></rss>

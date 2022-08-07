@@ -1,0 +1,44 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="Recently having binged watch Air Emergency,
+I felt that SREs can learn many things from
+aviation industry."><meta name=keywords content="geek,gamer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="What SREs can learn from Aviation industry?"><meta name=twitter:description content="Recently having binged watch Air Emergency,
+I felt that SREs can learn many things from
+aviation industry."><meta property="og:title" content="What SREs can learn from Aviation industry?"><meta property="og:description" content="Recently having binged watch Air Emergency,
+I felt that SREs can learn many things from
+aviation industry."><meta property="og:type" content="article"><meta property="og:url" content="http://www.anshulpatel.in/posts/sre_aviation_process/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-04-10T00:00:00+05:30"><meta property="article:modified_time" content="2019-04-10T00:00:00+05:30"><title>Anshul Patel</title><link rel=canonical href=http://www.anshulpatel.in/posts/sre_aviation_process/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.6b1a4fbc48955b72aea7913e43fabeb45e8bc120da5aa41b598dd33adcac4b59.css integrity="sha256-axpPvEiVW3Kup5E+Q/q+tF6LwSDaWqQbWY3TOtysS1k=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.39e41a7f16bdf8cb16e43cae7d714fa1016f1d2d2898a5b3f27f42c9979204e2.css integrity="sha256-OeQafxa9+MsW5DyufXFPoQFvHS0omKWz8n9CyZeSBOI=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/custom.min.cba2e9ecbfbcddfea52dc5e68065efce9cca76e279bc68b4f5c7dfca261c3e59.css integrity="sha256-y6Lp7L+83f6lLcXmgGXvzpzKduJ5vGi09cffyiYcPlk=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/fork-awesome.min.49b1c8033d3155bda3e09f65a136c3f8f73e70c3c2a327239e239950a9684f6e.css integrity="sha256-SbHIAz0xVb2j4J9loTbD+Pc+cMPCoycjniOZUKloT24=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Anshul Patel</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/meetups/>Meetups</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://www.anshulpatel.in/posts/sre_aviation_process/>What SREs can learn from Aviation industry?</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-04-10T00:00:00+05:30>April 10, 2019</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+2-minute read</span></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/sitereliability/>sitereliability</a></span></div></div></header><div><p>Recently having binged watch <a href=https://www.imdb.com/title/tt0386950/>Air Emergency</a>,
+I felt that <a href=https://landing.google.com/sre/>SREs</a> can learn many things from
+aviation industry.</p><ul><li><p>Like modern aircraft, modern runtimes and operating systems are sophisticated,
+complex and they just don&rsquo;t crash or behave weirdly.</p></li><li><p>Just as aircraft have cockpit voice recorders and black boxes, modern systems
+should improve logging as the overall system matures for quick and meticulous
+post-incident analysis.</p></li><li><p>Pilots are well aware of the importance of each subsystem of aircraft and the
+impact of its failure. Similarly, SREs should be well aware of the subsystems
+and impact of its failure. I prefer to name changes which can have a
+significant impact on the overall system and can lead to SLA breaches as
+<strong><em>sensitive changes</em></strong>.</p></li><li><p>Just as aircraft have pre-flight, in-flight, emergency-checklist and
+post-flight checklist, similar checklists should be prepared and executed by
+SREs before performing, while performing and after performing sensitive
+changes on the system. SREs should also maintain an emergency-checklist
+which should be executed in an event if sensitive changes go wrong.</p></li><li><p>Just as aircraft subsystems are passed through simulations, sensitive changes
+should be simulated before applying it to the overall system.</p></li><li><p>Just as pilots makes decision-based on several input parameters like aircraft
+instrument cluster, inputs from air traffic controller, weather information,
+etc. SREs should also consider analyzing information from various tools before
+reaching the decision. If the required tooling is unavailable, they should
+step forward and develop those tools.</p></li><li><p>Pilots, SREs are humans and humans are flawed to make mistakes, so like
+Pilots, SREs should be focussed while performing any kind of sensitive changes
+to systems or as <a href=https://en.wikipedia.org/wiki/Spock>Spock</a> would say it,
+they shouldn&rsquo;t be <a href="https://www.youtube.com/watch?v=k9vHopyEtzs">emotionally compromised</a>.</p></li><li><p>Just as Transport Safety Boards amends the appropriate documents after
+investigating the air crash, similarly SREs should update corresponding system
+knowledge base, engineering practices, checklists after the postmortem and
+should be reviewed periodically by the peers.</p></li><li><p>As Murphy&rsquo;s law states <em>&ldquo;Anything that can go wrong, will go wrong&rdquo;</em>. In such
+events, like pilots, SREs should rely on their knowledge, aptitude, and
+experience to solve these novel challenging situations.</p></li></ul><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/Xs-PUqNsdn0 style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div></div><footer></footer></article></section></div><footer class=footer><section>In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️.</section><section class=container>©
+2022
+Anshul Patel
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.236049395dc3682fb2719640872958e12f1f24067bb09c327b233e6290c7edac.js integrity="sha256-I2BJOV3DaC+ycZZAhylY4S8fJAZ7sJwyeyM+YpDH7aw="></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-93926186-1","auto"),ga("send","pageview"))</script></body></html>
