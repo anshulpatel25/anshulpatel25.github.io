@@ -6,11 +6,13 @@ tags:
   - "linux"
 ---
 
+<!-- markdownlint-disable-file MD033 -->
+
 This article provides introduction to Docker, how it differs from
 Virtual Machine and underlining technologies.
 
 <!--more-->
 
 ## Slides
-<!-- markdownlint-disable-next-line MD033 -->
+
 {{<slideshare BQjYUZr8vfa66W>}}

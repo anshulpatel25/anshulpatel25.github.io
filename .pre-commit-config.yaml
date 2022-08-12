@@ -15,7 +15,7 @@ repos:
     rev: v4.3.0
     hooks:
       - id: check-added-large-files
-        args: ['--maxkb=5000']
+        args: ["--maxkb=5000"]
       - id: check-case-conflict
       - id: check-symlinks
       - id: check-yaml
@@ -31,3 +31,7 @@ repos:
     rev: v0.32.1
     hooks:
       - id: markdownlint-docker
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.7.1
+    hooks:
+      - id: prettier

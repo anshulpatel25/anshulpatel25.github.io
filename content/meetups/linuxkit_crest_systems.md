@@ -3,6 +3,7 @@ title: "LinuxKit"
 date: 2017-07-08T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
 
 My meetup talk discusses about how to build immutable
 operating systems [Unikernels] with LinuxKit.
@@ -11,7 +12,6 @@ operating systems [Unikernels] with LinuxKit.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare 4wv4PfiqLR2Ezq>}}
 
 ## Pictures

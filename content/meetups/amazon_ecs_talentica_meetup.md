@@ -3,6 +3,8 @@ title: "Container Cluster Management with AWS ECS"
 date: 2016-06-18T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
+
 My meetup talk discusses about basics of Docker containers
 and how to orchestrate the containers at scale using AWS ECS.
 
@@ -10,7 +12,6 @@ and how to orchestrate the containers at scale using AWS ECS.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare ldqXAFbAlbUbjP>}}
 
 ## Pictures

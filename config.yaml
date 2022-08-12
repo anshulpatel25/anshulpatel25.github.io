@@ -5,7 +5,6 @@ title: "Anshul Patel"
 languageCode: "en"
 defaultContentLanguage: "en"
 
-
 paginate: 10
 enableEmoji: true
 
@@ -38,7 +37,6 @@ params:
       weight: 3
       url: "mailto:anshulpatel25@gmail.com"
 
-
 languages:
   en:
     languageName: ":uk:"
@@ -53,6 +51,9 @@ languages:
         - name: "About"
           weight: 3
           url: "/about/"
+        - name: "FOSS"
+          weight: 4
+          url: "/foss/"
 
 theme:
   - github.com/luizdepra/hugo-coder

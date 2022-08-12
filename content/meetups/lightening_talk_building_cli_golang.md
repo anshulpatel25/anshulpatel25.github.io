@@ -3,6 +3,8 @@ title: "Building CLI applications with Golang"
 date: 2017-11-11T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
+
 My lightening talk discusses on structure, architecture, framework and
 workflow of developing Command Line Interface (CLI) applications using Golang.
 
@@ -10,7 +12,6 @@ workflow of developing Command Line Interface (CLI) applications using Golang.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare Fgzi0xpxqHbLfq>}}
 
 ## Pictures

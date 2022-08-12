@@ -18,7 +18,7 @@
 - **Public Clouds**: Amazon Web Services (AWS), Google Cloud Platform (GCP)
 - **CI/CD Systems**: Concourse, Jenkins, Harness.io, GCP Cloud Build
 - **Observability**: Prometheus, AWS Cloudwatch, GCP Operations Suite,
-Elasticsearch Kibana Logstash, Jaeger, Grafana
+  Elasticsearch Kibana Logstash, Jaeger, Grafana
 - **Infrastructure as Code**: Terraform, Ansible, Packer, AWS CDK, Pulumi
 - **Container Systems**: Docker, Kubernetes [GKE, EKS], Sysbox
 - **Unikernel Toolkits**: LinuxKit

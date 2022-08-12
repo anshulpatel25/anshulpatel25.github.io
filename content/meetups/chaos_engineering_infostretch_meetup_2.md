@@ -3,6 +3,7 @@ title: "Chaos Engineering with Gremlin Platform"
 date: 2019-12-28T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
 
 My meetup talk discusses about conducting Chaos Engineering
 experiments using Gremlin platform.
@@ -11,7 +12,6 @@ experiments using Gremlin platform.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare 1PVjm20jneey8p>}}
 
 ## Pictures

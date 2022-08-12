@@ -3,6 +3,7 @@ title: "Apache Zookeeper"
 date: 2016-10-08T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
 
 My meetup talk discusses about the architecture, configuration,
 scalability and management of Apache Zookeeper.
@@ -11,7 +12,6 @@ scalability and management of Apache Zookeeper.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare qyiH1pC1qotEG5>}}
 
 ## Pictures

@@ -6,7 +6,6 @@ tags:
   - "security"
 ---
 
-
 [2016 saw 71%](http://www.akamai.com/us/en/multimedia/documents/state-of-the-internet/q3-2016-state-of-the-internet-security-report-infographic.pdf)
 rise in Denial of Service attacks with biggest attack of 623 Gbps and mega
 attacks averaging around 100 Gbps.

@@ -3,6 +3,7 @@ title: "Docker Notary"
 date: 2018-06-23T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
 
 My meetup talk discusses about securely distributing docker images
 in Software Supply Chain using Docker Notary.
@@ -11,7 +12,6 @@ in Software Supply Chain using Docker Notary.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare eJ3n9q1bdOVh0T>}}
 
 ## Pictures

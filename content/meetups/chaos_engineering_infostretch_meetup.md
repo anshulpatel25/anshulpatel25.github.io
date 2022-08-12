@@ -3,6 +3,7 @@ title: "Chaos Engineering with Chaos Lambda"
 date: 2019-09-15T00:00:00+05:30
 ---
 
+<!-- markdownlint-disable-file MD033 -->
 
 My meetup talk discusses about basics of Chaos Engineering
 and how to induce Chaos Engineering via Chaos Lambda.
@@ -11,7 +12,6 @@ and how to induce Chaos Engineering via Chaos Lambda.
 
 ## Slides
 
-<!-- markdownlint-disable-next-line MD033 -->
 {{<slideshare c50CP9f5YCCG6L>}}
 
 ## Pictures
