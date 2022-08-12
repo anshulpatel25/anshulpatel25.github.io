@@ -3,13 +3,18 @@
 ## Present
 
 - Infrastructure Engineer @ [Woven Planet](https://www.woven-planet.global/en)
+  , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
 
 ## Past
 
 - Senior DevOps Lead @ [Infostretch (now Apexon)](https://www.apexon.com/)
+  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Senior DevOps Engineer @ [Talentica](https://www.talentica.com/)
+  , [Pune](https://en.wikipedia.org/wiki/Pune)
 - Software Configuration Management Engineer @ [Amdocs](https://www.amdocs.com/)
+  , [Pune](https://en.wikipedia.org/wiki/Pune)
 - Junior Systems Engineer @ [Elitecore (now Sterlite Tech)](https://www.stl.tech/)
+  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 
 ## Skillset
 
