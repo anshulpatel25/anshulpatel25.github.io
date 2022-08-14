@@ -19,6 +19,8 @@ params:
   avatarURL: "images/anshul.jpg"
   dateFormat: "January 02, 2006"
   colorScheme: "auto"
+  favicon_16: "images/favicon_16.png"
+  favicon_32: "images/favicon_32.png"
   customCSS:
     - "css/custom.css"
     - "css/fork-awesome.css"
