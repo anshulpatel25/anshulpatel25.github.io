@@ -32,6 +32,6 @@ repos:
     hooks:
       - id: markdownlint-docker
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.7.1
+    rev: v3.0.0-alpha.0
     hooks:
       - id: prettier

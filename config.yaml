@@ -50,9 +50,9 @@ languages:
         - name: "Meetups"
           weight: 2
           url: "/meetups/"
-        - name: "FOSS"
+        - name: "OSS"
           weight: 3
-          url: "/foss/"
+          url: "/oss/"
         - name: "About"
           weight: 4
           url: "/about/"
