@@ -20,6 +20,13 @@ lifecycle.
 - Junior Systems Engineer @ [Elitecore (now Sterlite Tech)](https://www.stl.tech/)
   , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 
+## Certifications
+
+- [Google Cloud Certified Professional Cloud Architect](https://www.credential.net/071157a6-d983-43af-aee2-d687f27e68ad)
+- [CloudBees Certified Jenkins Engineer](https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488)
+- [AWS Certified Solutins Architect - Associate](https://www.dropbox.com/s/e4n0w46pt3pqq4d/awsSolutionsArchitect_AE.pdf?dl=0)
+- [Red Hat Certified Engineer](https://www.dropbox.com/s/9nc88jt7h2orxrt/Patel_Anshul_RHCE.pdf?dl=0)
+
 ## Skillset
 
 - **Operating System**: Linux, Windows
