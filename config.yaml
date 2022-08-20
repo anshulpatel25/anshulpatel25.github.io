@@ -24,6 +24,10 @@ params:
   customCSS:
     - "css/custom.css"
     - "css/fork-awesome.css"
+    - "css/cookieconsent.min.css"
+  customJS:
+    - "js/cookieconsent.min.js"
+    - "js/consent.js"
   footerQuote: "In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️."
   social:
     - name: "Github"
