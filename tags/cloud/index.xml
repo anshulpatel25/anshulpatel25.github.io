@@ -8,4 +8,6 @@ defines cloud computing characteristics as follows:&lt;/p>
 &lt;li>Broad network access&lt;/li>
 &lt;li>Resource pooling&lt;/li>
 &lt;li>Measured service&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Container Cluster Management with AWS ECS</title><link>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</link><pubDate>Sat, 18 Jun 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;p>My meetup talk discusses about basics of Docker containers
+and how to orchestrate the containers at scale using AWS ECS.&lt;/p></description></item></channel></rss>
