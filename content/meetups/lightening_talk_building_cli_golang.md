@@ -1,6 +1,9 @@
 ---
 title: "Building CLI applications with Golang"
 date: 2017-11-11T00:00:00+05:30
+tags:
+  - "programming"
+  - "devops"
 ---
 
 <!-- markdownlint-disable-file MD033 -->

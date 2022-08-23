@@ -1,6 +1,10 @@
 ---
 title: "Container Cluster Management with AWS ECS"
 date: 2016-06-18T00:00:00+05:30
+tags:
+  - "cloud"
+  - "devops"
+  - "containers"
 ---
 
 <!-- markdownlint-disable-file MD033 -->

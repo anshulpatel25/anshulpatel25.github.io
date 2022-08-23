@@ -1,6 +1,10 @@
 ---
 title: "Docker Notary"
 date: 2018-06-23T00:00:00+05:30
+tags:
+  - "containers"
+  - "security"
+  - "devops"
 ---
 
 <!-- markdownlint-disable-file MD033 -->

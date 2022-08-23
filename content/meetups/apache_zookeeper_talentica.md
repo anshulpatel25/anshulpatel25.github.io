@@ -1,6 +1,8 @@
 ---
 title: "Apache Zookeeper"
 date: 2016-10-08T00:00:00+05:30
+tags:
+  - "bigdata"
 ---
 
 <!-- markdownlint-disable-file MD033 -->

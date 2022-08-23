@@ -1,6 +1,9 @@
 ---
 title: "Chaos Engineering with Litmus Chaos Framework"
 date: 2020-09-05T00:00:00+05:30
+tags:
+  - "chaosengineering"
+  - "highavailability"
 ---
 
 <!-- markdownlint-disable-file MD033 -->

@@ -1,6 +1,11 @@
 ---
 title: "LinuxKit"
 date: 2017-07-08T00:00:00+05:30
+tags:
+  - "linux"
+  - "containers"
+  - "performance"
+  - "devops"
 ---
 
 <!-- markdownlint-disable-file MD033 -->
