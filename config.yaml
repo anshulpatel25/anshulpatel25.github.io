@@ -28,6 +28,8 @@ params:
   customJS:
     - "js/cookieconsent.min.js"
     - "js/consent.js"
+    - "js/lunr.js"
+    - "js/search.js"
   footerQuote: "In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️."
   social:
     - name: "Github"
@@ -42,6 +44,12 @@ params:
       icon: "fa fa-2x fa-envelope"
       weight: 3
       url: "mailto:anshulpatel25@gmail.com"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 languages:
   en:
