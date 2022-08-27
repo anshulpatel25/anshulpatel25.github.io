@@ -28,6 +28,8 @@ params:
   customJS:
     - "js/cookieconsent.min.js"
     - "js/consent.js"
+    - "js/search.js"
+    - "js/lunr.js"
   footerQuote: "In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️."
   social:
     - name: "Github"
@@ -42,6 +44,11 @@ params:
       icon: "fa fa-2x fa-envelope"
       weight: 3
       url: "mailto:anshulpatel25@gmail.com"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 languages:
   en:
@@ -51,14 +58,17 @@ languages:
         - name: "Posts"
           weight: 1
           url: "/posts/"
-        - name: "Meetups"
+        - name: "Search"
           weight: 2
+          url: "/search/"
+        - name: "Meetups"
+          weight: 3
           url: "/meetups/"
         - name: "OSS"
-          weight: 3
+          weight: 4
           url: "/oss/"
         - name: "About"
-          weight: 4
+          weight: 5
           url: "/about/"
 
 theme:
