@@ -1,4 +1,6 @@
-# Free and Opensource Contributions
+---
+title: Opensource Contributions
+---
 
 - <https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125>
 - <https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17>

@@ -1,63 +1,73 @@
-var searchElem = document.getElementById("search-input");
-var posts;
-function loadSearch() {
-    // call the index.json file from server by http get request
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText);
-                if (data) {
-                    posts = data; // load json data
-                }
-            } else {
-                console.log(xhr.responseText);
-            }
-        }
-    };
-    xhr.open('GET', "/index.json");
-    xhr.send();
-}
-loadSearch(); // call loadsearch to load the json file
-function showSearchResults() {
-    var query = searchElem.value || ''; // get the value from input
-    var searchString = query.replace(/[^\w\s]/gi, ''); // clear white spaces
-    var target = document.getElementById('list'); // target the ul list to render the results
-    var postsByTitle = posts.reduce((acc, curr) => { // map lunr search index to your articles
-        acc[curr.title] = curr;
-        return acc;
-    }, {}
-    );
-    // build lunr index file
-    var index = lunr(function () {
-        this.ref('title')
-        this.field('content')
-        posts.forEach(function (doc) {
-            this.add(doc)
-        }, this)
-    });
-    // search in lunr index
-    if (searchString && searchString != '') {
-        var matches = index.search(searchString);
-        var matchPosts = [];
-        matches.forEach((m) => {
-            matchPosts.push(postsByTitle[m.ref]);
-        });
-        if (matchPosts.length > 0) {
-            // match found with input text and lunr index
-            target.innerHTML = matchPosts.map(function (p) {
-                if (p != undefined) {
-                    console.log(p.uri)
-                    return `<li>
-                        <a href="${p.uri}"> ${p.title}</a>
-                        </li>`;
-                }
-            }).join('');
-        } else {
-            // if no results found, then render a general message
-            target.innerHTML = `<br><h2 style="text-align:center">No search results found</h2>`;
-        };
-    } else {
-        target.innerHTML = ''
+// https://ruddra.com/add-search-functionality-hugo/
+
+let url = "/index.json";
+let posts = {};
+
+function getIndexData(url, callback) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", url);
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      const status = xhr.status;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        callback(JSON.parse(xhr.responseText));
+      } else {
+        console.log("ERROR: Error fetching data ....");
+        callback({});
+      }
     }
-};
+  };
+  xhr.send();
+}
+
+function updatePosts(payload) {
+  posts = payload;
+}
+
+getIndexData(url, updatePosts);
+
+function buildIndex(posts) {
+  return lunr(function () {
+    this.ref("title");
+    this.field("content");
+    posts.forEach(function (doc) {
+      this.add(doc);
+    }, this);
+  });
+}
+
+function showSearchResults() {
+  let rawQuery = document.getElementById("search-input").value || "";
+  let searchQuery = rawQuery.replace(/[^\w\s]/gi, "");
+  let postsByTitle = posts.reduce((acc, curr) => {
+    acc[curr.title] = curr;
+    return acc;
+  }, {});
+
+  let index = buildIndex(posts);
+
+  let listRelevantPost = document.getElementById("list");
+
+  if (searchQuery && searchQuery != "") {
+    let searchResults = index.search(searchQuery);
+    let relevantPosts = [];
+    searchResults.forEach((post) => {
+      relevantPosts.push(postsByTitle[post.ref]);
+    });
+
+    if (relevantPosts.length > 0) {
+      listRelevantPost.innerHTML = relevantPosts
+        .map(function (post) {
+          if (post != undefined) {
+            return `<li><a href="${post.uri}">${post.title}</a></li>`;
+            console.log(post);
+          }
+        })
+        .join("");
+    } else {
+      listRelevantPost.innerHTML = `<br><h2 style="text-align:center">No search results found</h2>`;
+    }
+  } else {
+    listRelevantPost.innerHTML = "";
+  }
+}

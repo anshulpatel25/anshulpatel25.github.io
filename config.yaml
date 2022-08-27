@@ -59,14 +59,17 @@ languages:
         - name: "Posts"
           weight: 1
           url: "/posts/"
-        - name: "Meetups"
+        - name: "Search"
           weight: 2
+          url: "/search/"
+        - name: "Meetups"
+          weight: 3
           url: "/meetups/"
         - name: "OSS"
-          weight: 3
+          weight: 4
           url: "/oss/"
         - name: "About"
-          weight: 4
+          weight: 5
           url: "/about/"
 
 theme:
