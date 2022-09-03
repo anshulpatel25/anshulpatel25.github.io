@@ -58,8 +58,8 @@ the incident from recurring.
 
 **Resolution** :
 
-1. Updated the Machine family from t2.large to m4.xlarge. _R2D2APIGateway_ now
-   has capacity to handle 5X traffic surge. (Github Issue: #2595)
+Updated the Machine family from t2.large to m4.xlarge. _R2D2APIGateway_ now
+has capacity to handle 5X traffic surge. (Github Issue: #2595)
 
 **Detection** : Monitoring System detected timeouts for queries to
 _R2D2APIGateway_.
