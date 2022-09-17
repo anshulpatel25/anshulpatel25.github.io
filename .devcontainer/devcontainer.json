@@ -1,0 +1,21 @@
+{
+  "name": "Ubuntu",
+  "image": "ghcr.io/anshulpatel25/vscode-dev-containers:latest",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.rulers": [80, 130]
+      },
+      "extensions": [
+        "2gua.rainbow-brackets",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "redhat.vscode-yaml",
+        "shardulm94.trailing-spaces",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  }
+}
