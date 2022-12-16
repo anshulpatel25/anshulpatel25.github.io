@@ -36,6 +36,6 @@ repos:
     hooks:
       - id: prettier
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.6.1
+    rev: 2.6.2
     hooks:
       - id: editorconfig-checker
