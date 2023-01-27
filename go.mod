@@ -2,4 +2,4 @@ module github.com/anshulpatel25/anshulpatel25.github.io
 
 go 1.19
 
-require github.com/luizdepra/hugo-coder v0.0.0-20230110215216-6407a2039bca // indirect
+require github.com/luizdepra/hugo-coder v0.0.0-20230122232529-09e04bcbb5d7 // indirect
