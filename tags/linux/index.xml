@@ -2,7 +2,8 @@
 &lt;p>This article provides introduction to Docker, how it differs from
 Virtual Machine and underlining technologies.&lt;/p></description></item><item><title>How Linux calculates CPU utilization</title><link>http://www.anshulpatel.in/posts/linux_cpu_percentage/</link><pubDate>Fri, 17 May 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_cpu_percentage/</guid><description>&lt;p>This article discusses the internals about how Linux calculates CPU utilization
 for a process.&lt;/p></description></item><item><title>Linux Kernel Capabilities Explained</title><link>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</link><pubDate>Mon, 17 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</guid><description>&lt;p>Traditionally, Linux Kernel distinguishes its processes with the following&lt;/p>
-&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process">two categories&lt;/a>:&lt;/p>
+&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process" class="external-link" target="_blank" rel="noopener">two categories&lt;/a>
+:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;strong>Privileged Processes&lt;/strong>: These processes allow the user to bypass all Kernel

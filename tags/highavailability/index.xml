@@ -6,7 +6,7 @@ experiments using Gremlin platform.&lt;/p></description></item><item><title>Chao
 &lt;p>My meetup talk discusses about basics of Chaos Engineering
 and how to induce Chaos Engineering via Chaos Lambda.&lt;/p></description></item><item><title>What are cloud-native applications?</title><link>http://www.anshulpatel.in/posts/cloud_native/</link><pubDate>Fri, 09 Aug 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/cloud_native/</guid><description>&lt;p>To understand the cloud-native, we should first understand the definition of
 the cloud.&lt;/p>
-&lt;p>&lt;a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST&lt;/a>
+&lt;p>&lt;a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf" class="external-link" target="_blank" rel="noopener">NIST&lt;/a>
 defines cloud computing characteristics as follows:&lt;/p>
 &lt;ul>
 &lt;li>Rapid elasticity&lt;/li>
@@ -20,8 +20,8 @@ in order to build confidence in the system’s capability to withstand turbulent
 conditions in production.&lt;/p></description></item><item><title>Distributed Systems: Workhorse of Computing Age</title><link>http://www.anshulpatel.in/posts/distributed_systems/</link><pubDate>Wed, 19 Oct 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/distributed_systems/</guid><description>&lt;p>From Iron Age(Bare Metal) Computing to Cloud Computing, Distributed Systems have
 played a vital role in processing and delivering information, but we are just
 getting started.&lt;/p>
-&lt;p>We are set to enter &lt;a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html">Zetta Byte era&lt;/a>
-with just &lt;a href="http://en.wikipedia.org/wiki/Global_Internet_usage">40% of total world population&lt;/a>
+&lt;p>We are set to enter &lt;a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html" class="external-link" target="_blank" rel="noopener">Zetta Byte era&lt;/a>
+with just &lt;a href="http://en.wikipedia.org/wiki/Global_Internet_usage" class="external-link" target="_blank" rel="noopener">40% of total world population&lt;/a>
 connected to Internet.&lt;/p>
 &lt;p>Since the inception of Internet, every technology giant is using aspects of
 Distributed Systems to achieve high availability and scalability in order to
