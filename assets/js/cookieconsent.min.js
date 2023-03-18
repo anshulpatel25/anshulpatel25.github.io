@@ -418,7 +418,7 @@
                                 );
                           })(n, i, "." + o);
                       return s;
-                    }.call(this, this.options.palette));
+                    }).call(this, this.options.palette);
                     this.customStyleSelector &&
                       o.push(this.customStyleSelector);
                     return o;
@@ -508,7 +508,7 @@
                   window.addEventListener("click", l),
                   window.addEventListener("touchend", l));
               }
-            }.call(this),
+            }).call(this),
               function () {
                 "info" != this.options.type && (this.options.revokable = !0);
                 t.isMobile() && (this.options.animateRevokable = !1);
@@ -539,7 +539,7 @@
                   }
                 }
               }.call(this),
-              this.options.autoOpen && this.autoOpen());
+              this.options.autoOpen && this.autoOpen();
           }),
           (o.prototype.destroy = function () {
             this.onButtonClick &&
