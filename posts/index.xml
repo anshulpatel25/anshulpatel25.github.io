@@ -11,10 +11,8 @@ defines cloud computing characteristics as follows:&lt;/p>
 &lt;li>Resource pooling&lt;/li>
 &lt;li>Measured service&lt;/li>
 &lt;/ul></description></item><item><title>How Linux calculates CPU utilization</title><link>http://www.anshulpatel.in/posts/linux_cpu_percentage/</link><pubDate>Fri, 17 May 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_cpu_percentage/</guid><description>&lt;p>This article discusses the internals about how Linux calculates CPU utilization
-for a process.&lt;/p></description></item><item><title>What SREs can learn from Aviation industry?</title><link>http://www.anshulpatel.in/posts/sre_aviation_process/</link><pubDate>Wed, 10 Apr 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/sre_aviation_process/</guid><description>&lt;p>Recently having binged watch &lt;a href="https://www.imdb.com/title/tt0386950/" class="external-link" target="_blank" rel="noopener">Air Emergency&lt;/a>
-,
-I felt that &lt;a href="https://landing.google.com/sre/" class="external-link" target="_blank" rel="noopener">SREs&lt;/a>
-can learn many things from
+for a process.&lt;/p></description></item><item><title>What SREs can learn from Aviation industry?</title><link>http://www.anshulpatel.in/posts/sre_aviation_process/</link><pubDate>Wed, 10 Apr 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/sre_aviation_process/</guid><description>&lt;p>Recently having binged watch &lt;a href="https://www.imdb.com/title/tt0386950/" class="external-link" target="_blank" rel="noopener">Air Emergency&lt;/a>,
+I felt that &lt;a href="https://landing.google.com/sre/" class="external-link" target="_blank" rel="noopener">SREs&lt;/a> can learn many things from
 aviation industry.&lt;/p></description></item><item><title>Create Self-Signed CA and TLS certificates using Terraform</title><link>http://www.anshulpatel.in/posts/private_tls_terrform/</link><pubDate>Sun, 09 Dec 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/private_tls_terrform/</guid><description>&lt;p>This article discusses the creation of Self-signed CA and TLS certificates using
 Terrform&lt;/p></description></item><item><title>Fault Tolerance, High Availability &amp; Disaster Recovery</title><link>http://www.anshulpatel.in/posts/ft_ha_dr/</link><pubDate>Tue, 24 Apr 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/ft_ha_dr/</guid><description>&lt;p>This article discusses the subtle differences between fault tolerance,
 disaster recovery and high availability.&lt;/p></description></item><item><title>Designing a Chaos Engineering Experiment</title><link>http://www.anshulpatel.in/posts/chaos_engg_exprmnt_dsgn/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/chaos_engg_exprmnt_dsgn/</guid><description>&lt;p>Chaos engineering is the discipline of experimenting on a distributed system,
@@ -22,8 +20,7 @@ in order to build confidence in the system’s capability to withstand turbulent
 conditions in production.&lt;/p></description></item><item><title>SLI, SLO &amp; SLA</title><link>http://www.anshulpatel.in/posts/sre_sli_sla_slo/</link><pubDate>Mon, 30 Oct 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/sre_sli_sla_slo/</guid><description>&lt;p>Service Level Indicator(&lt;strong>SLI&lt;/strong>), Service Level Object(&lt;strong>SLO&lt;/strong>) &amp;amp; Service Level
 Agreement(&lt;strong>SLA&lt;/strong>) are parameters with which reliability, availability and
 performance of the service are measured.&lt;/p></description></item><item><title>Linux Kernel Capabilities Explained</title><link>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</link><pubDate>Mon, 17 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</guid><description>&lt;p>Traditionally, Linux Kernel distinguishes its processes with the following&lt;/p>
-&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process" class="external-link" target="_blank" rel="noopener">two categories&lt;/a>
-:&lt;/p>
+&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process" class="external-link" target="_blank" rel="noopener">two categories&lt;/a>:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;strong>Privileged Processes&lt;/strong>: These processes allow the user to bypass all Kernel
@@ -44,8 +41,7 @@ enabled the frequent release and deployment of software platforms and services.&
 &lt;p>Such frequency of updates and introduction of new Software, have made the
 failure inevitable.&lt;/p></description></item><item><title>Semantic Versioning Simplified</title><link>http://www.anshulpatel.in/posts/semantic_versioning/</link><pubDate>Sun, 11 Dec 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/semantic_versioning/</guid><description>&lt;p>Software Versioning makes it easy and convenient to track, test, deploy, patch,
 and rollback features, enhancements and bug/fixes across variety of
-environmentsin &lt;a href="https://youtu.be/XM1HRy7aJxE" class="external-link" target="_blank" rel="noopener">Software Supply Chain&lt;/a>
-.&lt;/p>
+environmentsin &lt;a href="https://youtu.be/XM1HRy7aJxE" class="external-link" target="_blank" rel="noopener">Software Supply Chain&lt;/a>.&lt;/p>
 &lt;p>Semantic Versioning provides an efficient and effective framework to version
 the software products, so that the infamous
 &lt;a href="https://en.wikipedia.org/wiki/Dependency_hell" class="external-link" target="_blank" rel="noopener">Dependency Hell&lt;/a>
@@ -53,8 +49,7 @@ can be avoided.&lt;/p></description></item><item><title>Denial of Service(DoS): 
 rise in Denial of Service attacks with biggest attack of 623 Gbps and mega
 attacks averaging around 100 Gbps.&lt;/p>
 &lt;p>If unprepared, Denial of Service can result in
-&lt;a href="http://blog.radware.com/security/2013/05/how-much-can-a-ddos-attack-cost-your-business/" class="external-link" target="_blank" rel="noopener">Financial losses, Reputational Damage, Customer Attrition and Legal Pursuits&lt;/a>
-.&lt;/p></description></item><item><title>Distributed Systems: Workhorse of Computing Age</title><link>http://www.anshulpatel.in/posts/distributed_systems/</link><pubDate>Wed, 19 Oct 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/distributed_systems/</guid><description>&lt;p>From Iron Age(Bare Metal) Computing to Cloud Computing, Distributed Systems have
+&lt;a href="http://blog.radware.com/security/2013/05/how-much-can-a-ddos-attack-cost-your-business/" class="external-link" target="_blank" rel="noopener">Financial losses, Reputational Damage, Customer Attrition and Legal Pursuits&lt;/a>.&lt;/p></description></item><item><title>Distributed Systems: Workhorse of Computing Age</title><link>http://www.anshulpatel.in/posts/distributed_systems/</link><pubDate>Wed, 19 Oct 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/distributed_systems/</guid><description>&lt;p>From Iron Age(Bare Metal) Computing to Cloud Computing, Distributed Systems have
 played a vital role in processing and delivering information, but we are just
 getting started.&lt;/p>
 &lt;p>We are set to enter &lt;a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html" class="external-link" target="_blank" rel="noopener">Zetta Byte era&lt;/a>

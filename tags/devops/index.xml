@@ -6,8 +6,7 @@ workflow of developing Command Line Interface (CLI) applications using Golang.&l
 &lt;p>My meetup talk discusses about how to build immutable
 operating systems [Unikernels] with LinuxKit.&lt;/p></description></item><item><title>Semantic Versioning Simplified</title><link>http://www.anshulpatel.in/posts/semantic_versioning/</link><pubDate>Sun, 11 Dec 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/semantic_versioning/</guid><description>&lt;p>Software Versioning makes it easy and convenient to track, test, deploy, patch,
 and rollback features, enhancements and bug/fixes across variety of
-environmentsin &lt;a href="https://youtu.be/XM1HRy7aJxE" class="external-link" target="_blank" rel="noopener">Software Supply Chain&lt;/a>
-.&lt;/p>
+environmentsin &lt;a href="https://youtu.be/XM1HRy7aJxE" class="external-link" target="_blank" rel="noopener">Software Supply Chain&lt;/a>.&lt;/p>
 &lt;p>Semantic Versioning provides an efficient and effective framework to version
 the software products, so that the infamous
 &lt;a href="https://en.wikipedia.org/wiki/Dependency_hell" class="external-link" target="_blank" rel="noopener">Dependency Hell&lt;/a>

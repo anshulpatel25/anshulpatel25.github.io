@@ -2,8 +2,7 @@
 Terrform&lt;/p></description></item><item><title>Docker Notary</title><link>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</link><pubDate>Sat, 23 Jun 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;p>My meetup talk discusses about securely distributing docker images
 in Software Supply Chain using Docker Notary.&lt;/p></description></item><item><title>Linux Kernel Capabilities Explained</title><link>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</link><pubDate>Mon, 17 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</guid><description>&lt;p>Traditionally, Linux Kernel distinguishes its processes with the following&lt;/p>
-&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process" class="external-link" target="_blank" rel="noopener">two categories&lt;/a>
-:&lt;/p>
+&lt;p>&lt;a href="https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process" class="external-link" target="_blank" rel="noopener">two categories&lt;/a>:&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;strong>Privileged Processes&lt;/strong>: These processes allow the user to bypass all Kernel
@@ -21,5 +20,4 @@ communication over HTTPS.&lt;/p></description></item><item><title>Denial of Serv
 rise in Denial of Service attacks with biggest attack of 623 Gbps and mega
 attacks averaging around 100 Gbps.&lt;/p>
 &lt;p>If unprepared, Denial of Service can result in
-&lt;a href="http://blog.radware.com/security/2013/05/how-much-can-a-ddos-attack-cost-your-business/" class="external-link" target="_blank" rel="noopener">Financial losses, Reputational Damage, Customer Attrition and Legal Pursuits&lt;/a>
-.&lt;/p></description></item></channel></rss>
+&lt;a href="http://blog.radware.com/security/2013/05/how-much-can-a-ddos-attack-cost-your-business/" class="external-link" target="_blank" rel="noopener">Financial losses, Reputational Damage, Customer Attrition and Legal Pursuits&lt;/a>.&lt;/p></description></item></channel></rss>

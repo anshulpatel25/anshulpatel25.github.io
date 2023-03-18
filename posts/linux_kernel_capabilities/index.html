@@ -1,6 +1,5 @@
 <!doctype html><html lang=en><head><title>Linux Kernel Capabilities Explained · Anshul Patel</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="Traditionally, Linux Kernel distinguishes its processes with the following
-two categories
-:
+two categories:
 
 
 Privileged Processes: These processes allow the user to bypass all Kernel
@@ -11,8 +10,7 @@ Unprivileged Processes: These processes are subject to full permission
 checks, such as the effective UID, GID, and supplementary group list.
 
 "><meta name=keywords content="geek,gamer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Linux Kernel Capabilities Explained"><meta name=twitter:description content="Traditionally, Linux Kernel distinguishes its processes with the following
-two categories
-:
+two categories:
 
 
 Privileged Processes: These processes allow the user to bypass all Kernel
@@ -23,8 +21,7 @@ Unprivileged Processes: These processes are subject to full permission
 checks, such as the effective UID, GID, and supplementary group list.
 
 "><meta property="og:title" content="Linux Kernel Capabilities Explained"><meta property="og:description" content="Traditionally, Linux Kernel distinguishes its processes with the following
-two categories
-:
+two categories:
 
 
 Privileged Processes: These processes allow the user to bypass all Kernel
@@ -42,8 +39,7 @@ checks, such as the effective UID, GID, and supplementary group list.
 2-minute read</span></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/tags/security/>security</a></span>
 <span class=separator>•</span>
-<span class=tag><a href=/tags/linux/>linux</a></span></div></div></header><div class=post-content><p>Traditionally, Linux Kernel distinguishes its processes with the following</p><p><a href=https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process class=external-link target=_blank rel=noopener>two categories</a>
-:</p><ul><li><p><strong>Privileged Processes</strong>: These processes allow the user to bypass all Kernel
+<span class=tag><a href=/tags/linux/>linux</a></span></div></div></header><div class=post-content><p>Traditionally, Linux Kernel distinguishes its processes with the following</p><p><a href=https://unix.stackexchange.com/questions/258503/what-happens-when-a-non-root-user-sends-signals-to-root-users-process class=external-link target=_blank rel=noopener>two categories</a>:</p><ul><li><p><strong>Privileged Processes</strong>: These processes allow the user to bypass all Kernel
 permission checks.</p></li><li><p><strong>Unprivileged Processes</strong>: These processes are subject to full permission
 checks, such as the effective UID, GID, and supplementary group list.</p></li></ul><p>Granting full privileged access to a user process might induce system abuse,
 like unauthorized changes of data, backdoors, changing ACL, etc.</p><p>Linux 2.2 shipped with a solution called Capabilities. Capabilities allows the
@@ -69,12 +65,11 @@ Effective and Permitted ( &ldquo;-&rdquo; would remove it).</p><p>Now let&rsquo;
 </span></span><span style=display:flex><span>172.28.128.1 - - <span style=color:#f92672>[</span>06/Jul/2017 11:30:13<span style=color:#f92672>]</span> code 404, message File not found
 </span></span><span style=display:flex><span>172.28.128.1 - - <span style=color:#f92672>[</span>06/Jul/2017 11:30:13<span style=color:#f92672>]</span> <span style=color:#e6db74>&#34;GET /favicon.ico HTTP/1.1&#34;</span> <span style=color:#ae81ff>404</span> -</span></span></code></pre></div><p>We are now able to serve traffic over privileged port 80 with a non-privileged
 user.</p><p>At the time of writing this article, there are over 40 capabilities which can be
-assigned per requirement.</p><p>There are 3 modes for <a href=https://www.insecure.ws/linux/getcap_setcap.html class=external-link target=_blank rel=noopener>Capabilities</a>
-:</p><p><strong>e: Effective</strong> - This indicates that the capability is &ldquo;activated.&rdquo;</p><p><strong>p: Permitted</strong> - This indicates that the capability can be used.</p><p><strong>i: Inherited</strong> - This indicates that the capability is inherited by child
+assigned per requirement.</p><p>There are 3 modes for <a href=https://www.insecure.ws/linux/getcap_setcap.html class=external-link target=_blank rel=noopener>Capabilities</a>:</p><p><strong>e: Effective</strong> - This indicates that the capability is &ldquo;activated.&rdquo;</p><p><strong>p: Permitted</strong> - This indicates that the capability can be used.</p><p><strong>i: Inherited</strong> - This indicates that the capability is inherited by child
 elements/subprocesses.</p><p>Capabilities provide a concise and efficient way to assign privileged
 permissions to non-privileged users.</p></div><footer></footer></article></section></div><footer class=footer><section>In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️.</section><section class=container>© 2023 Anshul Patel · Powered by
 <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-<script src=/js/cookieconsent.min.min.faf3d03ff2f9255b4d9143342173f42c8cf68bf8f2c841eac311fa81b624c084.js integrity="sha256-+vPQP/L5JVtNkUM0IXP0LIz2i/jyyEHqwxH6gbYkwIQ="></script>
+<script src=/js/cookieconsent.min.min.29b14776f348229570e44872c7cd032bdd63f54e1caaaef7e3dde1a3bf1db4a1.js integrity="sha256-KbFHdvNIIpVw5Ehyx80DK91j9U4cqq73493ho78dtKE="></script>
 <script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script>
 <script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script>
 <script src=/js/lunr.min.9ed679385e5d53cd7a82dc360813ac71badca15107a6517eebcc174471af75f5.js integrity="sha256-ntZ5OF5dU816gtw2CBOscbrcoVEHplF+68wXRHGvdfU="></script>
