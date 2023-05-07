@@ -18,6 +18,8 @@ communication over HTTPS.
 
 HSTS is designed to overcome following threats:
 
+<!-- markdownlint-disable-file MD034 -->
+
 - User bookmarks or manual types like "http://example.com" are vulnerable to
   man-in-the-middle attack.
 

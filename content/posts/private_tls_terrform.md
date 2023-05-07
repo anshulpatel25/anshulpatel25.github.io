@@ -52,7 +52,9 @@ Above example code creates the following:
   keychain.
 - **api.anveshak.in.crt**: Certificate for DNS `api.anveshak.in`.
 - **api.anveshak.in.pem**: Private key for DNS `api.anveshak.in`.
+<!-- markdownlint-disable-file MD034 -->
 - **www.anveshak.in.cr**: Certificate for DNS `www.anveshak.in`.
+<!-- markdownlint-disable-file MD034 -->
 - **www.anveshak.in.pem**: Private key for DNS `www.anveshak.in`.
 
 ### Diagram
