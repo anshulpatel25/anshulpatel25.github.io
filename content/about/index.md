@@ -8,7 +8,7 @@ lifecycle.
 
 ## Present
 
-- Infrastructure Engineer @ [Woven Planet](https://www.woven-planet.global/en)
+- Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
   , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
 
 ## Past
@@ -24,28 +24,23 @@ lifecycle.
 
 ## Certifications
 
-- [Google Cloud Certified Professional Cloud Architect](https://www.credential.net/071157a6-d983-43af-aee2-d687f27e68ad)
+- [CNCF certified Kubernetes and Cloud Native Associate](https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c)
+- [Gooogle Cloud Certified Associate Cloud Engineer](https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea)
+- [AWS Certified Solutions Architect - Associate](https://www.dropbox.com/s/kiyqgbbi2h0wp7b/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20certificate%20-%202022.pdf?dl=0)
 - [CloudBees Certified Jenkins Engineer](https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488)
-- [AWS Certified Solutins Architect - Associate](https://www.dropbox.com/s/e4n0w46pt3pqq4d/awsSolutionsArchitect_AE.pdf?dl=0)
-- [Red Hat Certified Engineer](https://www.dropbox.com/s/9nc88jt7h2orxrt/Patel_Anshul_RHCE.pdf?dl=0)
 
 ## Skillset
 
-- **Operating System**: Linux, Windows
-- **Version Control System**: GitHub, GitLab
-- **Public Clouds**: Amazon Web Services (AWS), Google Cloud Platform (GCP)
-- **CI/CD Systems**: Concourse, Jenkins, Harness.io, GCP Cloud Build
-- **Observability**: Prometheus, AWS Cloudwatch, GCP Operations Suite,
-  Elasticsearch Kibana Logstash, Jaeger, Grafana
-- **Infrastructure as Code**: Terraform, Ansible, Packer, AWS CDK, Pulumi
-- **Container Systems**: Docker, Kubernetes [GKE, EKS], Sysbox
-- **Unikernel Toolkits**: LinuxKit
-- **Chaos Engineering**: Chaos Lambda, Gremlin Platform, Toxiproxy
-- **Web Servers and Proxy**: Nginx, Apache HTTP Server, Traefik
-- **Identity and Access Management**: Keycloak, Azure AD, AWS IAM, GCP IAM
-- **Database**: MySQL, PostgreSQL, MongoDB
-- **Programming Languages**: Java, Go
-- **Scripting Languages**: Python, Javascript, Bash
-- **API Management**: Kong
-- **Caching Systems**: Redis
-- **Big Data**: Apache Mesos, Apache Airflow, Apache Zookeeper, Apache Kafka
+- **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.
+- **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
+- **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.
+- **Agile Methodologies:** Scrum, Kanban
+- **CI/CD:** Github Actions, Concourse CI, Jenkins, GitOps.
+- **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.
+- **Security and Compliance:** Wiz, AWS Config, AWS Control Tower.
+- **Scripting Languages:** Python, Bash Shell.
+- **Programming Languages:** Go [Intermediate], Javascript [Intermediate].
+- **Database Systems:** MySQL, PostgreSQL, MongoDB.
+- **Caching Engine:** Redis, Memcached.
+- **Big Data:** Apache Kafka, Apache Airflow.
+
