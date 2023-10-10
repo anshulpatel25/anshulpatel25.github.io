@@ -25,7 +25,7 @@ lifecycle.
 ## Certifications
 
 - [CNCF certified Kubernetes and Cloud Native Associate](https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c)
-- [Gooogle Cloud Certified Associate Cloud Engineer](https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea)
+- [Google Cloud Certified Associate Cloud Engineer](https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea)
 - [AWS Certified Solutions Architect - Associate](https://www.dropbox.com/s/kiyqgbbi2h0wp7b/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20certificate%20-%202022.pdf?dl=0)
 - [CloudBees Certified Jenkins Engineer](https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488)
 
