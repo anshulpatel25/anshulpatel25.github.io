@@ -43,4 +43,3 @@ lifecycle.
 - **Database Systems:** MySQL, PostgreSQL, MongoDB.
 - **Caching Engine:** Redis, Memcached.
 - **Big Data:** Apache Kafka, Apache Airflow.
-
