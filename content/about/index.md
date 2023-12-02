@@ -3,8 +3,7 @@ title: Experience Summary
 ---
 
 I am passionate about designing robust, efficient, secure, performant,
-compliant, and thrifty platform to accelerate the application development
-lifecycle.
+compliant, and thrifty digital infrastructure to maximize the business value.
 
 ## Present
 

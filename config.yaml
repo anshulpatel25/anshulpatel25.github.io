@@ -13,9 +13,9 @@ googleAnalytics: "UA-93926186-1"
 params:
   author: "Anshul Patel"
   description: "Anshul Patel's personal website"
-  keywords: "geek, gamer, techie, blog, engineer"
+  keywords: "geek, tinkerer, techie, blog, engineer"
   info:
-    - Geek 🤓, Gamer 🕹️, Techie 👨‍💻
+    - Geek 🤓, Tinkerer 👨‍🔧, Techie 👨‍💻
   avatarURL: "images/anshul.jpg"
   dateFormat: "January 02, 2006"
   colorScheme: "auto"
@@ -30,7 +30,7 @@ params:
     - "js/consent.js"
     - "js/search.js"
     - "js/lunr.js"
-  footerQuote: "In my spare time, I plan world domination from a secret villainous lair 🦹‍♂️."
+  footerQuote: "धर्मो रक्षति रक्षितः"
   social:
     - name: "Github"
       icon: "fa fa-2x fa-github"
