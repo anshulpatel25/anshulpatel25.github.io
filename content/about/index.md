@@ -2,8 +2,7 @@
 title: Experience Summary
 ---
 
-I am passionate about designing robust, efficient, secure, performant,
-compliant, and thrifty digital infrastructure to maximize the business value.
+Result driven engineer with a decade of experience in architecting, implementing, and optimizing cloud infrastructure, site-reliability, and operations.
 
 ## Present
 
