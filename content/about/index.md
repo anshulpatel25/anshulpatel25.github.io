@@ -2,7 +2,9 @@
 title: Experience Summary
 ---
 
-Result driven engineer with a decade of experience in architecting, implementing, and optimizing cloud infrastructure, site-reliability, and operations.
+Result driven engineer with a decade of experience in architecting, implementing,
+and optimizing cloud infrastructure, site-reliability, and operations to maximize
+the business value.
 
 ## Present
 
