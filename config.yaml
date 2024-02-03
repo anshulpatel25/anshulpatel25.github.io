@@ -41,7 +41,7 @@ params:
       weight: 2
       url: "https://www.linkedin.com/in/anshul-patel-29a95635"
     - name: "Email"
-      icon: "fa fa-2x fa-envelope"
+      icon: "fa fa-2x fa-envelope-o"
       weight: 3
       url: "mailto:anshulpatel25@gmail.com"
 outputs:
