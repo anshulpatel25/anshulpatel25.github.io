@@ -3,3 +3,4 @@ _gen/
 public/
 .hugo_build.lock
 anshulpatel25.github.io.code-workspace
+node_modules/
