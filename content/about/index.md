@@ -8,11 +8,13 @@ the business value.
 
 ## Present
 
-- Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
-  , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
+- Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/)
+  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 
 ## Past
 
+- Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
+  , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
 - Senior DevOps Lead @ [Infostretch (now Apexon)](https://www.apexon.com/)
   , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Senior DevOps Engineer @ [Talentica](https://www.talentica.com/)
