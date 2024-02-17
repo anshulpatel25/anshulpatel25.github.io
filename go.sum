@@ -64,3 +64,5 @@ github.com/luizdepra/hugo-coder v0.0.0-20240131003939-1fdac008175c h1:9Bhv+nbe3C
 github.com/luizdepra/hugo-coder v0.0.0-20240131003939-1fdac008175c/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
 github.com/luizdepra/hugo-coder v0.0.0-20240205121531-cb6f1a797f52 h1:hKQY63T1gzbL3FNH9jfLGUhrJYST9KIJEitXR2HeV24=
 github.com/luizdepra/hugo-coder v0.0.0-20240205121531-cb6f1a797f52/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
+github.com/luizdepra/hugo-coder v0.0.0-20240214140951-3f82e100f670 h1:1mJl9n0FkMfC+NrqJZZZzyCqciBqgWUiyRLoOjxFXdw=
+github.com/luizdepra/hugo-coder v0.0.0-20240214140951-3f82e100f670/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
