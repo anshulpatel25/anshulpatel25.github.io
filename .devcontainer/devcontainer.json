@@ -5,7 +5,7 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "editor.rulers": [80, 130],
+        "editor.rulers": [80, 130]
       },
       "extensions": [
         "2gua.rainbow-brackets",
@@ -14,8 +14,8 @@
         "oderwat.indent-rainbow",
         "redhat.vscode-yaml",
         "shardulm94.trailing-spaces",
-        "EditorConfig.EditorConfig",
-      ],
-    },
-  },
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  }
 }
