@@ -6,13 +6,12 @@ Result driven engineer with a decade of experience in architecting, implementing
 and optimizing cloud infrastructure, site-reliability, and operations to maximize
 the business value.
 
-## Present
-
-- Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/)
-  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+<!-- ## Present -->
 
 ## Past
 
+- Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/)
+  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
   , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
 - Senior DevOps Lead @ [Infostretch (now Apexon)](https://www.apexon.com/)
