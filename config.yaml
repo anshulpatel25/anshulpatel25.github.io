@@ -8,7 +8,7 @@ defaultContentLanguage: "en"
 paginate: 10
 enableEmoji: true
 
-googleAnalytics: "UA-93926186-1"
+googleAnalytics: "G-62JLR4L8L8"
 
 params:
   author: "Anshul Patel"
