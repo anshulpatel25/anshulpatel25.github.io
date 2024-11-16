@@ -10,6 +10,8 @@ the business value.
 
 ## Past
 
+- Software Engineering Consultant, [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+  - [Toptal](https://www.toptal.com/) : [Anshul Patel](https://www.toptal.com/resume/anshul-patel)
 - Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/)
   , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
