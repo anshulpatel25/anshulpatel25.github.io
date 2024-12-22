@@ -10,7 +10,7 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk provides introduction to keycloak and how it can be 
+My meetup talk provides introduction to keycloak and how it can be
 leveraged for identity and access management.
 
 <!--more-->
