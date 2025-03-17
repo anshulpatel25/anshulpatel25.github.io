@@ -44,6 +44,10 @@ params:
       icon: "fa fa-2x fa-envelope-o"
       weight: 3
       url: "mailto:contact@anshulpatel.in"
+    - name: "Thangs - 3D Modeling and Design"
+      icon: "fa-solid fa-2x fa-wrench"
+      weight: 4
+      url: "https://thangs.com/designer/er.anshul.patel"
 outputs:
   home:
     - HTML
