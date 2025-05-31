@@ -44,9 +44,13 @@ params:
       icon: "fa fa-2x fa-envelope-o"
       weight: 3
       url: "mailto:contact@anshulpatel.in"
+    - name: "Youtube"
+      icon: "fa fa-2x fa-youtube"
+      weight: 4
+      url: "https://www.youtube.com/channel/UCOkY4R0GsvRoGCVqgPR6SQw"
     - name: "Thangs - 3D Modeling and Design"
       icon: "fa-solid fa-2x fa-wrench"
-      weight: 4
+      weight: 5
       url: "https://thangs.com/designer/er.anshul.patel"
 outputs:
   home:
