@@ -44,7 +44,7 @@ module provides an easy way to create CA and corresponding service certificates.
 
 ### Gist
 
-{{< gist anshulpatel25 13097ff04c04732496258ac0ed24f1c3 >}}
+{{<gist anshulpatel25 13097ff04c04732496258ac0ed24f1c3>}}
 
 Above example code creates the following:
 

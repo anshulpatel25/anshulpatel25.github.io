@@ -5,7 +5,9 @@ title: "Anshul Patel"
 languageCode: "en"
 defaultContentLanguage: "en"
 
-paginate: 10
+pagination:
+  pagerSize: 10
+
 enableEmoji: true
 
 googleAnalytics: "G-62JLR4L8L8"

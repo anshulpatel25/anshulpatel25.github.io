@@ -85,7 +85,7 @@ percentage can be calculated as follows:
 
 This Golang snippet samples CPU utilization per second.
 
-{{< gist anshulpatel25 c596e322d8e64b2bd547d5bfa7bd59f2 >}}
+{{<gist anshulpatel25 c596e322d8e64b2bd547d5bfa7bd59f2>}}
 
 ## Output
 
