@@ -1,15 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anshul Patel</title><link>http://www.anshulpatel.in/</link><description>Recent content on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0530</lastBuildDate><atom:link href="http://www.anshulpatel.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Opensource identity and access management with Keycloak</title><link>http://www.anshulpatel.in/meetups/cncf_intro_to_keycloak/</link><pubDate>Sat, 21 Dec 2024 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/cncf_intro_to_keycloak/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk provides introduction to keycloak and how it can be
-leveraged for identity and access management.&lt;/p></description></item><item><title>Safeguard Software Supply Chain</title><link>http://www.anshulpatel.in/meetups/safeguard_software_supply_chain/</link><pubDate>Sat, 31 Aug 2024 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/safeguard_software_supply_chain/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about safeguarding the software supply chain via
-SLSA framework and SBOM.&lt;/p></description></item><item><title>Chaos Engineering with Litmus Chaos Framework</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_3/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_3/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about conducting Chaos Engineering
-experiments using Litmus Chaos Framework.&lt;/p></description></item><item><title>Compilers, Interpreters, Transpilers and Strategies</title><link>http://www.anshulpatel.in/posts/jit_v_aot/</link><pubDate>Mon, 06 Apr 2020 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/jit_v_aot/</guid><description>&lt;p>This blog provides overview on software compilation and strategies.&lt;/p></description></item><item><title>Docker Fundamentals</title><link>http://www.anshulpatel.in/posts/docker_fundamentals/</link><pubDate>Sun, 29 Dec 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/docker_fundamentals/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>This article provides introduction to Docker, how it differs from
-Virtual Machine and underlining technologies.&lt;/p></description></item><item><title>Chaos Engineering with Gremlin Platform</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_2/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_2/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about conducting Chaos Engineering
-experiments using Gremlin platform.&lt;/p></description></item><item><title>Chaos Engineering with Chaos Lambda</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup/</link><pubDate>Sun, 15 Sep 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about basics of Chaos Engineering
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Anshul Patel</title><link>http://www.anshulpatel.in/</link><description>Recent content on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0530</lastBuildDate><atom:link href="http://www.anshulpatel.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Opensource identity and access management with Keycloak</title><link>http://www.anshulpatel.in/meetups/cncf_intro_to_keycloak/</link><pubDate>Sat, 21 Dec 2024 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/cncf_intro_to_keycloak/</guid><description>&lt;p>My meetup talk provides introduction to keycloak and how it can be
+leveraged for identity and access management.&lt;/p></description></item><item><title>Safeguard Software Supply Chain</title><link>http://www.anshulpatel.in/meetups/safeguard_software_supply_chain/</link><pubDate>Sat, 31 Aug 2024 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/safeguard_software_supply_chain/</guid><description>&lt;p>My meetup talk discusses about safeguarding the software supply chain via
+SLSA framework and SBOM.&lt;/p></description></item><item><title>Chaos Engineering with Litmus Chaos Framework</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_3/</link><pubDate>Sat, 05 Sep 2020 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_3/</guid><description>&lt;p>My meetup talk discusses about conducting Chaos Engineering
+experiments using Litmus Chaos Framework.&lt;/p></description></item><item><title>Compilers, Interpreters, Transpilers and Strategies</title><link>http://www.anshulpatel.in/posts/jit_v_aot/</link><pubDate>Mon, 06 Apr 2020 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/jit_v_aot/</guid><description>&lt;p>This blog provides overview on software compilation and strategies.&lt;/p></description></item><item><title>Docker Fundamentals</title><link>http://www.anshulpatel.in/posts/docker_fundamentals/</link><pubDate>Sun, 29 Dec 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/docker_fundamentals/</guid><description>&lt;p>This article provides introduction to Docker, how it differs from
+Virtual Machine and underlining technologies.&lt;/p></description></item><item><title>Chaos Engineering with Gremlin Platform</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_2/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup_2/</guid><description>&lt;p>My meetup talk discusses about conducting Chaos Engineering
+experiments using Gremlin platform.&lt;/p></description></item><item><title>Chaos Engineering with Chaos Lambda</title><link>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup/</link><pubDate>Sun, 15 Sep 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/chaos_engineering_infostretch_meetup/</guid><description>&lt;p>My meetup talk discusses about basics of Chaos Engineering
 and how to induce Chaos Engineering via Chaos Lambda.&lt;/p></description></item><item><title>What are cloud-native applications?</title><link>http://www.anshulpatel.in/posts/cloud_native/</link><pubDate>Fri, 09 Aug 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/cloud_native/</guid><description>&lt;p>To understand the cloud-native, we should first understand the definition of
 the cloud.&lt;/p>
 &lt;p>&lt;a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf" class="external-link" target="_blank" rel="noopener">NIST&lt;/a>
@@ -24,13 +18,11 @@ defines cloud computing characteristics as follows:&lt;/p>
 for a process.&lt;/p></description></item><item><title>What SREs can learn from Aviation industry?</title><link>http://www.anshulpatel.in/posts/sre_aviation_process/</link><pubDate>Wed, 10 Apr 2019 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/sre_aviation_process/</guid><description>&lt;p>Recently having binged watch &lt;a href="https://www.imdb.com/title/tt0386950/" class="external-link" target="_blank" rel="noopener">Air Emergency&lt;/a>,
 I felt that &lt;a href="https://landing.google.com/sre/" class="external-link" target="_blank" rel="noopener">SREs&lt;/a> can learn many things from
 aviation industry.&lt;/p></description></item><item><title>Create Self-Signed CA and TLS certificates using Terraform</title><link>http://www.anshulpatel.in/posts/private_tls_terrform/</link><pubDate>Sun, 09 Dec 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/private_tls_terrform/</guid><description>&lt;p>This article discusses the creation of Self-signed CA and TLS certificates using
-Terrform&lt;/p></description></item><item><title>Docker Notary</title><link>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</link><pubDate>Sat, 23 Jun 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about securely distributing docker images
+Terrform&lt;/p></description></item><item><title>Docker Notary</title><link>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</link><pubDate>Sat, 23 Jun 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/notary_sterlite_tech/</guid><description>&lt;p>My meetup talk discusses about securely distributing docker images
 in Software Supply Chain using Docker Notary.&lt;/p></description></item><item><title>Fault Tolerance, High Availability &amp; Disaster Recovery</title><link>http://www.anshulpatel.in/posts/ft_ha_dr/</link><pubDate>Tue, 24 Apr 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/ft_ha_dr/</guid><description>&lt;p>This article discusses the subtle differences between fault tolerance,
 disaster recovery and high availability.&lt;/p></description></item><item><title>Designing a Chaos Engineering Experiment</title><link>http://www.anshulpatel.in/posts/chaos_engg_exprmnt_dsgn/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/chaos_engg_exprmnt_dsgn/</guid><description>&lt;p>Chaos engineering is the discipline of experimenting on a distributed system,
 in order to build confidence in the system’s capability to withstand turbulent
-conditions in production.&lt;/p></description></item><item><title>Building CLI applications with Golang</title><link>http://www.anshulpatel.in/meetups/lightening_talk_building_cli_golang/</link><pubDate>Sat, 11 Nov 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/lightening_talk_building_cli_golang/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My lightening talk discusses on structure, architecture, framework and
+conditions in production.&lt;/p></description></item><item><title>Building CLI applications with Golang</title><link>http://www.anshulpatel.in/meetups/lightening_talk_building_cli_golang/</link><pubDate>Sat, 11 Nov 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/lightening_talk_building_cli_golang/</guid><description>&lt;p>My lightening talk discusses on structure, architecture, framework and
 workflow of developing Command Line Interface (CLI) applications using Golang.&lt;/p></description></item><item><title>SLI, SLO &amp; SLA</title><link>http://www.anshulpatel.in/posts/sre_sli_sla_slo/</link><pubDate>Mon, 30 Oct 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/sre_sli_sla_slo/</guid><description>&lt;p>Service Level Indicator(&lt;strong>SLI&lt;/strong>), Service Level Object(&lt;strong>SLO&lt;/strong>) &amp;amp; Service Level
 Agreement(&lt;strong>SLA&lt;/strong>) are parameters with which reliability, availability and
 performance of the service are measured.&lt;/p></description></item><item><title>Linux Kernel Capabilities Explained</title><link>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</link><pubDate>Mon, 17 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/linux_kernel_capabilities/</guid><description>&lt;p>Traditionally, Linux Kernel distinguishes its processes with the following&lt;/p>
@@ -44,8 +36,7 @@ permission checks.&lt;/p>
 &lt;p>&lt;strong>Unprivileged Processes&lt;/strong>: These processes are subject to full permission
 checks, such as the effective UID, GID, and supplementary group list.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>LinuxKit</title><link>http://www.anshulpatel.in/meetups/linuxkit_crest_systems/</link><pubDate>Sat, 08 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/linuxkit_crest_systems/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about how to build immutable
+&lt;/ul></description></item><item><title>LinuxKit</title><link>http://www.anshulpatel.in/meetups/linuxkit_crest_systems/</link><pubDate>Sat, 08 Jul 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/linuxkit_crest_systems/</guid><description>&lt;p>My meetup talk discusses about how to build immutable
 operating systems [Unikernels] with LinuxKit.&lt;/p></description></item><item><title>Linux CPU Terminologies Explained</title><link>http://www.anshulpatel.in/posts/cpu_terminologies/</link><pubDate>Tue, 11 Apr 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/cpu_terminologies/</guid><description>&lt;p>Linux based systems uses defined terminologies for different components of
 processors.&lt;/p></description></item><item><title>HTTP Strict Transport Security(HSTS)</title><link>http://www.anshulpatel.in/posts/hsts/</link><pubDate>Fri, 13 Jan 2017 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/posts/hsts/</guid><description>&lt;p>HSTS is an opt-in security specified by a web application through the use of a
 special response header.&lt;/p>
@@ -73,9 +64,80 @@ with just &lt;a href="http://en.wikipedia.org/wiki/Global_Internet_usage" class=
 connected to Internet.&lt;/p>
 &lt;p>Since the inception of Internet, every technology giant is using aspects of
 Distributed Systems to achieve high availability and scalability in order to
-cater the ever growing service requests.&lt;/p></description></item><item><title>Apache Zookeeper</title><link>http://www.anshulpatel.in/meetups/apache_zookeeper_talentica/</link><pubDate>Sat, 08 Oct 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/apache_zookeeper_talentica/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about the architecture, configuration,
-scalability and management of Apache Zookeeper.&lt;/p></description></item><item><title>Container Cluster Management with AWS ECS</title><link>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</link><pubDate>Sat, 18 Jun 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</guid><description>&lt;!-- raw HTML omitted -->
-&lt;p>My meetup talk discusses about basics of Docker containers
-and how to orchestrate the containers at scale using AWS ECS.&lt;/p></description></item><item><title>Experience Summary</title><link>http://www.anshulpatel.in/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/about/</guid><description>Result driven engineer with a decade of experience in architecting, implementing, and optimizing cloud infrastructure, site-reliability, and operations to maximize the business value.
-Past Link to heading Software Engineering Consultant, Ahmedabad Toptal : Anshul Patel Cloud Lead @ Adani Enterprises Limited , Ahmedabad Senior Infrastructure Engineer @ Woven By Toyota , Tokyo Senior DevOps Lead @ Infostretch (now Apexon) , Ahmedabad Senior DevOps Engineer @ Talentica , Pune Software Configuration Management Engineer @ Amdocs , Pune Junior Systems Engineer @ Elitecore (now Sterlite Tech) , Ahmedabad Certifications Link to heading CNCF certified Kubernetes and Cloud Native Associate Google Cloud Certified Associate Cloud Engineer AWS Certified Solutions Architect - Associate CloudBees Certified Jenkins Engineer Skillset Link to heading Cloud Platforms: Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.</description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description> https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125 https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17 https://github.com/tektoncd/pipeline/issues/3721 https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464 https://github.com/avelino/awesome-go/pull/2365 https://github.com/googleapis/google-resumable-media-python/issues/60 https://github.com/hashicorp/terraform-provider-google/issues/1952 https://github.com/edenhill/kcat/issues/73 https://github.com/philips-labs/terraform-aws-github-runner/issues/2287 https://github.com/python/mypy/issues/9223 https://github.com/keycloak/keycloak-admin-ui/issues/915</description></item></channel></rss>
+cater the ever growing service requests.&lt;/p></description></item><item><title>Apache Zookeeper</title><link>http://www.anshulpatel.in/meetups/apache_zookeeper_talentica/</link><pubDate>Sat, 08 Oct 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/apache_zookeeper_talentica/</guid><description>&lt;p>My meetup talk discusses about the architecture, configuration,
+scalability and management of Apache Zookeeper.&lt;/p></description></item><item><title>Container Cluster Management with AWS ECS</title><link>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</link><pubDate>Sat, 18 Jun 2016 00:00:00 +0530</pubDate><guid>http://www.anshulpatel.in/meetups/amazon_ecs_talentica_meetup/</guid><description>&lt;p>My meetup talk discusses about basics of Docker containers
+and how to orchestrate the containers at scale using AWS ECS.&lt;/p></description></item><item><title>Experience Summary</title><link>http://www.anshulpatel.in/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/about/</guid><description>&lt;p>Result driven engineer with a decade of experience in architecting, implementing,
+and optimizing cloud infrastructure, site-reliability, and operations to maximize
+the business value.&lt;/p>
+&lt;h2 id="past">
+ Past
+ &lt;a class="heading-link" href="#past">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Software Engineering Consultant, &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener">Ahmedabad&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://www.toptal.com/" class="external-link" target="_blank" rel="noopener">Toptal&lt;/a> : &lt;a href="https://www.toptal.com/resume/anshul-patel" class="external-link" target="_blank" rel="noopener">Anshul Patel&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Cloud Lead @ &lt;a href="https://www.adanienterprises.com/" class="external-link" target="_blank" rel="noopener">Adani Enterprises Limited&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener">Ahmedabad&lt;/a>&lt;/li>
+&lt;li>Senior Infrastructure Engineer @ &lt;a href="https://woven.toyota/en/" class="external-link" target="_blank" rel="noopener">Woven By Toyota&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Tokyo" class="external-link" target="_blank" rel="noopener">Tokyo&lt;/a>&lt;/li>
+&lt;li>Senior DevOps Lead @ &lt;a href="https://www.apexon.com/" class="external-link" target="_blank" rel="noopener">Infostretch (now Apexon)&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener">Ahmedabad&lt;/a>&lt;/li>
+&lt;li>Senior DevOps Engineer @ &lt;a href="https://www.talentica.com/" class="external-link" target="_blank" rel="noopener">Talentica&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Pune" class="external-link" target="_blank" rel="noopener">Pune&lt;/a>&lt;/li>
+&lt;li>Software Configuration Management Engineer @ &lt;a href="https://www.amdocs.com/" class="external-link" target="_blank" rel="noopener">Amdocs&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Pune" class="external-link" target="_blank" rel="noopener">Pune&lt;/a>&lt;/li>
+&lt;li>Junior Systems Engineer @ &lt;a href="https://www.stl.tech/" class="external-link" target="_blank" rel="noopener">Elitecore (now Sterlite Tech)&lt;/a>
+, &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener">Ahmedabad&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="certifications">
+ Certifications
+ &lt;a class="heading-link" href="#certifications">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url" class="external-link" target="_blank" rel="noopener">CNCF certified Kubernetes and Cloud Native Associate&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea" class="external-link" target="_blank" rel="noopener">Google Cloud Certified Associate Cloud Engineer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.credly.com/badges/1d2d5cc9-d783-48e3-921d-b7781667a39d/public_url" class="external-link" target="_blank" rel="noopener">AWS Certified Solutions Architect - Associate&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488" class="external-link" target="_blank" rel="noopener">CloudBees Certified Jenkins Engineer&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="skillset">
+ Skillset
+ &lt;a class="heading-link" href="#skillset">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Cloud Platforms:&lt;/strong> Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.&lt;/li>
+&lt;li>&lt;strong>Infrastructure-as-Code:&lt;/strong> Terraform, Ansible, Packer, Helm.&lt;/li>
+&lt;li>&lt;strong>Container Technologies:&lt;/strong> Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.&lt;/li>
+&lt;li>&lt;strong>Agile Methodologies:&lt;/strong> Scrum, Kanban&lt;/li>
+&lt;li>&lt;strong>CI/CD:&lt;/strong> Github Actions, Concourse CI, Jenkins, GitOps.&lt;/li>
+&lt;li>&lt;strong>Observability:&lt;/strong> AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.&lt;/li>
+&lt;li>&lt;strong>Security and Compliance:&lt;/strong> Wiz, AWS Config, AWS Control Tower.&lt;/li>
+&lt;li>&lt;strong>Scripting Languages:&lt;/strong> Python, Bash Shell.&lt;/li>
+&lt;li>&lt;strong>Programming Languages:&lt;/strong> Go [Intermediate], Javascript [Intermediate].&lt;/li>
+&lt;li>&lt;strong>Database Systems:&lt;/strong> MySQL, PostgreSQL, MongoDB.&lt;/li>
+&lt;li>&lt;strong>Caching Engine:&lt;/strong> Redis, Memcached.&lt;/li>
+&lt;li>&lt;strong>Big Data:&lt;/strong> Apache Kafka, Apache Airflow.&lt;/li>
+&lt;/ul></description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/tektoncd/pipeline/issues/3721" class="external-link" target="_blank" rel="noopener">https://github.com/tektoncd/pipeline/issues/3721&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464" class="external-link" target="_blank" rel="noopener">https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/avelino/awesome-go/pull/2365" class="external-link" target="_blank" rel="noopener">https://github.com/avelino/awesome-go/pull/2365&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/googleapis/google-resumable-media-python/issues/60" class="external-link" target="_blank" rel="noopener">https://github.com/googleapis/google-resumable-media-python/issues/60&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/hashicorp/terraform-provider-google/issues/1952" class="external-link" target="_blank" rel="noopener">https://github.com/hashicorp/terraform-provider-google/issues/1952&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/edenhill/kcat/issues/73" class="external-link" target="_blank" rel="noopener">https://github.com/edenhill/kcat/issues/73&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/philips-labs/terraform-aws-github-runner/issues/2287" class="external-link" target="_blank" rel="noopener">https://github.com/philips-labs/terraform-aws-github-runner/issues/2287&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/python/mypy/issues/9223" class="external-link" target="_blank" rel="noopener">https://github.com/python/mypy/issues/9223&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/keycloak/keycloak-admin-ui/issues/915" class="external-link" target="_blank" rel="noopener">https://github.com/keycloak/keycloak-admin-ui/issues/915&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
