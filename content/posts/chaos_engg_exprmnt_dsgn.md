@@ -37,7 +37,6 @@ outcome of the experiment.
 
 - Terminating half of the instances in Auto-Scaling group of the service might
   result in the following scenarios:
-
   - 25% increase in response latency of the service.
 
   - 30% increase in CPU utilization of existing machines.
