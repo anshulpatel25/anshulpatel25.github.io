@@ -119,6 +119,7 @@ the business value.&lt;/p>
 &lt;li>&lt;strong>Cloud Platforms:&lt;/strong> Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.&lt;/li>
 &lt;li>&lt;strong>Infrastructure-as-Code:&lt;/strong> Terraform, Ansible, Packer, Helm.&lt;/li>
 &lt;li>&lt;strong>Container Technologies:&lt;/strong> Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.&lt;/li>
+&lt;li>**&lt;/li>
 &lt;li>&lt;strong>Agile Methodologies:&lt;/strong> Scrum, Kanban&lt;/li>
 &lt;li>&lt;strong>CI/CD:&lt;/strong> Github Actions, Concourse CI, Jenkins, GitOps.&lt;/li>
 &lt;li>&lt;strong>Observability:&lt;/strong> AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.&lt;/li>
@@ -128,7 +129,7 @@ the business value.&lt;/p>
 &lt;li>&lt;strong>Database Systems:&lt;/strong> MySQL, PostgreSQL, MongoDB.&lt;/li>
 &lt;li>&lt;strong>Caching Engine:&lt;/strong> Redis, Memcached.&lt;/li>
 &lt;li>&lt;strong>Big Data:&lt;/strong> Apache Kafka, Apache Airflow.&lt;/li>
-&lt;li>&lt;strong>No Code:&lt;/strong> N8N.&lt;/li>
+&lt;li>&lt;strong>No Code Platforms:&lt;/strong> N8N.&lt;/li>
 &lt;/ul></description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17&lt;/a>&lt;/li>
