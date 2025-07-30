@@ -119,7 +119,7 @@ the business value.&lt;/p>
 &lt;li>&lt;strong>Cloud Platforms:&lt;/strong> Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.&lt;/li>
 &lt;li>&lt;strong>Infrastructure-as-Code:&lt;/strong> Terraform, Ansible, Packer, Helm.&lt;/li>
 &lt;li>&lt;strong>Container Technologies:&lt;/strong> Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.&lt;/li>
-&lt;li>**&lt;/li>
+&lt;li>&lt;strong>Artificial Intelligence:&lt;/strong> Scikit-learn, Langchain, DVC&lt;/li>
 &lt;li>&lt;strong>Agile Methodologies:&lt;/strong> Scrum, Kanban&lt;/li>
 &lt;li>&lt;strong>CI/CD:&lt;/strong> Github Actions, Concourse CI, Jenkins, GitOps.&lt;/li>
 &lt;li>&lt;strong>Observability:&lt;/strong> AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.&lt;/li>
