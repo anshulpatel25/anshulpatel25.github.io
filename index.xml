@@ -103,9 +103,9 @@ the business value.&lt;/p>
  &lt;/a>
 &lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url" class="external-link" target="_blank" rel="noopener">CNCF certified Kubernetes and Cloud Native Associate&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url" class="external-link" target="_blank" rel="noopener">Cloud Native Computing Foundation certified Kubernetes and Cloud Native Associate&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea" class="external-link" target="_blank" rel="noopener">Google Cloud Certified Associate Cloud Engineer&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.credly.com/badges/1d2d5cc9-d783-48e3-921d-b7781667a39d/public_url" class="external-link" target="_blank" rel="noopener">AWS Certified Solutions Architect - Associate&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.credly.com/badges/1d2d5cc9-d783-48e3-921d-b7781667a39d/public_url" class="external-link" target="_blank" rel="noopener">Amazon Web Services Certified Solutions Architect - Associate&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488" class="external-link" target="_blank" rel="noopener">CloudBees Certified Jenkins Engineer&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="skillset">
@@ -128,6 +128,7 @@ the business value.&lt;/p>
 &lt;li>&lt;strong>Database Systems:&lt;/strong> MySQL, PostgreSQL, MongoDB.&lt;/li>
 &lt;li>&lt;strong>Caching Engine:&lt;/strong> Redis, Memcached.&lt;/li>
 &lt;li>&lt;strong>Big Data:&lt;/strong> Apache Kafka, Apache Airflow.&lt;/li>
+&lt;li>&lt;strong>No Code:&lt;/strong> N8N.&lt;/li>
 &lt;/ul></description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;ul>
 &lt;li>&lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" class="external-link" target="_blank" rel="noopener">https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17&lt;/a>&lt;/li>
