@@ -37,6 +37,7 @@ the business value.
 - **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.
 - **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
 - **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.
+- **
 - **Agile Methodologies:** Scrum, Kanban
 - **CI/CD:** Github Actions, Concourse CI, Jenkins, GitOps.
 - **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.
@@ -46,4 +47,4 @@ the business value.
 - **Database Systems:** MySQL, PostgreSQL, MongoDB.
 - **Caching Engine:** Redis, Memcached.
 - **Big Data:** Apache Kafka, Apache Airflow.
-- **No Code:** N8N.
+- **No Code Platforms:** N8N.
