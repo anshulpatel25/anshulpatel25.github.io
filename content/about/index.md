@@ -37,7 +37,7 @@ the business value.
 - **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.
 - **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
 - **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.
-- **
+- **Artificial Intelligence:** Scikit-learn, Langchain, DVC
 - **Agile Methodologies:** Scrum, Kanban
 - **CI/CD:** Github Actions, Concourse CI, Jenkins, GitOps.
 - **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.
