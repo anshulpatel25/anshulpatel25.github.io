@@ -32,7 +32,7 @@ params:
     - "js/consent.js"
     - "js/search.js"
     - "js/lunr.js"
-  footerQuote: "धर्मो रक्षति रक्षितः"
+  footerQuote: "ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥"
   social:
     - name: "Github"
       icon: "fa fa-2x fa-github"
@@ -81,10 +81,9 @@ languages:
           weight: 5
           url: "/about/"
 
-theme:
-  - github.com/luizdepra/hugo-coder
-
 module:
+  imports:
+    - path: "github.com/luizdepra/hugo-coder"
   mounts:
     - source: assets
       target: assets

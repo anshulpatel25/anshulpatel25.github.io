@@ -1,6 +1,6 @@
 {
   "name": "Ubuntu",
-  "image": "ghcr.io/anshulpatel25/dev-containers:v0.0.5",
+  "image": "ghcr.io/anshulpatel25/dev-containers:main",
   "remoteUser": "vscode",
   "customizations": {
     "vscode": {
