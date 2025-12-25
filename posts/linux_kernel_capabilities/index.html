@@ -27,9 +27,9 @@ Unprivileged Processes: These processes are subject to full permission checks, s
 permission checks.</p></li><li><p><strong>Unprivileged Processes</strong>: These processes are subject to full permission
 checks, such as the effective UID, GID, and supplementary group list.</p></li></ul><p>Granting full privileged access to a user process might induce system abuse,
 like unauthorized changes of data, backdoors, changing ACL, etc.</p><p>Linux 2.2 shipped with a solution called Capabilities. Capabilities allows the
-developer to grant binaries/files specific permissions.</p><h3 id=example>Example
+developer to grant binaries/files specific permissions.</p><h2 id=example>Example
 <a class=heading-link href=#example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><p>Let&rsquo;s say we want to start a Simple HTTP Server module of Python on port 80 with
+<span class=sr-only>Link to heading</span></a></h2><p>Let&rsquo;s say we want to start a Simple HTTP Server module of Python on port 80 with
 a non-privileged user. If we try to start the process without granting any
 capabilities, we will get the following error:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer <span style=color:#ae81ff>80</span>
 </span></span><span style=display:flex><span>Traceback <span style=color:#f92672>(</span>most recent call last<span style=color:#f92672>)</span>:
