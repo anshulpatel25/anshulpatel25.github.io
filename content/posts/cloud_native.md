@@ -29,7 +29,7 @@ characteristics.
 
 Cloud-Native applications should have the following characteristics:
 
-### Immutable Packaging & Execution
+## Immutable Packaging & Execution
 
 - Machine Images (For eg: AMI) and Container Images (For eg: Docker Image)
   allows us to bake the library dependencies along with the application.
@@ -39,7 +39,7 @@ Cloud-Native applications should have the following characteristics:
   characteristics.
 - Functions as service (For eg: Lambda) can further optimize `Resource Pooling`.
 
-### Decoupled Configurations & Secrets
+## Decoupled Configurations & Secrets
 
 - Immutability and elasticity make it difficult to add configuration as part of
   code, hence centralized K/V store (For eg: Hashicorp Consul) and
@@ -47,7 +47,7 @@ Cloud-Native applications should have the following characteristics:
 - The application should fetch the secrets and K/V from the above engines,
   providing on-demand flexibility to append, update secrets and K/V.
 
-### Statelessness & Statefulness
+## Statelessness & Statefulness
 
 - `Rapid Elasticity` makes it somewhat difficult to couple data with the
   applications. The stateful landscape is still work-in-progress and unstable.
@@ -55,7 +55,7 @@ Cloud-Native applications should have the following characteristics:
   queuing and search engine systems
   (For eg: Redis, RabbitMQ, Kafka, MySQL, Cassandra, Elasticsearch, etc).
 
-### Modular Applications
+## Modular Applications
 
 - Problem with monoliths was that even if we need to scale only one module
   ( For eg: Payment), we need to replicate/scale the whole monolith which
@@ -69,14 +69,14 @@ Cloud-Native applications should have the following characteristics:
   applications can take advantage of this
   multi-tenancy (`Resource Pooling`)characteristics.
 
-### Polyglot Paradigm
+## Polyglot Paradigm
 
 - Probably the best thing of using this paradigm. As dependencies are packaged
   along with the application and are isolated from the underlying execution
   environment, the development team can use their language of choice to write
   their modules and achieve their use case.
 
-### Centralized Logging
+## Centralized Logging
 
 - Due to `Rapid Elasticity`, it can be difficult for the development team
   to track down the problematic machine and view its logs, as it wouldn't be
@@ -88,7 +88,7 @@ Cloud-Native applications should have the following characteristics:
 - `On-demand self-service` centralized logging solution can be used by
   development teams to securely and conveniently access the production logs.
 
-### Managed via DevOps & SRE processes
+## Managed via DevOps & SRE processes
 
 - Apps should use Continuous Integration
 - Apps should use Continuous Delivery & Deployment via declarative
@@ -99,13 +99,13 @@ Cloud-Native applications should have the following characteristics:
 - Blameless postmortem should be promoted during application outage to
   make the application more resilient and robust.
 
-### Automation
+## Automation
 
 - All the processes, tools which are used for development, deployment and
   maintenance of the apps should be automated or have API(s) for automation
   via custom scripts.
 
-### API centric
+## API centric
 
 - Applications use well defined lightweight API on top of common protocols
   (For eg: REST, gRPC) for exchanging the data. The protocols used are

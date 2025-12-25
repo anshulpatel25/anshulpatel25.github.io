@@ -24,7 +24,7 @@ like unauthorized changes of data, backdoors, changing ACL, etc.
 Linux 2.2 shipped with a solution called Capabilities. Capabilities allows the
 developer to grant binaries/files specific permissions.
 
-### Example
+## Example
 
 Let's say we want to start a Simple HTTP Server module of Python on port 80 with
 a non-privileged user. If we try to start the process without granting any

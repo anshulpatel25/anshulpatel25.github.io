@@ -27,6 +27,8 @@ the business value.
 
 ## Certifications
 
+<!-- markdownlint-disable-file MD013 -->
+
 - [Cloud Native Computing Foundation certified Kubernetes and Cloud Native Associate](https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url)
 - [Google Cloud Certified Associate Cloud Engineer](https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea)
 - [Amazon Web Services Certified Solutions Architect - Associate](https://www.credly.com/badges/1d2d5cc9-d783-48e3-921d-b7781667a39d/public_url)
