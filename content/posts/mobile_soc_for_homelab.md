@@ -9,7 +9,7 @@ tags:
 
 # 🔄 Rethinking Homelab Compute: Why Mobile SoCs Deserve a Second Look
 
-If you've been shopping for homelab hardware lately, you've probably experienced some serious sticker shock. 😱 The AI boom has fundamentally shifted manufacturer priorities, and traditional computing hardware prices have skyrocketed as a result. But what if I told you that the solution to affordable homelab computing might be sitting in your desk drawer—or more specifically, in that old flagship smartphone you replaced a couple of years ago? 📱✨
+If you've been shopping for homelab hardware lately, you've probably experienced some serious sticker shock. 😱 The AI boom has fundamentally shifted manufacturer priorities, and traditional computing hardware prices have skyrocketed as a result. But what if I told you that the solution to affordable homelab computing might be sitting in your desk drawer or more specifically, in that old flagship smartphone you replaced a couple of years ago? 📱✨
 
 ## 🌍 The Shifting Landscape of Computing Hardware
 
@@ -19,7 +19,7 @@ But here's the thing: while we've been chasing traditional ARM SBCs (Single Boar
 
 ## 🔬 The Experiment: Snapdragon 835 vs. Raspberry Pi 5
 
-To test this hypothesis, I decided to pit a mobile SoC against one of the most popular homelab boards: the Raspberry Pi 5 Model B rev 1.0. But instead of using the latest and greatest mobile chip, I went with something you might find in a used phone from 2016-2017—the Qualcomm Snapdragon 835.
+To test this hypothesis, I decided to pit a mobile SoC against one of the most popular homelab boards: the Raspberry Pi 5 Model B rev 1.0. But instead of using the latest and greatest mobile chip, I went with something you might find in a used phone from 2016-2017 the Qualcomm Snapdragon 835.
 
 Let's set the stage with the specs:
 
@@ -69,7 +69,7 @@ Used smartphones with `Snapdragon 835` (and similar generation chips) are abunda
 
 ### 2. ⚡ **Performance Per Dollar**
 
-When you're only giving up **13-15%** performance for potentially 50-70% cost savings, the math starts to look really compelling. For many lab workloads—DNS servers, lightweight web applications, monitoring tools,this performance difference is negligible.
+When you're only giving up **13-15%** performance for potentially 50-70% cost savings, the math starts to look really compelling. For many lab workloads such as DNS servers, lightweight web applications, monitoring tools,this performance difference is negligible.
 
 ### 3. 🔋 **Power Efficiency**
 
@@ -98,7 +98,7 @@ The setup has been stable, performant, and power-efficient. Prometheus scrapes m
 
 Check out my detailed setup and configuration: [Running CNCF Prometheus Stack on Snapdragon 835](https://grafana.anshulpatel.in/dashboard/snapshot/VTqPiDgCZLNeH7lAO4UC8HiDpdgzbtTF) (Depending on your network, it might take a few seconds to load the dashboard)
 
-This real-world deployment proves that mobile SoCs aren't just a theoretical alternative—they're a practical, viable option for modern lab infrastructure running cloud-native workloads.
+This real-world deployment proves that mobile SoCs aren't just a theoretical alternative but they're a practical, viable option for modern lab infrastructure running cloud-native workloads.
 
 ## ⚠️ The Challenges (Because Nothing's Perfect)
 
