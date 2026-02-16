@@ -93,7 +93,7 @@ The setup has been stable, performant, and power-efficient. Prometheus scrapes m
 
 **Want to see it in action?**
 
-[Dashboard Snapshot](https://grafana.anshulpatel.in/dashboard/snapshot/VTqPiDgCZLNeH7lAO4UC8HiDpdgzbtTF) of node exporter running on `Snapdragon 835`. (Depending on your network, it might take a few seconds to load the dashboard). I will be sharing more details about the setup and configuration in an upcoming post, so stay tuned!
+[Dashboard Snapshot](https://grafana.anshulpatel.in/dashboard/snapshot/DQqsxIzREd86XAesVNxEvitPDy9uX1Ln) of node exporter running on `Snapdragon 835`. (Depending on your network, it might take a few seconds to load the dashboard). I will be sharing more details about the setup and configuration in an upcoming post, so stay tuned!
 
 This real-world deployment proves that mobile SoCs aren't just a theoretical alternative but they're a practical, viable option for modern lab infrastructure running cloud-native workloads.
 
