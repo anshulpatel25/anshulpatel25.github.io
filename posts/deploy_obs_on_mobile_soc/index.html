@@ -1,0 +1,163 @@
+<!doctype html><html lang=en><head><title>Deploying Observability Stack on Mobile SoC: A Practical Guide · Anshul Patel</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="In my previous post, I explored why mobile SoCs
+make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its
+own against modern single-board computers. I even showed a live dashboard
+running Prometheus and Node Exporter on this setup. Now, let&rsquo;s get practical,
+I&rsquo;ll show you exactly how to deploy a complete observability stack on your
+mobile SoC. 📊🚀
+
+  🎯 What We&rsquo;re Building
+  
+    
+    Link to heading
+  
+
+By the end of this guide, you&rsquo;ll have a fully functional monitoring setup
+running on your Android device:"><meta name=keywords content="geek,tinkerer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Deploying Observability Stack on Mobile SoC: A Practical Guide"><meta name=twitter:description content="In my previous post, I explored why mobile SoCs make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its own against modern single-board computers. I even showed a live dashboard running Prometheus and Node Exporter on this setup. Now, let’s get practical, I’ll show you exactly how to deploy a complete observability stack on your mobile SoC. 📊🚀
+🎯 What We’re Building Link to heading By the end of this guide, you’ll have a fully functional monitoring setup running on your Android device:"><meta property="og:url" content="http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/"><meta property="og:site_name" content="Anshul Patel"><meta property="og:title" content="Deploying Observability Stack on Mobile SoC: A Practical Guide"><meta property="og:description" content="In my previous post, I explored why mobile SoCs make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its own against modern single-board computers. I even showed a live dashboard running Prometheus and Node Exporter on this setup. Now, let’s get practical, I’ll show you exactly how to deploy a complete observability stack on your mobile SoC. 📊🚀
+🎯 What We’re Building Link to heading By the end of this guide, you’ll have a fully functional monitoring setup running on your Android device:"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-02-17T00:00:00+00:00"><meta property="article:modified_time" content="2026-02-17T00:00:00+00:00"><meta property="article:tag" content="Observability"><meta property="article:tag" content="Lab"><meta property="article:tag" content="Arm"><meta property="article:tag" content="Hardware"><link rel=canonical href=http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/custom.min.cba2e9ecbfbcddfea52dc5e68065efce9cca76e279bc68b4f5c7dfca261c3e59.css integrity="sha256-y6Lp7L+83f6lLcXmgGXvzpzKduJ5vGi09cffyiYcPlk=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/fork-awesome.min.41c9b5c129b4633389c0ad630f0904f7a63fe27a7be7e59999a70233739eb83b.css integrity="sha256-Qcm1wSm0YzOJwK1jDwkE96Y/4np75+WZmacCM3OeuDs=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/cookieconsent.min.min.63b9b6f50d79ec84bdfe0545539ef71cedb040021b933e9a7bcf121e8b59c1d8.css integrity="sha256-Y7m29Q157IS9/gVFU573HO2wQAIbkz6ae88SHotZwdg=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon_32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon_16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://www.anshulpatel.in/>Anshul Patel
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/search/>Search</a></li><li class=navigation-item><a class=navigation-link href=/meetups/>Meetups</a></li><li class=navigation-item><a class=navigation-link href=/oss/>OSS</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/>Deploying Observability Stack on Mobile SoC: A Practical Guide</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2026-02-17T00:00:00Z>February 17, 2026
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/observability/>Observability</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/lab/>Lab</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/arm/>Arm</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/hardware/>Hardware</a></span></div></div></header><div class=post-content><p>In my <a href=../mobile_soc_for_homelab/>previous post</a>, I explored why mobile SoCs
+make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its
+own against modern single-board computers. I even showed a live dashboard
+running Prometheus and Node Exporter on this setup. Now, let&rsquo;s get practical,
+I&rsquo;ll show you exactly how to deploy a complete observability stack on your
+mobile SoC. 📊🚀</p><h2 id=-what-were-building>🎯 What We&rsquo;re Building
+<a class=heading-link href=#-what-were-building><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>By the end of this guide, you&rsquo;ll have a fully functional monitoring setup
+running on your Android device:</p><ul><li><strong>Grafana</strong> - For beautiful dashboards and visualization</li><li><strong>Prometheus</strong> - For metrics collection and time-series storage</li><li><strong>Node Exporter</strong> - For system metrics (CPU, memory, disk, network)</li></ul><p>This setup is perfect for monitoring your homelab, learning about observability,
+or just proving that your old smartphone is more powerful than you thought! 💪</p><h2 id=-prerequisites>📋 Prerequisites
+<a class=heading-link href=#-prerequisites><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Before we dive in, make sure you have:</p><h3 id=1-termux-installed>1. <strong>Termux Installed</strong>
+<a class=heading-link href=#1-termux-installed><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><a href=https://termux.dev/en/ class=external-link target=_blank rel=noopener>Termux</a> is a powerful terminal emulator and Linux
+environment for Android. It&rsquo;s the foundation of our entire setup.</p><ul><li>Install from <a href=https://f-droid.org/en/packages/com.termux/ class=external-link target=_blank rel=noopener>F-Droid</a>
+(recommended) or
+<a href=https://github.com/termux/termux-app/releases class=external-link target=_blank rel=noopener>GitHub releases</a></li><li>⚠️ <strong>Important</strong>: Do NOT install from Google Play Store.</li></ul><h3 id=2-root-access-for-node-exporter>2. <strong>Root Access (for Node Exporter)</strong>
+<a class=heading-link href=#2-root-access-for-node-exporter><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Node Exporter requires
+<a href=https://en.wikipedia.org/wiki/Rooting_%28Android%29 class=external-link target=_blank rel=noopener>root privileges</a> to access
+certain system metrics. You&rsquo;ll need:</p><ul><li>A rooted Android device</li><li><a href=https://github.com/termux/termux-boot class=external-link target=_blank rel=noopener>Termux:Boot</a> (optional, for auto-start
+on boot)</li></ul><h3 id=3-storage-and-network>3. <strong>Storage and Network</strong>
+<a class=heading-link href=#3-storage-and-network><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>At least 500MB free storage</li><li>Stable Wifi network connection</li></ul><h3 id=4-basic-terminal-skills>4. <strong>Basic Terminal Skills</strong>
+<a class=heading-link href=#4-basic-terminal-skills><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Familiarity with basic Linux commands will help, but I&rsquo;ll walk you through each
+step. 🎓</p><h3 id=5-install-termux-services>5. <strong>Install Termux Services</strong>
+<a class=heading-link href=#5-install-termux-services><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>We&rsquo;ll use <code>termux-services</code> to manage our observability stack cleanly with <code>sv</code>
+commands instead of using <code>nohup</code>. This provides proper service management
+similar to systemd on traditional Linux systems.</p><p>Install termux-services:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>pkg install termux-services -y
+</span></span></code></pre></div><h2 id=-part-1-installing-grafana>🚀 Part 1: Installing Grafana
+<a class=heading-link href=#-part-1-installing-grafana><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Grafana is the easiest component to install, thanks to Termux&rsquo;s excellent
+package repository.</p><h3 id=step-1-update-package-lists>Step 1: Update Package Lists
+<a class=heading-link href=#step-1-update-package-lists><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>First, ensure your Termux packages are up to date:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>pkg update <span style=color:#f92672>&amp;&amp;</span> pkg upgrade -y
+</span></span></code></pre></div><h3 id=step-2-install-grafana>Step 2: Install Grafana
+<a class=heading-link href=#step-2-install-grafana><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Install Grafana directly from the Termux repository:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>pkg install grafana -y
+</span></span></code></pre></div><p>That&rsquo;s it! The package manager handles all dependencies automatically. ✨</p><h3 id=step-3-set-up-grafana-as-a-service>Step 3: Set Up Grafana as a Service
+<a class=heading-link href=#step-3-set-up-grafana-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Instead of using <code>nohup</code>, let&rsquo;s properly manage Grafana as a service using <code>sv</code>.</p><p>Create a service directory for Grafana:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/grafana
+</span></span></code></pre></div><p>Create the run script:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/grafana/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>exec grafana server --homepath $PREFIX/share/grafana/ 2&gt;&amp;1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/grafana/run
+</span></span></code></pre></div><p>Enable and start the Grafana service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable grafana
+</span></span><span style=display:flex><span>sv up grafana
+</span></span></code></pre></div><p>💡 <strong>Pro Tip</strong>: You can check if Grafana is running with:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv status grafana
+</span></span></code></pre></div><p>By default, Grafana runs on port <code>3000</code>. You can access it by opening a browser
+and navigating to:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>http://&lt;mobile-phone-ip&gt;:3000
+</span></span></code></pre></div><p>Default credentials:</p><ul><li><strong>Username</strong>: <code>admin</code></li><li><strong>Password</strong>: <code>admin</code> (you&rsquo;ll be prompted to change this on first login)</li></ul><h2 id=-part-2-installing-prometheus>📦 Part 2: Installing Prometheus
+<a class=heading-link href=#-part-2-installing-prometheus><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Prometheus isn&rsquo;t available in the Termux repository, so we&rsquo;ll install it from
+the official GitHub releases.</p><h3 id=step-1-install-required-dependencies>Step 1: Install Required Dependencies
+<a class=heading-link href=#step-1-install-required-dependencies><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>pkg install wget tar -y
+</span></span></code></pre></div><h3 id=step-2-download-prometheus>Step 2: Download Prometheus
+<a class=heading-link href=#step-2-download-prometheus><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Visit the
+<a href=https://github.com/prometheus/prometheus/releases class=external-link target=_blank rel=noopener>Prometheus releases page</a> to
+find the latest ARM64 version. At the time of writing, the latest version is
+<code>3.x.x</code>.</p><p>For ARM64 (which is what Snapdragon 835 uses):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cd $HOME
+</span></span><span style=display:flex><span>wget https://github.com/prometheus/prometheus/releases/download/v3.5.1/prometheus-3.5.1.linux-arm64.tar.gz
+</span></span></code></pre></div><p>⚠️ <strong>Note</strong>: Replace <code>3.5.1</code> with the latest version number from the releases
+page.</p><h3 id=step-3-extract-the-tarball>Step 3: Extract the Tarball
+<a class=heading-link href=#step-3-extract-the-tarball><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>tar -xzf prometheus-3.5.1.linux-arm64.tar.gz
+</span></span><span style=display:flex><span>mv prometheus-3.5.1.linux-arm64 prometheus
+</span></span></code></pre></div><h3 id=step-4-set-up-prometheus-as-a-service>Step 4: Set Up Prometheus as a Service
+<a class=heading-link href=#step-4-set-up-prometheus-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Create a service directory for Prometheus:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/prometheus
+</span></span></code></pre></div><p>Create the run script:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/prometheus/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>exec $HOME/prometheus/prometheus --config.file=$HOME/prometheus/prometheus.yml --storage.tsdb.path $HOME/prometheus/ --storage.tsdb.retention.time 14d 2&gt;&amp;1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/prometheus/run
+</span></span></code></pre></div><p>Enable and start the Prometheus service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable prometheus
+</span></span><span style=display:flex><span>sv up prometheus
+</span></span></code></pre></div><p>Verify it&rsquo;s running:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv status prometheus
+</span></span></code></pre></div><h2 id=-part-3-installing-node-exporter-root-required>🔍 Part 3: Installing Node Exporter (Root Required)
+<a class=heading-link href=#-part-3-installing-node-exporter-root-required><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Node Exporter exposes hardware and OS metrics that Prometheus can scrape. This
+requires root access to read certain system files.</p><h3 id=step-1-install-sudo-root-shell>Step 1: Install Sudo (Root Shell)
+<a class=heading-link href=#step-1-install-sudo-root-shell><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Install <code>sudo</code> for a proper root environment in Termux:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>pkg install sudo -y
+</span></span></code></pre></div><h3 id=step-2-download-node-exporter>Step 2: Download Node Exporter
+<a class=heading-link href=#step-2-download-node-exporter><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cd $HOME
+</span></span><span style=display:flex><span>wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_exporter-1.10.2.linux-arm64.tar.gz
+</span></span></code></pre></div><p>⚠️ <strong>Note</strong>: Replace <code>1.10.2</code> with the latest version from the
+<a href=https://github.com/prometheus/node_exporter/releases class=external-link target=_blank rel=noopener>Node Exporter releases page</a>.</p><h3 id=step-3-extract-and-prepare>Step 3: Extract and Prepare
+<a class=heading-link href=#step-3-extract-and-prepare><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>tar -xzf node_exporter-1.7.0.linux-arm64.tar.gz
+</span></span><span style=display:flex><span>mv node_exporter-1.10.2.linux-arm64 node_exporter
+</span></span></code></pre></div><h3 id=step-4-set-up-node-exporter-as-a-service>Step 4: Set Up Node Exporter as a Service
+<a class=heading-link href=#step-4-set-up-node-exporter-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Create a service directory for Node Exporter:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/node_exporter
+</span></span></code></pre></div><p>Create the run script (with root privileges):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/node_exporter/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>exec sudo $HOME/node_exporter/node_exporter 2&gt;&amp;1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/node_exporter/run
+</span></span></code></pre></div><p>Enable and start the Node Exporter service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable node-exporter
+</span></span><span style=display:flex><span>sv up node-exporter
+</span></span></code></pre></div><p>Verify it&rsquo;s running:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv status node-exporter
+</span></span></code></pre></div><h2 id=auto-start-on-boot>Auto-Start on Boot
+<a class=heading-link href=#auto-start-on-boot><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Services managed by <code>sv-enable</code> will automatically start when Termux starts. If
+you want them to start when your device boots, install and configure
+Termux:Boot:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#75715e># Create a boot script</span>
+</span></span><span style=display:flex><span>mkdir -p ~/.termux/boot
+</span></span><span style=display:flex><span>cat &gt; ~/.termux/boot/start <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>termux-wake-lock
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>. $PREFIX/etc/profile
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>chmod +x ~/.termux/boot/start
+</span></span></code></pre></div><p>The wake lock ensures your services keep running even when the device is in
+standby mode.</p><p>Running a complete monitoring stack on a mobile SoC might seem unconventional,
+but it&rsquo;s surprisingly practical. The Snapdragon 835 handles this workload
+without breaking a sweat, proving once again that these devices are capable of
+much more than we give them credit for.</p><p>Whether you&rsquo;re using this for learning, as a lightweight monitoring solution, or
+just to breathe new life into old hardware, I hope this guide helps you get
+started. Happy monitoring! 📊✨</p><p>Here is the
+<a href=https://grafana.anshulpatel.in/dashboard/snapshot/kwh62EsmD6LYvtw3sYrbp6dzpo8zSLLU class=external-link target=_blank rel=noopener>snapshot preview</a>
+of my Snapdragon 835 running the observability stack, showcasing real-time
+metrics and system performance.</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
+<a href=https://gohugo.io/>Hugo</a> &
+<a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/cookieconsent.min.min.640def47472a85694886ce0c6ce862dc679272fe53ca0dabc37ea5bbf1574ea8.js integrity="sha256-ZA3vR0cqhWlIhs4MbOhi3GeScv5Tyg2rw36lu/FXTqg="></script><script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script><script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script><script src=/js/lunr.min.a2fdd4e494c630ca682ec816b827065412a48e1277b1b6ce8cff1a94ffdc1d9e.js integrity="sha256-ov3U5JTGMMpoLsgWuCcGVBKkjhJ3sbbOjP8alP/cHZ4="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-62JLR4L8L8"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-62JLR4L8L8")}</script></body></html>

@@ -21,22 +21,21 @@ attacks averaging around 100 Gbps.</p><p>If unprepared, Denial of Service can re
 <a class=heading-link href=#http-flood-attacks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><ul><li><strong>Volumetric Attack:</strong> Simultaneously many machines launch HTTP requests
 towards a target, saturating it&rsquo;s resources or saturating bandwidth.</li><li><strong>Malicious Application Requests:</strong> Simultaneous GET/POST/PUT requests to
-target, which causes high CPU utilization.
-For Eg: Password Reset request, Long running requests like report execution,
-downloading large files, requests calling slow hash function</li></ul><h3 id=syn-attacks>SYN Attacks
+target, which causes high CPU utilization. For Eg: Password Reset request,
+Long running requests like report execution, downloading large files, requests
+calling slow hash function</li></ul><h3 id=syn-attacks>SYN Attacks
 <a class=heading-link href=#syn-attacks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><ul><li>Simultaneous TCP requests are sent to target, but doesn&rsquo;t complete
-3-way handshake. For Eg: Initiating request via Spoofed IP.</li></ul><h3 id=udp-and-icmp-attacks>UDP and ICMP Attacks
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Simultaneous TCP requests are sent to target, but doesn&rsquo;t complete 3-way
+handshake. For Eg: Initiating request via Spoofed IP.</li></ul><h3 id=udp-and-icmp-attacks>UDP and ICMP Attacks
 <a class=heading-link href=#udp-and-icmp-attacks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><ul><li>Simultaneously flood random ports on target using UDP protocol.
-Spoofing is much easier as there is no 3-way handshake in UDP.</li></ul><h3 id=icmp-attacks>ICMP Attacks
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Simultaneously flood random ports on target using UDP protocol. Spoofing is
+much easier as there is no 3-way handshake in UDP.</li></ul><h3 id=icmp-attacks>ICMP Attacks
 <a class=heading-link href=#icmp-attacks><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><ul><li>Simultaneously launching ICMP echo requests to the target with spoofed IP.</li><li>Simultaneously sending large packets to the target causing buffer-overflow.</li></ul><h3 id=dns-attack-reflection-and-amplification>DNS Attack Reflection and Amplification
 <a class=heading-link href=#dns-attack-reflection-and-amplification><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><ul><li>DNS reflection is achieved by eliciting a response from a DNS resolvers to a
-spoofed IP.
-Simultaneously sending out DNS query with a spoofed IP to a DNS resolver
-can overwhelm it.</li></ul><h2 id=basic-mitigations>Basic Mitigations
+spoofed IP. Simultaneously sending out DNS query with a spoofed IP to a DNS
+resolver can overwhelm it.</li></ul><h2 id=basic-mitigations>Basic Mitigations
 <a class=heading-link href=#basic-mitigations><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li>Establish Traffic reputation</li><li>Filter Ingress traffic</li><li>Disable unused ports and block unnecssary protocols</li><li>Blackholing suspected or malicious traffic</li><li>Implement Web Application Firewall (WAF)</li><li>Use third-party services like CloudFlare, Akamai, Incapsula.</li></ul><p><img src=/images/ddos.png alt=ddos></p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
 <a href=https://gohugo.io/>Hugo</a> &

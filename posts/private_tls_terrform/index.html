@@ -13,16 +13,16 @@ Terrform</p><h2 id=how-tls-works>How TLS Works?
 <span class=sr-only>Link to heading</span></a></h2><p>TLS is an industry standward way to add encryption for data in transist.</p><ul><li><p>Certificate Authority (CA) is an entity responsible for issuing TLS
 certificates to websites or services.</p></li><li><p>Private CA is developed by creating public/private key pair. Public portion is
 then published which is called CA certificate. Private Key is kept securely
-else attacker can use the Private Key to issue invalide/malicious
-TLS certificates.</p></li><li><p>TLS certificate is developed by creating another public/private key, the
+else attacker can use the Private Key to issue invalide/malicious TLS
+certificates.</p></li><li><p>TLS certificate is developed by creating another public/private key, the
 public key is then signed by CA&rsquo;s private key and this signed public key
-becomes the TLS certificate. The private key will be used to decrypt
-the initial message encrypted by the TLS certificate and it should be
-kept securely.</p></li></ul><h2 id=why-private-tls>Why Private TLS?
+becomes the TLS certificate. The private key will be used to decrypt the
+initial message encrypted by the TLS certificate and it should be kept
+securely.</p></li></ul><h2 id=why-private-tls>Why Private TLS?
 <a class=heading-link href=#why-private-tls><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li>Generating private CA and TLS certificate is cost-efficient.</li><li>Cost-efficieny allows to prototype TLS based application on internal
-environments before releasing or using actual production certificates.</li><li>If application is privately used in Organization&rsquo;s infrastructure then
-Private TLS and CA could be more beneficial.</li></ul><h2 id=terraform-tls-module>Terraform TLS Module
+environments before releasing or using actual production certificates.</li><li>If application is privately used in Organization&rsquo;s infrastructure then Private
+TLS and CA could be more beneficial.</li></ul><h2 id=terraform-tls-module>Terraform TLS Module
 <a class=heading-link href=#terraform-tls-module><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p><a href=https://github.com/anshulpatel25/terraform-private-tls-cert class=external-link target=_blank rel=noopener>Terraform TLS</a>
 module provides an easy way to create CA and corresponding service certificates.</p><h3 id=gist>Gist
