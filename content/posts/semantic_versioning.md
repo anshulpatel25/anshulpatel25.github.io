@@ -9,17 +9,16 @@ Software Versioning makes it easy and convenient to track, test, deploy, patch,
 and rollback features, enhancements and bug/fixes across variety of
 environmentsin [Software Supply Chain](https://youtu.be/XM1HRy7aJxE).
 
-Semantic Versioning provides an efficient and effective framework to version
-the software products, so that the infamous
-[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)
-can be avoided.
+Semantic Versioning provides an efficient and effective framework to version the
+software products, so that the infamous
+[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell) can be avoided.
 
 <!--more-->
 
 ## What is Semantic Versioning ?
 
-Semantic Versioning uses MAJOR.MINOR.PATCH number scheme
-for software products . For Eg: 2.0.5
+Semantic Versioning uses MAJOR.MINOR.PATCH number scheme for software products .
+For Eg: 2.0.5
 
 ![Semantic Versioning](/images/semantic_versioning.png)
 
@@ -43,9 +42,8 @@ Note: PATCH should be reset to 0 when MINOR is incremented.
 Increment MAJOR number during:
 
 - Any Backward Incompatible change.
-- MAJOR zero (0.Y.Z) should be considered for development.
-  Product shouldn't be considered stable and shouldn't be
-  deployed on Production.
+- MAJOR zero (0.Y.Z) should be considered for development. Product shouldn't be
+  considered stable and shouldn't be deployed on Production.
 
 Note: PATH, MINOR both should be reset to 0 when MAJOR is incremented.
 
@@ -56,9 +54,8 @@ versioning during CI.
 
 For Eg: X.Y.Z-${CI_BUILD_NUMBER}, 2.0.5-1992
 
-Once the software product is ready for prime time, pre-release number
-should be removed and product should be published/released to
-external repository.
+Once the software product is ready for prime time, pre-release number should be
+removed and product should be published/released to external repository.
 
-Note: Once the package is released/published, it MUST NOT be modified.
-Any modifications MUST be released as a new version.
+Note: Once the package is released/published, it MUST NOT be modified. Any
+modifications MUST be released as a new version.

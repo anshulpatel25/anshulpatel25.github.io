@@ -9,8 +9,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about basics of Docker containers
-and how to orchestrate the containers at scale using AWS ECS.
+My meetup talk discusses about basics of Docker containers and how to
+orchestrate the containers at scale using AWS ECS.
 
 <!--more-->
 

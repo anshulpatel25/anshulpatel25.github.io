@@ -22,19 +22,19 @@ If unprepared, Denial of Service can result in
 - **Volumetric Attack:** Simultaneously many machines launch HTTP requests
   towards a target, saturating it's resources or saturating bandwidth.
 - **Malicious Application Requests:** Simultaneous GET/POST/PUT requests to
-  target, which causes high CPU utilization.
-  For Eg: Password Reset request, Long running requests like report execution,
-  downloading large files, requests calling slow hash function
+  target, which causes high CPU utilization. For Eg: Password Reset request,
+  Long running requests like report execution, downloading large files, requests
+  calling slow hash function
 
 ### SYN Attacks
 
-- Simultaneous TCP requests are sent to target, but doesn't complete
-  3-way handshake. For Eg: Initiating request via Spoofed IP.
+- Simultaneous TCP requests are sent to target, but doesn't complete 3-way
+  handshake. For Eg: Initiating request via Spoofed IP.
 
 ### UDP and ICMP Attacks
 
-- Simultaneously flood random ports on target using UDP protocol.
-  Spoofing is much easier as there is no 3-way handshake in UDP.
+- Simultaneously flood random ports on target using UDP protocol. Spoofing is
+  much easier as there is no 3-way handshake in UDP.
 
 ### ICMP Attacks
 
@@ -44,9 +44,8 @@ If unprepared, Denial of Service can result in
 ### DNS Attack Reflection and Amplification
 
 - DNS reflection is achieved by eliciting a response from a DNS resolvers to a
-  spoofed IP.
-  Simultaneously sending out DNS query with a spoofed IP to a DNS resolver
-  can overwhelm it.
+  spoofed IP. Simultaneously sending out DNS query with a spoofed IP to a DNS
+  resolver can overwhelm it.
 
 ## Basic Mitigations
 

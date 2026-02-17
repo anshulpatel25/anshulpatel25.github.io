@@ -2,28 +2,31 @@
 title: Experience Summary
 ---
 
-Result driven engineer with a decade of experience in architecting, implementing,
-and optimizing cloud infrastructure, site-reliability, and operations to maximize
-the business value.
+Result driven engineer with a decade of experience in architecting,
+implementing, and optimizing cloud infrastructure, site-reliability, and
+operations to maximize the business value.
 
 <!-- ## Present -->
 
 ## Past
 
-- Software Engineering Consultant, [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
-  - [Toptal](https://www.toptal.com/) : [Anshul Patel](https://www.toptal.com/resume/anshul-patel)
-- Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/)
-  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
-- Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/)
-  , [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
-- Senior DevOps Lead @ [Infostretch (now Apexon)](https://www.apexon.com/)
-  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
-- Senior DevOps Engineer @ [Talentica](https://www.talentica.com/)
-  , [Pune](https://en.wikipedia.org/wiki/Pune)
+- Software Engineering Consultant,
+  [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+  - [Toptal](https://www.toptal.com/) :
+    [Anshul Patel](https://www.toptal.com/resume/anshul-patel)
+- Cloud Lead @ [Adani Enterprises Limited](https://www.adanienterprises.com/) ,
+  [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+- Senior Infrastructure Engineer @ [Woven By Toyota](https://woven.toyota/en/) ,
+  [Tokyo](https://en.wikipedia.org/wiki/Tokyo)
+- Senior DevOps Lead @ [Infostretch (now Apexon)](https://www.apexon.com/) ,
+  [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+- Senior DevOps Engineer @ [Talentica](https://www.talentica.com/) ,
+  [Pune](https://en.wikipedia.org/wiki/Pune)
 - Software Configuration Management Engineer @ [Amdocs](https://www.amdocs.com/)
   , [Pune](https://en.wikipedia.org/wiki/Pune)
-- Junior Systems Engineer @ [Elitecore (now Sterlite Tech)](https://www.stl.tech/)
-  , [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
+- Junior Systems Engineer @
+  [Elitecore (now Sterlite Tech)](https://www.stl.tech/) ,
+  [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 
 ## Certifications
 
@@ -36,13 +39,16 @@ the business value.
 
 ## Skillset
 
-- **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF Ecosystem.
+- **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF
+  Ecosystem.
 - **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
-- **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud run.
+- **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud
+  run.
 - **Artificial Intelligence:** Scikit-learn, Langchain, DVC
 - **Agile Methodologies:** Scrum, Kanban
 - **CI/CD:** Github Actions, Concourse CI, Jenkins, GitOps.
-- **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus, OpenTelemetry.
+- **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus,
+  OpenTelemetry.
 - **Security and Compliance:** Wiz, AWS Config, AWS Control Tower.
 - **Scripting Languages:** Python, Bash Shell.
 - **Programming Languages:** Go [Intermediate], Javascript [Intermediate].

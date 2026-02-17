@@ -5,9 +5,10 @@ tags:
   - "sitereliability"
 ---
 
-Recently having binged watch [Air Emergency](https://www.imdb.com/title/tt0386950/),
-I felt that [SREs](https://landing.google.com/sre/) can learn many things from
-aviation industry.
+Recently having binged watch
+[Air Emergency](https://www.imdb.com/title/tt0386950/), I felt that
+[SREs](https://landing.google.com/sre/) can learn many things from aviation
+industry.
 
 <!--more-->
 
@@ -27,8 +28,8 @@ aviation industry.
 - Just as aircraft have pre-flight, in-flight, emergency-checklist and
   post-flight checklist, similar checklists should be prepared and executed by
   SREs before performing, while performing and after performing sensitive
-  changes on the system. SREs should also maintain an emergency-checklist
-  which should be executed in an event if sensitive changes go wrong.
+  changes on the system. SREs should also maintain an emergency-checklist which
+  should be executed in an event if sensitive changes go wrong.
 
 - Just as aircraft subsystems are passed through simulations, sensitive changes
   should be simulated before applying it to the overall system.
@@ -42,7 +43,8 @@ aviation industry.
 - Pilots, SREs are humans and humans are flawed to make mistakes, so like
   Pilots, SREs should be focussed while performing any kind of sensitive changes
   to systems or as [Spock](https://en.wikipedia.org/wiki/Spock) would say it,
-  they shouldn't be [emotionally compromised](https://www.youtube.com/watch?v=k9vHopyEtzs).
+  they shouldn't be
+  [emotionally compromised](https://www.youtube.com/watch?v=k9vHopyEtzs).
 
 - Just as Transport Safety Boards amends the appropriate documents after
   investigating the air crash, similarly SREs should update corresponding system

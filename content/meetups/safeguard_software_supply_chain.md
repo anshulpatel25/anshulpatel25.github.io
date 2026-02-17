@@ -10,8 +10,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about safeguarding the software supply chain via
-SLSA framework and SBOM.
+My meetup talk discusses about safeguarding the software supply chain via SLSA
+framework and SBOM.
 
 <!--more-->
 

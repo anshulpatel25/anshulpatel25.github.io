@@ -8,8 +8,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about conducting Chaos Engineering
-experiments using Gremlin platform.
+My meetup talk discusses about conducting Chaos Engineering experiments using
+Gremlin platform.
 
 <!--more-->
 

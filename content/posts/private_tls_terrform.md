@@ -20,22 +20,22 @@ TLS is an industry standward way to add encryption for data in transist.
 
 - Private CA is developed by creating public/private key pair. Public portion is
   then published which is called CA certificate. Private Key is kept securely
-  else attacker can use the Private Key to issue invalide/malicious
-  TLS certificates.
+  else attacker can use the Private Key to issue invalide/malicious TLS
+  certificates.
 
 - TLS certificate is developed by creating another public/private key, the
   public key is then signed by CA's private key and this signed public key
-  becomes the TLS certificate. The private key will be used to decrypt
-  the initial message encrypted by the TLS certificate and it should be
-  kept securely.
+  becomes the TLS certificate. The private key will be used to decrypt the
+  initial message encrypted by the TLS certificate and it should be kept
+  securely.
 
 ## Why Private TLS?
 
 - Generating private CA and TLS certificate is cost-efficient.
 - Cost-efficieny allows to prototype TLS based application on internal
   environments before releasing or using actual production certificates.
-- If application is privately used in Organization's infrastructure then
-  Private TLS and CA could be more beneficial.
+- If application is privately used in Organization's infrastructure then Private
+  TLS and CA could be more beneficial.
 
 ## Terraform TLS Module
 

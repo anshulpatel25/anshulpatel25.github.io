@@ -32,7 +32,9 @@ params:
     - "js/consent.js"
     - "js/search.js"
     - "js/lunr.js"
-  footerQuote: "ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥"
+  footerQuote:
+    "ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः
+    प्रचोदयात्॥"
   social:
     - name: "Github"
       icon: "fa fa-2x fa-github"

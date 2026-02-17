@@ -10,8 +10,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about how to build immutable
-operating systems [Unikernels] with LinuxKit.
+My meetup talk discusses about how to build immutable operating systems
+[Unikernels] with LinuxKit.
 
 <!--more-->
 

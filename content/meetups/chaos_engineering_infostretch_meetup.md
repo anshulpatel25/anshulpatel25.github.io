@@ -8,8 +8,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about basics of Chaos Engineering
-and how to induce Chaos Engineering via Chaos Lambda.
+My meetup talk discusses about basics of Chaos Engineering and how to induce
+Chaos Engineering via Chaos Lambda.
 
 <!--more-->
 

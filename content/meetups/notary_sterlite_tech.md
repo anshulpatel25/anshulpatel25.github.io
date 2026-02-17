@@ -9,8 +9,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about securely distributing docker images
-in Software Supply Chain using Docker Notary.
+My meetup talk discusses about securely distributing docker images in Software
+Supply Chain using Docker Notary.
 
 <!--more-->
 

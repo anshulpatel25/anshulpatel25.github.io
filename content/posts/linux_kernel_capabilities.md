@@ -30,22 +30,17 @@ Let's say we want to start a Simple HTTP Server module of Python on port 80 with
 a non-privileged user. If we try to start the process without granting any
 capabilities, we will get the following error:
 
-{{< highlight bash >}}
-anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer 80
-Traceback (most recent call last):
-File "/usr/lib/python2.7/runpy.py", line 174, in \_run_module_as_main
-"**main**", fname, loader, pkg_name)
-File "/usr/lib/python2.7/runpy.py", line 72, in \_run_code
-...
-File "/usr/lib/python2.7/socket.py", line 228, in meth
-return getattr(self.\_sock,name)(\*args)
-socket.error: [Errno 13] Permission denied
+{{< highlight bash >}} anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer 80
+Traceback (most recent call last): File "/usr/lib/python2.7/runpy.py", line 174,
+in \_run_module_as_main "**main**", fname, loader, pkg_name) File
+"/usr/lib/python2.7/runpy.py", line 72, in \_run_code ... File
+"/usr/lib/python2.7/socket.py", line 228, in meth return
+getattr(self.\_sock,name)(\*args) socket.error: [Errno 13] Permission denied
 {{< /highlight >}}
 
 Let's add the `CAP_NET_BIND_SERVICE` capability to our Python binary.
 
-{{< highlight bash >}}
-sudo setcap 'CAP_NET_BIND_SERVICE+ep' /usr/bin/python2.7
+{{< highlight bash >}} sudo setcap 'CAP_NET_BIND_SERVICE+ep' /usr/bin/python2.7
 {{< /highlight >}}
 
 The above command states that we are adding the `CAP_NET_BIND_SERVICE`
@@ -54,13 +49,11 @@ Effective and Permitted ( "-" would remove it).
 
 Now let's try to run the Python Simple HTTP Server module again on port 80:
 
-{{< highlight bash >}}
-anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer 80
-Serving HTTP on 0.0.0.0 port 80 ...
-172.28.128.1 - - [06/Jul/2017 11:30:13] "GET / HTTP/1.1" 200 -
-172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File not found
-172.28.128.1 - - [06/Jul/2017 11:30:13] "GET /favicon.ico HTTP/1.1" 404 -
-172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File not found
+{{< highlight bash >}} anshulp@dzone-vagrant-box:$ python -m SimpleHTTPServer 80
+Serving HTTP on 0.0.0.0 port 80 ... 172.28.128.1 - - [06/Jul/2017 11:30:13] "GET
+/ HTTP/1.1" 200 - 172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File
+not found 172.28.128.1 - - [06/Jul/2017 11:30:13] "GET /favicon.ico HTTP/1.1"
+404 - 172.28.128.1 - - [06/Jul/2017 11:30:13] code 404, message File not found
 172.28.128.1 - - [06/Jul/2017 11:30:13] "GET /favicon.ico HTTP/1.1" 404 -
 {{< /highlight >}}
 
@@ -72,7 +65,8 @@ assigned per requirement.
 
 <!-- markdownlint-disable-next-line MD013 -->
 
-There are 3 modes for [Capabilities](https://www.insecure.ws/linux/getcap_setcap.html):
+There are 3 modes for
+[Capabilities](https://www.insecure.ws/linux/getcap_setcap.html):
 
 **e: Effective** - This indicates that the capability is "activated."
 

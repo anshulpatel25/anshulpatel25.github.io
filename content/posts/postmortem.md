@@ -19,8 +19,8 @@ failure inevitable.
 Definition from _Google SRE Team_ :
 
 A postmortem is a written record of an incident, its impact, the actions taken
-to mitigate or resolve it, the root cause, and follow-up actions to prevent
-the incident from recurring.
+to mitigate or resolve it, the root cause, and follow-up actions to prevent the
+incident from recurring.
 
 ## When to create Postmortem Report ?
 
@@ -58,8 +58,8 @@ the incident from recurring.
 
 **Resolution** :
 
-Updated the Machine family from t2.large to m4.xlarge. _R2D2APIGateway_ now
-has capacity to handle 5X traffic surge. (Github Issue: #2595)
+Updated the Machine family from t2.large to m4.xlarge. _R2D2APIGateway_ now has
+capacity to handle 5X traffic surge. (Github Issue: #2595)
 
 **Detection** : Monitoring System detected timeouts for queries to
 _R2D2APIGateway_.

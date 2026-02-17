@@ -9,8 +9,8 @@ tags:
   - "continuousdelivery"
 ---
 
-Chaos engineering is the discipline of experimenting on a distributed system,
-in order to build confidence in the system’s capability to withstand turbulent
+Chaos engineering is the discipline of experimenting on a distributed system, in
+order to build confidence in the system’s capability to withstand turbulent
 conditions in production.
 
 <!--more-->
@@ -43,9 +43,8 @@ outcome of the experiment.
 
 ## 3. Notify the involved Business Units
 
-This is an important step which discusses about notifying the
-**Service Business Unit** so that all the teams around that service
-are aware of following:
+This is an important step which discusses about notifying the **Service Business
+Unit** so that all the teams around that service are aware of following:
 
 - What is that you will be performing on the service?
 - Why are you performing it on the service?
@@ -56,8 +55,8 @@ are aware of following:
 This step involves to run the chaos experiment and observe the metrics.
 
 If you're running the experiment in the production, ability to abort/stop the
-experiment could help in preventing unnecessary harm if experiment
-doesn't execute as per the plan.
+experiment could help in preventing unnecessary harm if experiment doesn't
+execute as per the plan.
 
 ## 5. Analyze the results
 

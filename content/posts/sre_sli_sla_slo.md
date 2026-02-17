@@ -42,11 +42,10 @@ Key Examples are:
 
 SLA defines the penalty that service provider should pay in an event of service
 unavailability for pre-defined period of time. Service provider should clearly
-define the failure factors for which they will be
-accountable(Domain of responsibility). It is common pattern to have loose SLA
-than SLO, for instance: SLA is 99% and SLO is 99.5%. If the service is overly
-available, then SLA/SLO can be used as error budget to deploy complex releases
-to production.
+define the failure factors for which they will be accountable(Domain of
+responsibility). It is common pattern to have loose SLA than SLO, for instance:
+SLA is 99% and SLO is 99.5%. If the service is overly available, then SLA/SLO
+can be used as error budget to deploy complex releases to production.
 
 Key Examples of Penalty are:
 

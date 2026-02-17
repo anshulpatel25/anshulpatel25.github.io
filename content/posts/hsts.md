@@ -36,7 +36,7 @@ HSTS is designed to overcome following threats:
 
 - Webserver directive to add HSTS header in HTTPS section.
 
-- If the configuration is successful, you will get following
-  307(Internal Redirect) redirection from the browser.
+- If the configuration is successful, you will get following 307(Internal
+  Redirect) redirection from the browser.
 
 ![hsts](/images/hsts_redirect.png)

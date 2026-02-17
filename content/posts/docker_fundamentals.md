@@ -8,8 +8,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-This article provides introduction to Docker, how it differs from
-Virtual Machine and underlining technologies.
+This article provides introduction to Docker, how it differs from Virtual
+Machine and underlining technologies.
 
 <!--more-->
 

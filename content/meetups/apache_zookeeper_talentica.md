@@ -7,8 +7,8 @@ tags:
 
 <!-- markdownlint-disable-file MD033 -->
 
-My meetup talk discusses about the architecture, configuration,
-scalability and management of Apache Zookeeper.
+My meetup talk discusses about the architecture, configuration, scalability and
+management of Apache Zookeeper.
 
 <!--more-->
 
