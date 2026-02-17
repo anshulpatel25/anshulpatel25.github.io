@@ -27,7 +27,7 @@ running on your Android device:"><meta name=keywords content="geek,tinkerer,tech
 <span class=tag><a href=/tags/arm/>Arm</a>
 </span><span class=separator>•</span>
 <span class=tag><a href=/tags/hardware/>Hardware</a></span></div></div></header><div class=post-content><p>In my <a href=../mobile_soc_for_homelab/>previous post</a>, I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its
+make compelling lab hardware and demonstrated that a <code>Snapdragon 835</code> can hold its
 own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let&rsquo;s get practical,
 I&rsquo;ll show you exactly how to deploy a complete observability stack on your
@@ -90,7 +90,7 @@ the official GitHub releases.</p><h3 id=step-1-install-required-dependencies>Ste
 <span class=sr-only>Link to heading</span></a></h3><p>Visit the
 <a href=https://github.com/prometheus/prometheus/releases class=external-link target=_blank rel=noopener>Prometheus releases page</a> to
 find the latest ARM64 version. At the time of writing, the latest version is
-<code>3.x.x</code>.</p><p>For ARM64 (which is what Snapdragon 835 uses):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cd $HOME
+<code>3.x.x</code>.</p><p>For ARM64 (which is what <code>Snapdragon 835</code> uses):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cd $HOME
 </span></span><span style=display:flex><span>wget https://github.com/prometheus/prometheus/releases/download/v3.5.1/prometheus-3.5.1.linux-arm64.tar.gz
 </span></span></code></pre></div><p>⚠️ <strong>Note</strong>: Replace <code>3.5.1</code> with the latest version number from the releases
 page.</p><h3 id=step-3-extract-the-tarball>Step 3: Extract the Tarball
@@ -151,13 +151,13 @@ Termux:Boot:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;backgro
 </span></span><span style=display:flex><span>chmod +x ~/.termux/boot/start
 </span></span></code></pre></div><p>The wake lock ensures your services keep running even when the device is in
 standby mode.</p><p>Running a complete monitoring stack on a mobile SoC might seem unconventional,
-but it&rsquo;s surprisingly practical. The Snapdragon 835 handles this workload
+but it&rsquo;s surprisingly practical. The <code>Snapdragon 835</code> handles this workload
 without breaking a sweat, proving once again that these devices are capable of
 much more than we give them credit for.</p><p>Whether you&rsquo;re using this for learning, as a lightweight monitoring solution, or
 just to breathe new life into old hardware, I hope this guide helps you get
 started. Happy monitoring! 📊✨</p><p>Here is the
-<a href=https://grafana.anshulpatel.in/dashboard/snapshot/kwh62EsmD6LYvtw3sYrbp6dzpo8zSLLU class=external-link target=_blank rel=noopener>snapshot preview</a>
-of my Snapdragon 835 running the observability stack, showcasing real-time
+<a href=https://grafana.anshulpatel.in/dashboard/snapshot/DQqsxIzREd86XAesVNxEvitPDy9uX1Ln class=external-link target=_blank rel=noopener>snapshot preview</a>
+of my <code>Snapdragon 835</code> running the observability stack, showcasing real-time
 metrics and system performance.</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
 <a href=https://gohugo.io/>Hugo</a> &
 <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/cookieconsent.min.min.640def47472a85694886ce0c6ce862dc679272fe53ca0dabc37ea5bbf1574ea8.js integrity="sha256-ZA3vR0cqhWlIhs4MbOhi3GeScv5Tyg2rw36lu/FXTqg="></script><script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script><script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script><script src=/js/lunr.min.a2fdd4e494c630ca682ec816b827065412a48e1277b1b6ce8cff1a94ffdc1d9e.js integrity="sha256-ov3U5JTGMMpoLsgWuCcGVBKkjhJ3sbbOjP8alP/cHZ4="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-62JLR4L8L8"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-62JLR4L8L8")}</script></body></html>
