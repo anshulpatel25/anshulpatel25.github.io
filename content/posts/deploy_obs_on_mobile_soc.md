@@ -9,7 +9,7 @@ tags:
 ---
 
 In my [previous post](../mobile_soc_for_homelab/), I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its
+make compelling lab hardware and demonstrated that a `Snapdragon 835` can hold its
 own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let's get practical,
 I'll show you exactly how to deploy a complete observability stack on your
@@ -166,7 +166,7 @@ Visit the
 find the latest ARM64 version. At the time of writing, the latest version is
 `3.x.x`.
 
-For ARM64 (which is what Snapdragon 835 uses):
+For ARM64 (which is what `Snapdragon 835` uses):
 
 ```sh
 cd $HOME
@@ -309,7 +309,7 @@ The wake lock ensures your services keep running even when the device is in
 standby mode.
 
 Running a complete monitoring stack on a mobile SoC might seem unconventional,
-but it's surprisingly practical. The Snapdragon 835 handles this workload
+but it's surprisingly practical. The `Snapdragon 835` handles this workload
 without breaking a sweat, proving once again that these devices are capable of
 much more than we give them credit for.
 
@@ -318,6 +318,6 @@ just to breathe new life into old hardware, I hope this guide helps you get
 started. Happy monitoring! 📊✨
 
 Here is the
-[snapshot preview](https://grafana.anshulpatel.in/dashboard/snapshot/kwh62EsmD6LYvtw3sYrbp6dzpo8zSLLU)
-of my Snapdragon 835 running the observability stack, showcasing real-time
+[snapshot preview](https://grafana.anshulpatel.in/dashboard/snapshot/DQqsxIzREd86XAesVNxEvitPDy9uX1Ln)
+of my `Snapdragon 835` running the observability stack, showcasing real-time
 metrics and system performance.
