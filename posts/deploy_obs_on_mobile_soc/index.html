@@ -1,6 +1,6 @@
 <!doctype html><html lang=en><head><title>Deploying Observability Stack on Mobile SoC: A Practical Guide · Anshul Patel</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="In my previous post, I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a Snapdragon 835 can hold its
-own against modern single-board computers. I even showed a live dashboard
+make compelling lab hardware and demonstrated that a Snapdragon 835 can hold
+its own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let&rsquo;s get practical,
 I&rsquo;ll show you exactly how to deploy a complete observability stack on your
 mobile SoC. 📊🚀
@@ -27,8 +27,8 @@ running on your Android device:"><meta name=keywords content="geek,tinkerer,tech
 <span class=tag><a href=/tags/arm/>Arm</a>
 </span><span class=separator>•</span>
 <span class=tag><a href=/tags/hardware/>Hardware</a></span></div></div></header><div class=post-content><p>In my <a href=../mobile_soc_for_homelab/>previous post</a>, I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a <code>Snapdragon 835</code> can hold its
-own against modern single-board computers. I even showed a live dashboard
+make compelling lab hardware and demonstrated that a <code>Snapdragon 835</code> can hold
+its own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let&rsquo;s get practical,
 I&rsquo;ll show you exactly how to deploy a complete observability stack on your
 mobile SoC. 📊🚀</p><h2 id=-what-were-building>🎯 What We&rsquo;re Building
@@ -69,10 +69,14 @@ package repository.</p><h3 id=step-1-update-package-lists>Step 1: Update Package
 </span></span></code></pre></div><p>That&rsquo;s it! The package manager handles all dependencies automatically. ✨</p><h3 id=step-3-set-up-grafana-as-a-service>Step 3: Set Up Grafana as a Service
 <a class=heading-link href=#step-3-set-up-grafana-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Instead of using <code>nohup</code>, let&rsquo;s properly manage Grafana as a service using <code>sv</code>.</p><p>Create a service directory for Grafana:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/grafana
+</span></span><span style=display:flex><span>mkdir -p $PREFIX/var/service/grafana/log
 </span></span></code></pre></div><p>Create the run script:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/grafana/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>exec grafana server --homepath $PREFIX/share/grafana/ 2&gt;&amp;1
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cd $PREFIX/var/service/grafana/log
+</span></span><span style=display:flex><span>ln -sf $PREFIX/share/termux-services/svlogger run
 </span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/grafana/run
 </span></span></code></pre></div><p>Enable and start the Grafana service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable grafana
 </span></span><span style=display:flex><span>sv up grafana
@@ -100,11 +104,15 @@ page.</p><h3 id=step-3-extract-the-tarball>Step 3: Extract the Tarball
 </span></span></code></pre></div><h3 id=step-4-set-up-prometheus-as-a-service>Step 4: Set Up Prometheus as a Service
 <a class=heading-link href=#step-4-set-up-prometheus-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Create a service directory for Prometheus:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/prometheus
+</span></span><span style=display:flex><span>mkdir -p $PREFIX/var/service/prometheus/log
 </span></span></code></pre></div><p>Create the run script:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/prometheus/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>exec $HOME/prometheus/prometheus --config.file=$HOME/prometheus/prometheus.yml --storage.tsdb.path $HOME/prometheus/ --storage.tsdb.retention.time 14d 2&gt;&amp;1
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cd $PREFIX/var/service/grafana/log
+</span></span><span style=display:flex><span>ln -sf $PREFIX/share/termux-services/svlogger run
 </span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/prometheus/run
 </span></span></code></pre></div><p>Enable and start the Prometheus service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable prometheus
 </span></span><span style=display:flex><span>sv up prometheus
@@ -127,11 +135,15 @@ requires root access to read certain system files.</p><h3 id=step-1-install-sudo
 </span></span></code></pre></div><h3 id=step-4-set-up-node-exporter-as-a-service>Step 4: Set Up Node Exporter as a Service
 <a class=heading-link href=#step-4-set-up-node-exporter-as-a-service><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Create a service directory for Node Exporter:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>mkdir -p $PREFIX/var/service/node_exporter
+</span></span><span style=display:flex><span>mkdir -p $PREFIX/var/service/node_exporter/log
 </span></span></code></pre></div><p>Create the run script (with root privileges):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>cat &gt; $PREFIX/var/service/node_exporter/run <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>#!/data/data/com.termux/files/usr/bin/sh
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>exec sudo $HOME/node_exporter/node_exporter 2&gt;&amp;1
 </span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cd $PREFIX/var/service/grafana/log
+</span></span><span style=display:flex><span>ln -sf $PREFIX/share/termux-services/svlogger run
 </span></span></code></pre></div><p>Make the scripts executable:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>chmod +x $PREFIX/var/service/node_exporter/run
 </span></span></code></pre></div><p>Enable and start the Node Exporter service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-sh data-lang=sh><span style=display:flex><span>sv-enable node-exporter
 </span></span><span style=display:flex><span>sv up node-exporter

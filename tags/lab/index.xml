@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lab on Anshul Patel</title><link>http://www.anshulpatel.in/tags/lab/</link><description>Recent content in Lab on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/lab/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploying Observability Stack on Mobile SoC: A Practical Guide</title><link>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</link><pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a &lt;code&gt;Snapdragon 835&lt;/code&gt; can hold its
-own against modern single-board computers. I even showed a live dashboard
+make compelling lab hardware and demonstrated that a &lt;code&gt;Snapdragon 835&lt;/code&gt; can hold
+its own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let&amp;rsquo;s get practical,
 I&amp;rsquo;ll show you exactly how to deploy a complete observability stack on your
 mobile SoC. 📊🚀&lt;/p&gt;
