@@ -9,8 +9,8 @@ tags:
 ---
 
 In my [previous post](../mobile_soc_for_homelab/), I explored why mobile SoCs
-make compelling lab hardware and demonstrated that a `Snapdragon 835` can hold its
-own against modern single-board computers. I even showed a live dashboard
+make compelling lab hardware and demonstrated that a `Snapdragon 835` can hold
+its own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let's get practical,
 I'll show you exactly how to deploy a complete observability stack on your
 mobile SoC. 📊🚀
@@ -106,6 +106,7 @@ Create a service directory for Grafana:
 
 ```sh
 mkdir -p $PREFIX/var/service/grafana
+mkdir -p $PREFIX/var/service/grafana/log
 ```
 
 Create the run script:
@@ -115,6 +116,9 @@ cat > $PREFIX/var/service/grafana/run << 'EOF'
 #!/data/data/com.termux/files/usr/bin/sh
 exec grafana server --homepath $PREFIX/share/grafana/ 2>&1
 EOF
+
+cd $PREFIX/var/service/grafana/log
+ln -sf $PREFIX/share/termux-services/svlogger run
 ```
 
 Make the scripts executable:
@@ -189,6 +193,7 @@ Create a service directory for Prometheus:
 
 ```sh
 mkdir -p $PREFIX/var/service/prometheus
+mkdir -p $PREFIX/var/service/prometheus/log
 ```
 
 Create the run script:
@@ -199,6 +204,9 @@ cat > $PREFIX/var/service/prometheus/run << 'EOF'
 
 exec $HOME/prometheus/prometheus --config.file=$HOME/prometheus/prometheus.yml --storage.tsdb.path $HOME/prometheus/ --storage.tsdb.retention.time 14d 2>&1
 EOF
+
+cd $PREFIX/var/service/grafana/log
+ln -sf $PREFIX/share/termux-services/svlogger run
 ```
 
 Make the scripts executable:
@@ -256,6 +264,7 @@ Create a service directory for Node Exporter:
 
 ```sh
 mkdir -p $PREFIX/var/service/node_exporter
+mkdir -p $PREFIX/var/service/node_exporter/log
 ```
 
 Create the run script (with root privileges):
@@ -266,6 +275,9 @@ cat > $PREFIX/var/service/node_exporter/run << 'EOF'
 
 exec sudo $HOME/node_exporter/node_exporter 2>&1
 EOF
+
+cd $PREFIX/var/service/grafana/log
+ln -sf $PREFIX/share/termux-services/svlogger run
 ```
 
 Make the scripts executable:
