@@ -19,14 +19,14 @@ old flagship smartphone you replaced a couple of years ago? 📱✨
 ## 🌍 The Shifting Landscape of Computing Hardware
 
 The AI revolution has been incredible for advancing technology, but it's come
-with an unexpected side effect: traditional compute hardware for hobbyists and
+with an unexpected side effect, traditional compute hardware for hobbyists and
 enthusiasts is getting squeezed out. Manufacturers are prioritizing high-margin
 AI accelerators and data center GPUs, while the modest computing needs of
 builders are increasingly an afterthought. The result? Higher prices and limited
 availability for the very hardware that powers our learning labs and self-hosted
 services.
 
-But here's the thing: while we've been chasing traditional ARM SBCs (Single
+But here's the thing, while we've been chasing traditional ARM SBCs (Single
 Board Computers) like the Raspberry Pi, the mobile industry has been quietly
 churning out incredibly efficient, powerful System-on-Chips (SoCs) for years.
 And many of these devices are now readily available in the second-hand market at
@@ -162,7 +162,7 @@ running cloud-native workloads.
 
 ## ⚠️ The Challenges (Because Nothing's Perfect)
 
-Let's be honest: using mobile hardware for computing isn't without challenges:
+Let's be honest, using mobile hardware for computing isn't without challenges:
 
 - **Software Ecosystem**: While there are solutions like
   [termux](https://termux.dev/en/) which allow you to install various Linux
@@ -183,5 +183,5 @@ reservoir of affordable, efficient computing power that deserves serious
 consideration.
 
 The next time you're about to drop **$80-100** on a `Raspberry Pi 5`, consider
-this: that old flagship phone might just be your next lab server. 🚀 It's not a
+this, that old flagship phone might just be your next lab server. 🚀 It's not a
 bad idea—it might actually be brilliant. 💪
