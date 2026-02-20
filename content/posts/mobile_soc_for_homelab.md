@@ -151,7 +151,7 @@ chip originally designed to power a smartphone.
 
 **Want to see it in action?**
 
-[Dashboard Snapshot](https://grafana.anshulpatel.in/dashboard/snapshot/DQqsxIzREd86XAesVNxEvitPDy9uX1Ln)
+[Dashboard Snapshot](https://grafana.anshulpatel.in/dashboard/snapshot/ta01oO39p4KGbYjFyQnyz0hAEcTo3mZT)
 of node exporter running on `Snapdragon 835`. (Depending on your network, it
 might take a few seconds to load the dashboard). I will be sharing more details
 about the setup and configuration in an upcoming post, so stay tuned!

@@ -330,6 +330,6 @@ just to breathe new life into old hardware, I hope this guide helps you get
 started. Happy monitoring! 📊✨
 
 Here is the
-[snapshot preview](https://grafana.anshulpatel.in/dashboard/snapshot/DQqsxIzREd86XAesVNxEvitPDy9uX1Ln)
+[snapshot preview](https://grafana.anshulpatel.in/dashboard/snapshot/ta01oO39p4KGbYjFyQnyz0hAEcTo3mZT)
 of my `Snapdragon 835` running the observability stack, showcasing real-time
 metrics and system performance.
