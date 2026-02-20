@@ -1,0 +1,115 @@
+<!doctype html><html lang=en><head><title>Opensourcing Yukti: A Battery Charging Manager for Your Mobile Lab · Anshul Patel</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="In my previous post, I made the
+case that old flagship smartphones are seriously underrated as lab nodes.
+A Snapdragon 835 from 2016 trailing a Raspberry Pi 5 by only 13-15%
+on cryptographic benchmarks, at a fraction of the cost? That&rsquo;s a compelling
+argument for raiding the drawer where old phones go to retire. 📱
+The case for mobile hardware has only gotten stronger since then. The AI
+boom has quietly reshaped memory manufacturing priorities: chip makers have
+pivoted capacity toward High Bandwidth Memory (HBM) to feed the insatiable
+appetite of GPU clusters and conventional DRAM and LPDDR supply has paid the
+price. Single Board Computers like the Raspberry Pi and its alternatives have
+seen noticeable price increases as a knock-on effect, making the
+economics of purpose-built hobby hardware shakier than they used to be. An
+old flagship sitting in a drawer starts looking less like a compromise and more
+like the smart play."><meta name=keywords content="geek,tinkerer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Opensourcing Yukti: A Battery Charging Manager for Your Mobile Lab"><meta name=twitter:description content="In my previous post, I made the case that old flagship smartphones are seriously underrated as lab nodes. A Snapdragon 835 from 2016 trailing a Raspberry Pi 5 by only 13-15% on cryptographic benchmarks, at a fraction of the cost? That’s a compelling argument for raiding the drawer where old phones go to retire. 📱
+The case for mobile hardware has only gotten stronger since then. The AI boom has quietly reshaped memory manufacturing priorities: chip makers have pivoted capacity toward High Bandwidth Memory (HBM) to feed the insatiable appetite of GPU clusters and conventional DRAM and LPDDR supply has paid the price. Single Board Computers like the Raspberry Pi and its alternatives have seen noticeable price increases as a knock-on effect, making the economics of purpose-built hobby hardware shakier than they used to be. An old flagship sitting in a drawer starts looking less like a compromise and more like the smart play."><meta property="og:url" content="http://www.anshulpatel.in/posts/opensourcing_yukti/"><meta property="og:site_name" content="Anshul Patel"><meta property="og:title" content="Opensourcing Yukti: A Battery Charging Manager for Your Mobile Lab"><meta property="og:description" content="In my previous post, I made the case that old flagship smartphones are seriously underrated as lab nodes. A Snapdragon 835 from 2016 trailing a Raspberry Pi 5 by only 13-15% on cryptographic benchmarks, at a fraction of the cost? That’s a compelling argument for raiding the drawer where old phones go to retire. 📱
+The case for mobile hardware has only gotten stronger since then. The AI boom has quietly reshaped memory manufacturing priorities: chip makers have pivoted capacity toward High Bandwidth Memory (HBM) to feed the insatiable appetite of GPU clusters and conventional DRAM and LPDDR supply has paid the price. Single Board Computers like the Raspberry Pi and its alternatives have seen noticeable price increases as a knock-on effect, making the economics of purpose-built hobby hardware shakier than they used to be. An old flagship sitting in a drawer starts looking less like a compromise and more like the smart play."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-02-20T00:00:00+00:00"><meta property="article:modified_time" content="2026-02-20T00:00:00+00:00"><meta property="article:tag" content="Lab"><meta property="article:tag" content="Arm"><meta property="article:tag" content="Hardware"><meta property="article:tag" content="Golang"><meta property="article:tag" content="Opensource"><link rel=canonical href=http://www.anshulpatel.in/posts/opensourcing_yukti/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/custom.min.cba2e9ecbfbcddfea52dc5e68065efce9cca76e279bc68b4f5c7dfca261c3e59.css integrity="sha256-y6Lp7L+83f6lLcXmgGXvzpzKduJ5vGi09cffyiYcPlk=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/fork-awesome.min.41c9b5c129b4633389c0ad630f0904f7a63fe27a7be7e59999a70233739eb83b.css integrity="sha256-Qcm1wSm0YzOJwK1jDwkE96Y/4np75+WZmacCM3OeuDs=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/cookieconsent.min.min.63b9b6f50d79ec84bdfe0545539ef71cedb040021b933e9a7bcf121e8b59c1d8.css integrity="sha256-Y7m29Q157IS9/gVFU573HO2wQAIbkz6ae88SHotZwdg=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon_32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon_16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://www.anshulpatel.in/>Anshul Patel
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/search/>Search</a></li><li class=navigation-item><a class=navigation-link href=/meetups/>Meetups</a></li><li class=navigation-item><a class=navigation-link href=/oss/>OSS</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://www.anshulpatel.in/posts/opensourcing_yukti/>Opensourcing Yukti: A Battery Charging Manager for Your Mobile Lab</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2026-02-20T00:00:00Z>February 20, 2026
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/lab/>Lab</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/arm/>Arm</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/hardware/>Hardware</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/golang/>Golang</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/opensource/>Opensource</a></span></div></div></header><div class=post-content><p>In my <a href=../mobile_soc_for_homelab/>previous post</a>, I made the
+case that old flagship smartphones are seriously underrated as lab nodes.
+A <code>Snapdragon 835</code> from <code>2016</code> trailing a <code>Raspberry Pi 5</code> by only <strong>13-15%</strong>
+on cryptographic benchmarks, at a fraction of the cost? That&rsquo;s a compelling
+argument for raiding the drawer where old phones go to retire. 📱</p><p>The case for mobile hardware has only gotten stronger since then. The <strong>AI
+boom</strong> has quietly reshaped memory manufacturing priorities: chip makers have
+pivoted capacity toward <strong>High Bandwidth Memory (HBM)</strong> to feed the insatiable
+appetite of GPU clusters and conventional DRAM and LPDDR supply has paid the
+price. Single Board Computers like the <code>Raspberry Pi</code> and its alternatives have
+seen noticeable <strong>price increases</strong> as a knock-on effect, making the
+economics of purpose-built hobby hardware shakier than they used to be. An
+old flagship sitting in a drawer starts looking less like a compromise and more
+like the smart play.</p><p>But there&rsquo;s a catch nobody talks about, what happens to the battery when you
+leave a phone plugged in permanently as a server?</p><h2 id=-the-hidden-cost-of-always-plugged-in>🔋 The Hidden Cost of &ldquo;Always Plugged In&rdquo;
+<a class=heading-link href=#-the-hidden-cost-of-always-plugged-in><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Lithium-ion batteries are genuinely remarkable pieces of chemistry, but they
+have a well-known Achilles&rsquo; heel, <strong>staying at 100% charge for extended
+periods degrades them fast.</strong> Keep a phone constantly topped up and you&rsquo;ll
+watch its battery capacity shrink visibly over months.</p><p>This is normally fine for a phone you pocket every day it charges overnight and
+you use it. But a lab node running Prometheus, Node Exporter, or any other
+24/7 service? That phone lives on the charger indefinitely. Without
+intervention, you&rsquo;re accelerating battery wear every single day.</p><p>The built-in battery is one of the best features of using mobile hardware for a
+lab (free UPS!), but only if you protect it. So I built <strong>Yukti</strong> to do
+exactly that.</p><h2 id=-introducing-yukti>🌱 Introducing Yukti
+<a class=heading-link href=#-introducing-yukti><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><a href=https://github.com/anshulpatel25/yukti class=external-link target=_blank rel=noopener><strong>Yukti</strong></a> is a small, clean Go
+application that manages battery charging automatically on rooted Android
+devices. The name <strong><em>yukti</em></strong> (युक्ति) means <em>clever strategy</em> in Sanskrit - and
+that&rsquo;s exactly what it is a clever strategy to make your mobile lab
+sustainable for the long run.</p><p>It runs quietly in the background as a Termux service, monitoring battery
+capacity every 60 seconds and toggling charging on or off based on configurable
+thresholds. No UI, no bloat just a focused daemon doing one thing well.</p><h2 id=-the-core-idea-hysteresis-charging>🧠 The Core Idea: Hysteresis Charging
+<a class=heading-link href=#-the-core-idea-hysteresis-charging><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>The magic behind Yukti is a concept called <strong>hysteresis</strong>. Rather than
+switching charging on and off at a single threshold (which would cause
+constant, rapid toggling), Yukti uses <em>two</em> thresholds with a buffer zone
+between them:</p><table><thead><tr><th>Battery Level</th><th>Action</th></tr></thead><tbody><tr><td>≤ 40%</td><td><strong>Enable charging</strong></td></tr><tr><td>41% – 69%</td><td><strong>Maintain current state</strong></td></tr><tr><td>≥ 70%</td><td><strong>Disable charging</strong></td></tr></tbody></table><p>Think of it like a thermostat, your home&rsquo;s heating doesn&rsquo;t kick in the moment
+the temperature drops by one degree it has a range it&rsquo;s comfortable with. Yukti
+applies exactly the same thinking to your battery.</p><p>Here&rsquo;s what an actual charging cycle looks like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-md data-lang=md><span style=display:flex><span>Battery drains → hits 40% → charging enabled ⚡
+</span></span><span style=display:flex><span>Battery charges → hits 70% → charging disabled 🔌
+</span></span><span style=display:flex><span>Battery drains → hits 40% → charging enabled ⚡
+</span></span><span style=display:flex><span>... and so on
+</span></span></code></pre></div><p>The result is that your battery lives comfortably between 40% and 70%, which
+is the <strong>sweet spot for lithium-ion longevity</strong>. You get the UPS benefit of a
+charged battery, without the degradation from perpetually sitting at 100%.</p><p>The hysteresis zone (41–69%) is equally important, it prevents the charging
+circuit from rapidly toggling on and off when the battery hovers near a single
+boundary, reducing wear on both the battery and the charging hardware.</p><h2 id=-seeing-it-in-action>📸 Seeing It In Action
+<a class=heading-link href=#-seeing-it-in-action><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Here&rsquo;s a snapshot of the periodic automatic recharging cycle and the
+corresponding thermal behavior on the <code>Snapdragon 835</code>:</p><p><img src=/images/yukti_thermals.png alt="Yukti thermals"></p><p>The pattern is exactly what you want, short, bounded charging bursts followed
+by discharge phases, with thermals staying well within safe operating ranges
+because charging events are infrequent and controlled.</p><p>I have been running Yukti on a <code>Snapdragon 835</code> lab node which currently
+hosts my home&rsquo;s <a href=../deploy_obs_on_mobile_soc/>observability stack</a>.</p><h2 id=-architecture-clean-go-no-surprises>🏗️ Architecture: Clean Go, No Surprises
+<a class=heading-link href=#-architecture-clean-go-no-surprises><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Yukti is written in idiomatic Go and follows clean architecture principles.</p><p>The charging control works by writing to
+<code>/sys/class/power_supply/battery/charging_enabled</code> a kernel-exposed sysfs
+path available on most Android devices. This is why <strong>root access is
+required</strong>, writing to sysfs nodes under <code>/sys/class/power_supply/</code> is
+restricted to <code>root</code> on Android. Yukti needs to be granted superuser
+permissions (via Magisk or similar) to function.</p><p>The clean separation between domain logic and the filesystem implementation
+also means the hysteresis rules are fully unit-tested independent of any
+hardware you can verify the logic without needing a physical device.</p><h2 id=-getting-started>🚀 Getting Started
+<a class=heading-link href=#-getting-started><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Yukti is built for <strong>rooted Android devices</strong> running Termux. The recommended
+deployment is as a persistent Termux service that starts automatically on boot.</p><p>Full installation and deployment instructions including cross-compiling the
+ARM64 binary, setting up the Termux service, and enabling it at startup are
+covered in the
+<a href=https://github.com/anshulpatel25/yukti class=external-link target=_blank rel=noopener>official README on GitHub</a>.</p><h2 id=-why-this-matters-beyond-battery-health>💭 Why This Matters Beyond Battery Health
+<a class=heading-link href=#-why-this-matters-beyond-battery-health><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>When I argued for mobile SoCs as lab nodes, one of the headline benefits
+was the built-in battery acting as a free UPS. But a degraded battery is
+worse than no battery at all it can fail unpredictably and give you false
+confidence about your uptime story.</p><p>Yukti closes that loop. With it running, the battery actually <em>stays healthy</em>
+as an emergency power buffer, thermals stay predictable because charging bursts
+are brief and spaced out, and your phone can realistically serve as a reliable
+lab node for years rather than months.</p><p>A <strong>2016-era flagship</strong> running modern cloud-native workloads, with a healthy
+battery, on a few watts of power that&rsquo;s an outcome worth getting excited about.
+🎉</p><h2 id=-open-source--contributions>🤝 Open Source & Contributions
+<a class=heading-link href=#-open-source--contributions><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Yukti is open source under the LICENSE included in the repository.
+Contributions are very much welcome whether that&rsquo;s supporting additional
+battery sysfs layouts, adding configurability for the charge thresholds, or
+improving the Termux service setup experience.</p><p>If you&rsquo;re running mobile hardware in your lab, give Yukti a try and let me
+know how it goes.</p><p>Happy building! 🚀</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
+<a href=https://gohugo.io/>Hugo</a> &
+<a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/cookieconsent.min.min.640def47472a85694886ce0c6ce862dc679272fe53ca0dabc37ea5bbf1574ea8.js integrity="sha256-ZA3vR0cqhWlIhs4MbOhi3GeScv5Tyg2rw36lu/FXTqg="></script><script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script><script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script><script src=/js/lunr.min.a2fdd4e494c630ca682ec816b827065412a48e1277b1b6ce8cff1a94ffdc1d9e.js integrity="sha256-ov3U5JTGMMpoLsgWuCcGVBKkjhJ3sbbOjP8alP/cHZ4="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-62JLR4L8L8"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-62JLR4L8L8")}</script></body></html>

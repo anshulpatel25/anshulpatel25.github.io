@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arm on Anshul Patel</title><link>http://www.anshulpatel.in/tags/arm/</link><description>Recent content in Arm on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/arm/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploying Observability Stack on Mobile SoC: A Practical Guide</title><link>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</link><pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I explored why mobile SoCs
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arm on Anshul Patel</title><link>http://www.anshulpatel.in/tags/arm/</link><description>Recent content in Arm on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 20 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/arm/index.xml" rel="self" type="application/rss+xml"/><item><title>Opensourcing Yukti: A Battery Charging Manager for Your Mobile Lab</title><link>http://www.anshulpatel.in/posts/opensourcing_yukti/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/opensourcing_yukti/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I made the
+case that old flagship smartphones are seriously underrated as lab nodes.
+A &lt;code&gt;Snapdragon 835&lt;/code&gt; from &lt;code&gt;2016&lt;/code&gt; trailing a &lt;code&gt;Raspberry Pi 5&lt;/code&gt; by only &lt;strong&gt;13-15%&lt;/strong&gt;
+on cryptographic benchmarks, at a fraction of the cost? That&amp;rsquo;s a compelling
+argument for raiding the drawer where old phones go to retire. 📱&lt;/p&gt;
+&lt;p&gt;The case for mobile hardware has only gotten stronger since then. The &lt;strong&gt;AI
+boom&lt;/strong&gt; has quietly reshaped memory manufacturing priorities: chip makers have
+pivoted capacity toward &lt;strong&gt;High Bandwidth Memory (HBM)&lt;/strong&gt; to feed the insatiable
+appetite of GPU clusters and conventional DRAM and LPDDR supply has paid the
+price. Single Board Computers like the &lt;code&gt;Raspberry Pi&lt;/code&gt; and its alternatives have
+seen noticeable &lt;strong&gt;price increases&lt;/strong&gt; as a knock-on effect, making the
+economics of purpose-built hobby hardware shakier than they used to be. An
+old flagship sitting in a drawer starts looking less like a compromise and more
+like the smart play.&lt;/p&gt;</description></item><item><title>Deploying Observability Stack on Mobile SoC: A Practical Guide</title><link>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</link><pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/deploy_obs_on_mobile_soc/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I explored why mobile SoCs
 make compelling lab hardware and demonstrated that a &lt;code&gt;Snapdragon 835&lt;/code&gt; can hold
 its own against modern single-board computers. I even showed a live dashboard
 running Prometheus and Node Exporter on this setup. Now, let&amp;rsquo;s get practical,
