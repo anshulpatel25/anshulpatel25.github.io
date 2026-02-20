@@ -149,7 +149,7 @@ battery, on a few watts of power that's an outcome worth getting excited about.
 
 ## 🤝 Open Source & Contributions
 
-Yukti is open source under the LICENSE included in the repository.
+Yukti is open source under the MIT License included in the repository.
 Contributions are very much welcome whether that's supporting additional
 battery sysfs layouts, adding configurability for the charge thresholds, or
 improving the Termux service setup experience.
