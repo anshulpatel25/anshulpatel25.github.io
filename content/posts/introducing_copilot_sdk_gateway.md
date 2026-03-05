@@ -82,7 +82,7 @@ architecture:
 ```goat
 +------------------------------------------+
 |  OpenAI-compatible client                |
-|  (e.g., N8N, Continue, Aider)            |
+|  (e.g., N8N)            |
 +------------------------------------------+
                   |
                   v
