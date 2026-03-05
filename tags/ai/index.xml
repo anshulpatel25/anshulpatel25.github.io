@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ai on Anshul Patel</title><link>http://www.anshulpatel.in/tags/ai/</link><description>Recent content in Ai on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 05 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing copilot-sdk-gateway: Bridging GitHub Copilot and Your Automation Workflows</title><link>http://www.anshulpatel.in/posts/introducing_copilot_sdk_gateway/</link><pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/introducing_copilot_sdk_gateway/</guid><description>&lt;p&gt;Like many developers, I&amp;rsquo;ve become hooked on AI powered automation.
+&lt;a href="https://n8n.io/" class="external-link" target="_blank" rel="noopener"&gt;N8N&lt;/a&gt; has been my go-to platform for orchestrating daily tasks
+from summarizing articles to processing notifications. But there&amp;rsquo;s been one
+persistent friction point: &lt;strong&gt;getting diverse LLM providers to play nicely with
+existing workflows.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Most workflow tools expect the OpenAI API format (or its close cousin, the
+Ollama API spec). GitHub Copilot, with its incredibly compelling pricing model,
+didn&amp;rsquo;t speak that language. Until now. 🚀&lt;/p&gt;</description></item></channel></rss>
