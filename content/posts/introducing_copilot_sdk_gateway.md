@@ -131,17 +131,7 @@ other hand, offers **unlimited requests** for certain models, with a concept of
 "premium requests" for frontier models.
 
 For my use case running dozens of automated workflows daily this is a
-game-changer. Token-based pricing would add up quickly. With Copilot Pro, I get:
-
-- **Unlimited completions** with included models (GPT-4.1, Claude Haiku 4.5,
-  Grok Code Fast 1)
-- **300 premium requests** per month for frontier models (Claude Opus 4.6,
-  GPT-5.2, Gemini 3 Pro)
-- **Access to cutting-edge models** without the token anxiety
-
-The math is simple: my N8N workflows typically use base models for routine tasks
-and premium models for complex reasoning. 300 premium requests covers my monthly
-automation needs comfortably.
+game-changer.
 
 ## The Tradeoff: Inference Latency
 
