@@ -32,9 +32,9 @@ operations to maximize the business value.
 
 <!-- markdownlint-disable-file MD013 -->
 
+- [Nvidia Certified Associate: AI Infrastructure and Operations](https://www.credly.com/badges/3f6b44d1-6176-46a2-bf9a-5718c7b21832/public_url)
 - [Cloud Native Computing Foundation certified Kubernetes and Cloud Native Associate](https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url)
 - [Google Cloud Certified Associate Cloud Engineer](https://google.accredible.com/8216c231-a056-44d4-8c3c-17af58fe67ea)
-- [Amazon Web Services Certified Solutions Architect - Associate](https://www.credly.com/badges/1d2d5cc9-d783-48e3-921d-b7781667a39d/public_url)
 - [CloudBees Certified Jenkins Engineer](https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488)
 
 ## Skillset
@@ -44,15 +44,15 @@ operations to maximize the business value.
 - **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
 - **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud
   run.
-- **Artificial Intelligence:** Scikit-learn, Langchain, DVC
+- **Artificial Intelligence:** Scikit-learn, Langchain, Langgraph, DVC
 - **Agile Methodologies:** Scrum, Kanban
-- **CI/CD:** Github Actions, Concourse CI, Jenkins, GitOps.
+- **CI/CD:** Github Actions, GitLab CI/CD, Jenkins, GitOps.
 - **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus,
   OpenTelemetry.
 - **Security and Compliance:** Wiz, AWS Config, AWS Control Tower.
 - **Scripting Languages:** Python, Bash Shell.
 - **Programming Languages:** Go [Intermediate], Javascript [Intermediate].
-- **Database Systems:** MySQL, PostgreSQL, MongoDB.
-- **Caching Engine:** Redis, Memcached.
+- **Database Systems:** PostgreSQL, MongoDB.
+- **Caching Engine:** Redis, Valkey.
 - **Big Data:** Apache Kafka, Apache Airflow.
 - **No Code Platforms:** N8N.
