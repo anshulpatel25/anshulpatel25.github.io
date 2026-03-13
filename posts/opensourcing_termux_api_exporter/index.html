@@ -1,0 +1,126 @@
+<!doctype html><html lang=en><head><title>Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way · Anshul Patel</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Anshul Patel"><meta name=description content="In my previous post, I made the case that old
+flagship smartphones are fantastic lab hardware. A Snapdragon 835 from 2016
+delivering 85-87% of a Raspberry Pi 5&rsquo;s performance at a fraction of the
+cost? That&rsquo;s not just compelling, it&rsquo;s a game-changer for budget-conscious lab
+builders. 📱💪
+But here&rsquo;s the thing, once you&rsquo;ve got your mobile SoC running services 24/7, you
+need to monitor it. You want to know if your battery is healthy, if your
+WiFi connection is stable, and whether your device is thermally comfortable
+under load. And if you&rsquo;re already running Prometheus (which you should be!), you
+need metrics in a format it understands."><meta name=keywords content="geek,tinkerer,techie,blog,engineer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way"><meta name=twitter:description content="In my previous post, I made the case that old flagship smartphones are fantastic lab hardware. A Snapdragon 835 from 2016 delivering 85-87% of a Raspberry Pi 5’s performance at a fraction of the cost? That’s not just compelling, it’s a game-changer for budget-conscious lab builders. 📱💪
+But here’s the thing, once you’ve got your mobile SoC running services 24/7, you need to monitor it. You want to know if your battery is healthy, if your WiFi connection is stable, and whether your device is thermally comfortable under load. And if you’re already running Prometheus (which you should be!), you need metrics in a format it understands."><meta property="og:url" content="http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/"><meta property="og:site_name" content="Anshul Patel"><meta property="og:title" content="Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way"><meta property="og:description" content="In my previous post, I made the case that old flagship smartphones are fantastic lab hardware. A Snapdragon 835 from 2016 delivering 85-87% of a Raspberry Pi 5’s performance at a fraction of the cost? That’s not just compelling, it’s a game-changer for budget-conscious lab builders. 📱💪
+But here’s the thing, once you’ve got your mobile SoC running services 24/7, you need to monitor it. You want to know if your battery is healthy, if your WiFi connection is stable, and whether your device is thermally comfortable under load. And if you’re already running Prometheus (which you should be!), you need metrics in a format it understands."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-03-13T00:00:00+00:00"><meta property="article:modified_time" content="2026-03-13T00:00:00+00:00"><meta property="article:tag" content="Observability"><meta property="article:tag" content="Prometheus"><meta property="article:tag" content="Lab"><meta property="article:tag" content="Arm"><meta property="article:tag" content="Hardware"><meta property="article:tag" content="Golang"><link rel=canonical href=http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/custom.min.cba2e9ecbfbcddfea52dc5e68065efce9cca76e279bc68b4f5c7dfca261c3e59.css integrity="sha256-y6Lp7L+83f6lLcXmgGXvzpzKduJ5vGi09cffyiYcPlk=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/fork-awesome.min.41c9b5c129b4633389c0ad630f0904f7a63fe27a7be7e59999a70233739eb83b.css integrity="sha256-Qcm1wSm0YzOJwK1jDwkE96Y/4np75+WZmacCM3OeuDs=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/cookieconsent.min.min.63b9b6f50d79ec84bdfe0545539ef71cedb040021b933e9a7bcf121e8b59c1d8.css integrity="sha256-Y7m29Q157IS9/gVFU573HO2wQAIbkz6ae88SHotZwdg=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon_32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon_16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://www.anshulpatel.in/>Anshul Patel
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/search/>Search</a></li><li class=navigation-item><a class=navigation-link href=/meetups/>Meetups</a></li><li class=navigation-item><a class=navigation-link href=/oss/>OSS</a></li><li class=navigation-item><a class=navigation-link href=/about/>About</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/>Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2026-03-13T00:00:00Z>March 13, 2026
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+6-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/observability/>Observability</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/prometheus/>Prometheus</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/lab/>Lab</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/arm/>Arm</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/hardware/>Hardware</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/golang/>Golang</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/opensource/>Opensource</a></span></div></div></header><div class=post-content><p>In my <a href=../mobile_soc_for_homelab/>previous post</a>, I made the case that old
+flagship smartphones are fantastic lab hardware. A <code>Snapdragon 835</code> from <code>2016</code>
+delivering <strong>85-87%</strong> of a <code>Raspberry Pi 5</code>&rsquo;s performance at a fraction of the
+cost? That&rsquo;s not just compelling, it&rsquo;s a game-changer for budget-conscious lab
+builders. 📱💪</p><p>But here&rsquo;s the thing, once you&rsquo;ve got your mobile SoC running services 24/7, you
+need to <strong>monitor</strong> it. You want to know if your battery is healthy, if your
+WiFi connection is stable, and whether your device is thermally comfortable
+under load. And if you&rsquo;re already running Prometheus (which you should be!), you
+need metrics in a format it understands.</p><p>That&rsquo;s why I built
+<a href=https://github.com/anshulpatel25/termux-api-exporter class=external-link target=_blank rel=noopener><strong>termux-api-exporter</strong></a>
+a Prometheus exporter that bridges Android device metrics and your observability
+stack. 🚀</p><h2 id=-first-things-first-what-is-termux>🤔 First Things First: What is Termux?
+<a class=heading-link href=#-first-things-first-what-is-termux><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Before diving into the exporter, let&rsquo;s establish the foundation.
+<a href=https://wiki.termux.com/wiki/Main_Page class=external-link target=_blank rel=noopener><strong>Termux</strong></a> is a powerful terminal
+emulator and Linux environment for Android. Think of it as bringing the full
+power of a Linux command line to your smartphone, no root required (for most
+features).</p><p>What makes Termux special:</p><ul><li><strong>Full-featured package ecosystem</strong> - Access to thousands of packages through
+<code>pkg</code> (apt-based)</li><li><strong>Real Linux environment</strong> - Not a chroot or VM, but a real userspace with
+bash, Python, Go, Node.js, and more</li><li><strong>Scriptable and automatable</strong> - Perfect for running servers, cron jobs, and
+automation</li><li><strong>Active development</strong> - Regular updates and strong community support</li></ul><p>In short, Termux transforms your Android device from a consumption device into a
+legitimate computing platform. It&rsquo;s what makes running Prometheus, Grafana, and
+other cloud-native tools on mobile hardware actually practical. ✨</p><h2 id=-what-is-termuxapi>📱 What is Termux:API?
+<a class=heading-link href=#-what-is-termuxapi><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><a href=https://wiki.termux.com/wiki/Termux:API class=external-link target=_blank rel=noopener><strong>Termux:API</strong></a> is Termux&rsquo;s bridge to
+Android system APIs. It&rsquo;s a companion app that exposes Android functionality
+through command-line tools, letting you interact with device hardware and
+services programmatically.</p><p>With Termux:API, you can:</p><ul><li><strong>📊 Query battery status</strong> - capacity, temperature, health, charging state</li><li><strong>📶 Access WiFi information</strong> - connection status, signal strength, network
+details</li><li><strong>📞 Send SMS/calls</strong> - automate notifications and alerts</li><li><strong>📍 Get GPS location</strong> - for location-aware scripts</li><li><strong>🔔 Show notifications</strong> - alert yourself about system events</li><li><strong>📸 Control camera</strong> - capture images from scripts</li><li>&mldr;and much more</li></ul><p>The beauty of Termux:API is its simplicity. Need battery info? Just run:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>termux-battery-status
+</span></span></code></pre></div><p>You get clean JSON output:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;health&#34;</span>: <span style=color:#e6db74>&#34;GOOD&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;percentage&#34;</span>: <span style=color:#ae81ff>65</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;plugged&#34;</span>: <span style=color:#e6db74>&#34;UNPLUGGED&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;status&#34;</span>: <span style=color:#e6db74>&#34;DISCHARGING&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;temperature&#34;</span>: <span style=color:#ae81ff>28.4</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;current&#34;</span>: <span style=color:#ae81ff>-450000</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This is perfect for monitoring, but there&rsquo;s a gap, <strong>these APIs aren&rsquo;t directly
+compatible with Prometheus.</strong> That&rsquo;s where <code>termux-api-exporter</code> comes in.</p><h2 id=-why-build-an-exporter>🎯 Why Build an Exporter?
+<a class=heading-link href=#-why-build-an-exporter><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>When I started using a <code>Snapdragon 835</code> device as a lab node running Prometheus
+and other services (as documented in my
+<a href=../deploy_obs_on_mobile_soc/>Mobile SoC deployment guide</a>), I quickly realized
+I had a <strong>blind spot</strong>: I couldn&rsquo;t see critical Android-specific metrics in my
+dashboards.</p><p>Questions I couldn&rsquo;t answer:</p><ul><li>❓ Is my battery degrading from being a 24/7 server?</li><li>❓ What&rsquo;s the actual WiFi signal quality over time?</li><li>❓ Is the battery temperature spiking under load?</li></ul><p>Sure, I could SSH in and run <code>termux-battery-status</code> manually. But that&rsquo;s not
+monitoring, that&rsquo;s spot-checking. I needed <strong>continuous, time-series metrics</strong>
+integrated into my existing Prometheus/Grafana observability stack.</p><p>The solution? Build a proper <strong>Prometheus exporter</strong> that translates Termux:API
+data into metrics that Prometheus can scrape, store, and alert on. 📈</p><h2 id=-introducing-termux-api-exporter>🛠️ Introducing termux-api-exporter
+<a class=heading-link href=#-introducing-termux-api-exporter><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><a href=https://github.com/anshulpatel25/termux-api-exporter class=external-link target=_blank rel=noopener><strong>termux-api-exporter</strong></a>
+is a lightweight Prometheus exporter written in Go that exposes Android device
+metrics through Termux:API. It runs as a simple HTTP server on your Android
+device, making metrics available at the standard <code>/metrics</code> endpoint.</p><h3 id=-battery-metrics>🔋 Battery Metrics
+<a class=heading-link href=#-battery-metrics><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The exporter provides comprehensive battery monitoring:</p><table><thead><tr><th>Metric</th><th>Description</th><th>Example Value</th></tr></thead><tbody><tr><td><code>termux_battery_percentage</code></td><td>Current battery level (%)</td><td><code>65</code></td></tr><tr><td><code>termux_battery_temperature</code></td><td>Battery temperature (°C)</td><td><code>28.4</code></td></tr><tr><td><code>termux_battery_health</code></td><td>Battery health status</td><td><code>1</code> (GOOD)</td></tr><tr><td><code>termux_battery_status</code></td><td>Charging status</td><td><code>3</code> (FULL)</td></tr><tr><td><code>termux_battery_plugged</code></td><td>Power source type</td><td><code>2</code> (USB)</td></tr><tr><td><code>termux_battery_current_microamperes</code></td><td>Current flow (μA, negative = draining)</td><td><code>-450000</code></td></tr><tr><td><code>termux_battery_charge_counter</code></td><td>Charge counter (mAh)</td><td><code>2450</code></td></tr></tbody></table><p>These metrics let you track battery health trends over time, set alerts for
+temperature spikes, and monitor charging patterns, critical data when using a
+mobile device as always-on infrastructure.</p><h3 id=-wifi-metrics>📶 WiFi Metrics
+<a class=heading-link href=#-wifi-metrics><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>The exporter also surfaces WiFi connection information:</p><table><thead><tr><th>Metric</th><th>Description</th><th>Example Value</th></tr></thead><tbody><tr><td><code>termux_wifi_frequency_mhz</code></td><td>Connection frequency (MHz)</td><td><code>2437</code> (2.4 GHz)</td></tr><tr><td><code>termux_wifi_rssi_dbm</code></td><td>Signal strength (dBm)</td><td><code>-45</code></td></tr><tr><td><code>termux_wifi_link_speed_mbps</code></td><td>Link speed (Mbps)</td><td><code>144</code></td></tr><tr><td><code>termux_wifi_connected</code></td><td>Connection status</td><td><code>1</code> (connected)</td></tr></tbody></table><p>With these metrics, you can:</p><ul><li>✅ Track WiFi stability and detect connection drops</li><li>✅ Monitor signal strength degradation (maybe it&rsquo;s time to relocate your device?)</li><li>✅ Observe link speed variations</li><li>✅ Set alerts for connection loss</li></ul><p>All metrics include helpful labels (like <code>ssid</code>, <code>bssid</code>, <code>network_id</code>) for
+richer filtering and aggregation in Prometheus.</p><h2 id=-what-it-looks-like-in-action>📊 What It Looks Like in Action
+<a class=heading-link href=#-what-it-looks-like-in-action><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Once scraped by Prometheus, you can build dashboards in Grafana that show:</p><ul><li><strong>Battery percentage over time</strong> - visualize drain rates and charging cycles</li><li><strong>Battery temperature trends</strong> - ensure your device isn&rsquo;t overheating</li><li><strong>WiFi signal strength history</strong> - identify network stability issues</li></ul><p>This is particularly valuable if you&rsquo;re running services like in my
+<a href=../deploy_obs_on_mobile_soc/>observability deployment</a> because you can
+correlate device health with workload changes.📉📈</p><h2 id=-how-it-works>🏗️ How It Works
+<a class=heading-link href=#-how-it-works><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Under the hood, the exporter is beautifully simple:</p><ol><li><strong>HTTP server</strong> exposes <code>/metrics</code> endpoint (default port: <code>9550</code>)</li><li><strong>On each scrape</strong>, it calls <code>termux-battery-status</code> and <code>termux-wifi-connectioninfo</code></li><li><strong>Parses JSON output</strong> from Termux:API commands</li><li><strong>Converts to Prometheus metrics</strong> with appropriate types (gauges) and labels</li><li><strong>Returns metrics</strong> in Prometheus text exposition format</li></ol><p>The exporter is stateless and lightweight, it only runs commands when Prometheus
+scrapes it, so it doesn&rsquo;t consume resources continuously polling APIs.</p><h2 id=-getting-started>🚀 Getting Started
+<a class=heading-link href=#-getting-started><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Installation is straightforward:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Install Termux:API app and package</span>
+</span></span><span style=display:flex><span>pkg install termux-api
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Download the latest release</span>
+</span></span><span style=display:flex><span>pkg install wget
+</span></span><span style=display:flex><span>wget https://github.com/anshulpatel25/termux-api-exporter/releases/latest/download/termux-api-exporter
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Make it executable</span>
+</span></span><span style=display:flex><span>chmod +x termux-api-exporter
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Run it</span>
+</span></span><span style=display:flex><span>./termux-api-exporter
+</span></span></code></pre></div><p>The exporter starts listening on <code>http://localhost:9797/metrics</code> by default. Add
+it as a scrape target in your Prometheus config:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>scrape_configs</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>job_name</span>: <span style=color:#e6db74>&#34;android-device&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>static_configs</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>targets</span>: [<span style=color:#e6db74>&#34;your-device-ip:9797&#34;</span>]
+</span></span></code></pre></div><p>And just like that, you&rsquo;re monitoring your mobile lab! 🎉</p><h2 id=-why-this-matters>💡 Why This Matters
+<a class=heading-link href=#-why-this-matters><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Using mobile SoCs for homelab infrastructure is still niche, but it&rsquo;s growing.
+As traditional SBC prices climb and used smartphones become more capable (and
+cheaper), more people are exploring this path. But to run mobile hardware
+<strong>sustainably</strong> and <strong>reliably</strong> in production, you need visibility.</p><p><code>termux-api-exporter</code> fills that gap. It&rsquo;s purpose-built for the emerging mobile
+lab ecosystem, bringing first-class observability to a platform that desperately
+needs it.</p><p>Whether you&rsquo;re monitoring a single device or building a fleet of smartphone
+servers (yes, people do this!), having battery health, thermal data, and network
+connectivity in your observability stack isn&rsquo;t optional, it&rsquo;s essential. 🔥</p><p>Happy monitoring! 📊✨</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
+<a href=https://gohugo.io/>Hugo</a> &
+<a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/cookieconsent.min.min.640def47472a85694886ce0c6ce862dc679272fe53ca0dabc37ea5bbf1574ea8.js integrity="sha256-ZA3vR0cqhWlIhs4MbOhi3GeScv5Tyg2rw36lu/FXTqg="></script><script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script><script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script><script src=/js/lunr.min.a2fdd4e494c630ca682ec816b827065412a48e1277b1b6ce8cff1a94ffdc1d9e.js integrity="sha256-ov3U5JTGMMpoLsgWuCcGVBKkjhJ3sbbOjP8alP/cHZ4="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-62JLR4L8L8"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-62JLR4L8L8")}</script></body></html>
