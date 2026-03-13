@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arm on Anshul Patel</title><link>http://www.anshulpatel.in/tags/arm/</link><description>Recent content in Arm on Anshul Patel</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 13 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://www.anshulpatel.in/tags/arm/index.xml" rel="self" type="application/rss+xml"/><item><title>Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way</title><link>http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/</link><pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I made the case that old
 flagship smartphones are fantastic lab hardware. A &lt;code&gt;Snapdragon 835&lt;/code&gt; from &lt;code&gt;2016&lt;/code&gt;
 delivering &lt;strong&gt;85-87%&lt;/strong&gt; of a &lt;code&gt;Raspberry Pi 5&lt;/code&gt;&amp;rsquo;s performance at a fraction of the
-cost? That&amp;rsquo;s not just compelling, it&amp;rsquo;s a game-changer for budget-conscious lab
+cost? That&amp;rsquo;s not just compelling, it&amp;rsquo;s a game-changer for budget conscious lab
 builders. 📱💪&lt;/p&gt;
 &lt;p&gt;But here&amp;rsquo;s the thing, once you&amp;rsquo;ve got your mobile SoC running services 24/7, you
 need to &lt;strong&gt;monitor&lt;/strong&gt; it. You want to know if your battery is healthy, if your
