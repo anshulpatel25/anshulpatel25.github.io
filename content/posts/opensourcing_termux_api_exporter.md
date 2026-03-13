@@ -14,7 +14,7 @@ tags:
 In my [previous post](../mobile_soc_for_homelab/), I made the case that old
 flagship smartphones are fantastic lab hardware. A `Snapdragon 835` from `2016`
 delivering **85-87%** of a `Raspberry Pi 5`'s performance at a fraction of the
-cost? That's not just compelling, it's a game-changer for budget-conscious lab
+cost? That's not just compelling, it's a game-changer for budget conscious lab
 builders. 📱💪
 
 But here's the thing, once you've got your mobile SoC running services 24/7, you
@@ -97,7 +97,7 @@ compatible with Prometheus.** That's where `termux-api-exporter` comes in.
 When I started using a `Snapdragon 835` device as a lab node running Prometheus
 and other services (as documented in my
 [Mobile SoC deployment guide](../deploy_obs_on_mobile_soc/)), I quickly realized
-I had a **blind spot**: I couldn't see critical Android-specific metrics in my
+I had a **blind spot**: I couldn't see critical Android specific metrics in my
 dashboards.
 
 Questions I couldn't answer:
@@ -124,15 +124,10 @@ device, making metrics available at the standard `/metrics` endpoint.
 
 The exporter provides comprehensive battery monitoring:
 
-| Metric                                | Description                            | Example Value |
-| ------------------------------------- | -------------------------------------- | ------------- |
-| `termux_battery_percentage`           | Current battery level (%)              | `65`          |
-| `termux_battery_temperature`          | Battery temperature (°C)               | `28.4`        |
-| `termux_battery_health`               | Battery health status                  | `1` (GOOD)    |
-| `termux_battery_status`               | Charging status                        | `3` (FULL)    |
-| `termux_battery_plugged`              | Power source type                      | `2` (USB)     |
-| `termux_battery_current_microamperes` | Current flow (μA, negative = draining) | `-450000`     |
-| `termux_battery_charge_counter`       | Charge counter (mAh)                   | `2450`        |
+| Metric                               | Description                         | Example Value |
+| ------------------------------------ | ----------------------------------- | ------------- |
+| `termux_battery_temperature_celsius` | Battery temperature in Celsius (°C) | `28.4`        |
+| `termux_battery_percentage`          | Battery charge percentage (%)       | `69`          |
 
 These metrics let you track battery health trends over time, set alerts for
 temperature spikes, and monitor charging patterns, critical data when using a
@@ -142,12 +137,10 @@ mobile device as always-on infrastructure.
 
 The exporter also surfaces WiFi connection information:
 
-| Metric                        | Description                | Example Value    |
-| ----------------------------- | -------------------------- | ---------------- |
-| `termux_wifi_frequency_mhz`   | Connection frequency (MHz) | `2437` (2.4 GHz) |
-| `termux_wifi_rssi_dbm`        | Signal strength (dBm)      | `-45`            |
-| `termux_wifi_link_speed_mbps` | Link speed (Mbps)          | `144`            |
-| `termux_wifi_connected`       | Connection status          | `1` (connected)  |
+| Metric                        | Description           | Example Value |
+| ----------------------------- | --------------------- | ------------- |
+| `termux_wifi_rssi_dbm`        | Signal strength (dBm) | `-45`         |
+| `termux_wifi_link_speed_mbps` | Link speed (Mbps)     | `144`         |
 
 With these metrics, you can:
 
@@ -155,9 +148,6 @@ With these metrics, you can:
 - ✅ Monitor signal strength degradation (maybe it's time to relocate your device?)
 - ✅ Observe link speed variations
 - ✅ Set alerts for connection loss
-
-All metrics include helpful labels (like `ssid`, `bssid`, `network_id`) for
-richer filtering and aggregation in Prometheus.
 
 ## 📊 What It Looks Like in Action
 
@@ -189,18 +179,32 @@ scrapes it, so it doesn't consume resources continuously polling APIs.
 Installation is straightforward:
 
 ```bash
-# Install Termux:API app and package
+
+# Update package repositories
+pkg update && pkg upgrade -y
+
+# Install sudo package
+pkg install sudo
+
+# Install termux-api package
 pkg install termux-api
 
-# Download the latest release
+# Install termux-services package
+pkg install termux-services
+
+# Restart Termux after installing termux-services
+exit
+# Then reopen Termux
+
 pkg install wget
-wget https://github.com/anshulpatel25/termux-api-exporter/releases/latest/download/termux-api-exporter
+# Update release version as per your requirement
+wget https://github.com/anshulpatel25/termux-api-exporter/releases/download/v0.1.0/termux-api-exporter-arm64-linux.tar.gz
 
 # Make it executable
 chmod +x termux-api-exporter
 
 # Run it
-./termux-api-exporter
+sudo ./termux-api-exporter
 ```
 
 The exporter starts listening on `http://localhost:9797/metrics` by default. Add
