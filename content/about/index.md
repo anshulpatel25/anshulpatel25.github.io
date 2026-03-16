@@ -10,6 +10,7 @@ operations to maximize the business value.
 
 ## Past
 
+- AI Builder @ [TLDRecap Tech](https://tldrecap.tech), [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Software Engineering Consultant,
   [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
   - [Toptal](https://www.toptal.com/) :
