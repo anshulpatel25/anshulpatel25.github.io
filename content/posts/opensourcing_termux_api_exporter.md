@@ -1,5 +1,7 @@
 ---
-title: "Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way"
+title:
+  "Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus
+  Way"
 date: 2026-03-13
 tags:
   - observability
@@ -145,7 +147,8 @@ The exporter also surfaces WiFi connection information:
 With these metrics, you can:
 
 - ✅ Track WiFi stability and detect connection drops
-- ✅ Monitor signal strength degradation (maybe it's time to relocate your device?)
+- ✅ Monitor signal strength degradation (maybe it's time to relocate your
+  device?)
 - ✅ Observe link speed variations
 - ✅ Set alerts for connection loss
 
@@ -166,7 +169,8 @@ correlate device health with workload changes.📉📈
 Under the hood, the exporter is beautifully simple:
 
 1. **HTTP server** exposes `/metrics` endpoint (default port: `9550`)
-2. **On each scrape**, it calls `termux-battery-status` and `termux-wifi-connectioninfo`
+2. **On each scrape**, it calls `termux-battery-status` and
+   `termux-wifi-connectioninfo`
 3. **Parses JSON output** from Termux:API commands
 4. **Converts to Prometheus metrics** with appropriate types (gauges) and labels
 5. **Returns metrics** in Prometheus text exposition format
