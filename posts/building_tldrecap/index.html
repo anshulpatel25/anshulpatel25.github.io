@@ -35,15 +35,15 @@ two hours?</em> So I built it. This post is about how.</p><h2 id=-the-architectu
 one.</p><hr><h2 id=-the-problem-youtube-hates-bots-rightfully-so>🔍 The Problem: YouTube Hates Bots (Rightfully So)
 <a class=heading-link href=#-the-problem-youtube-hates-bots-rightfully-so><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>The first challenge was fetching YouTube transcripts and video metadata
-programically at volume. YouTube&rsquo;s bot detection is sophisticated and aggressive.
-Residential IPs get flagged. Datacenter IPs get flagged faster. API quotas are
-limited for the scale I wanted.</p><p>The solution came from an unconventional place: <strong>my Android phone.</strong></p><p>I built a <strong>custom residential proxy deployed on an Android smartphone leveraging
-a 5G network connection.</strong> Here&rsquo;s why this works well:</p><ul><li><strong>Residential IP</strong>: Mobile carrier IPs are indistinguishable from regular
-consumer traffic</li><li><strong>5G throughput</strong>: Easily handles the bandwidth needs of metadata and transcript
-fetching</li><li><strong>Always-on</strong>: The phone sits plugged in (with charging managed by
+programically at volume. YouTube&rsquo;s bot detection is sophisticated and
+aggressive. Residential IPs get flagged. Datacenter IPs get flagged faster. API
+quotas are limited for the scale I wanted.</p><p>The solution came from an unconventional place: <strong>my Android phone.</strong></p><p>I built a <strong>custom residential proxy deployed on an Android smartphone
+leveraging a 5G network connection.</strong> Here&rsquo;s why this works well:</p><ul><li><strong>Residential IP</strong>: Mobile carrier IPs are indistinguishable from regular
+consumer traffic</li><li><strong>5G throughput</strong>: Easily handles the bandwidth needs of metadata and
+transcript fetching</li><li><strong>Always-on</strong>: The phone sits plugged in (with charging managed by
 <a href=../opensourcing_yukti/>Yukti</a>, naturally 😄)</li><li><strong>Rotating IPs</strong>: 5G carriers naturally rotate IPs over time, adding another
-layer of resilience</li></ul><p>All transcript and metadata fetches are routed through this proxy. YouTube
-sees ordinary residential traffic. Problem solved no bans, no CAPTCHAs.</p><hr><h2 id=-the-n8n-workflow-orchestrating-the-pipeline>⚙️ The n8n Workflow: Orchestrating the Pipeline
+layer of resilience</li></ul><p>All transcript and metadata fetches are routed through this proxy. YouTube sees
+ordinary residential traffic. Problem solved no bans, no CAPTCHAs.</p><hr><h2 id=-the-n8n-workflow-orchestrating-the-pipeline>⚙️ The n8n Workflow: Orchestrating the Pipeline
 <a class=heading-link href=#-the-n8n-workflow-orchestrating-the-pipeline><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>The entire data processing pipeline runs inside <a href=https://n8n.io/ class=external-link target=_blank rel=noopener><strong>n8n</strong></a>, a
 self-hosted workflow automation platform. Think of it as the conductor of the
@@ -51,64 +51,66 @@ orchestra it coordinates every step from raw video URL to a finished,
 publication-ready markdown recap.</p><p>The workflow steps in order:</p><h3 id=1-fetch-youtube-transcripts-and-metadata>1. Fetch YouTube Transcripts and Metadata
 <a class=heading-link href=#1-fetch-youtube-transcripts-and-metadata><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>The workflow starts with a video URL (or a batch of URLs from a curated list).
-n8n issues HTTP requests through the residential proxy to pull:</p><ul><li><strong>Auto-generated or manual transcripts</strong> the raw spoken content</li><li><strong>Video metadata</strong> title, channel, duration, thumbnail URL, publish date,
-view count, and description</li></ul><p>Raw transcripts from YouTube are noisy. They lack punctuation, speaker labels,
+n8n issues HTTP requests through the residential proxy to pull:</p><ul><li><strong>Auto-generated or manual transcripts</strong> the raw spoken content</li><li><strong>Video metadata</strong> title, channel, duration, thumbnail URL, publish date, view
+count, and description</li></ul><p>Raw transcripts from YouTube are noisy. They lack punctuation, speaker labels,
 and formatting. They go straight into the next stage for enrichment.</p><h3 id=2-infer-speakers>2. Infer Speakers
 <a class=heading-link href=#2-infer-speakers><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><p>Conference talks often involve multiple speakers, panellists, or interviewers.
-A flat transcript with no speaker attribution reads like a wall of text.</p><p>A Gemini model analyses the transcript and infers speaker turns based on
-context clues in the text phrasing shifts, topic hand-offs, self-introductions,
-and moderator patterns. The result is a speaker-attributed transcript that makes
-the final summary far more readable.</p><h3 id=3-summarize-the-video>3. Summarize the Video
+<span class=sr-only>Link to heading</span></a></h3><p>Conference talks often involve multiple speakers, panellists, or interviewers. A
+flat transcript with no speaker attribution reads like a wall of text.</p><p>A Gemini model analyses the transcript and infers speaker turns based on context
+clues in the text phrasing shifts, topic hand-offs, self-introductions, and
+moderator patterns. The result is a speaker-attributed transcript that makes the
+final summary far more readable.</p><h3 id=3-summarize-the-video>3. Summarize the Video
 <a class=heading-link href=#3-summarize-the-video><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>This is the centrepiece of the pipeline. The attributed transcript and video
-metadata are passed to a Gemini model with a carefully engineered <strong>deterministic
-summarization prompt</strong> that requests:</p><ul><li>A concise <code>TL;DR</code> (2-3 sentences)</li><li>Key themes and takeaways structured by topic</li><li>Actionable insights the reader can apply immediately</li><li>Notable quotes, where relevant</li></ul><p>The prompt is built around <strong>determinism</strong> the same video should always produce
-a structurally consistent recap, regardless of which model generation handles it.
-This is critical when you&rsquo;re balancing load across multiple models (more on that
-below). The output structure is locked; only model-generated content flows in.</p><h3 id=4-url-slug-generation>4. URL Slug Generation
+metadata are passed to a Gemini model with a carefully engineered
+<strong>deterministic summarization prompt</strong> that requests:</p><ul><li>A concise <code>TL;DR</code> (2-3 sentences)</li><li>Key themes and takeaways structured by topic</li><li>Actionable insights the reader can apply immediately</li><li>Notable quotes, where relevant</li></ul><p>The prompt is built around <strong>determinism</strong> the same video should always produce
+a structurally consistent recap, regardless of which model generation handles
+it. This is critical when you&rsquo;re balancing load across multiple models (more on
+that below). The output structure is locked; only model-generated content flows
+in.</p><h3 id=4-url-slug-generation>4. URL Slug Generation
 <a class=heading-link href=#4-url-slug-generation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Every recap needs a clean, SEO-friendly URL slug. Rather than slugifying the
 video title (which can be verbose, click-baity, or just strange), Gemini is
-asked to generate a concise, descriptive, lowercase slug from the video title and
-summary.</p><p><code>"Understanding Distributed Tracing in 2025 | Platform Eng Summit"</code> becomes
+asked to generate a concise, descriptive, lowercase slug from the video title
+and summary.</p><p><code>"Understanding Distributed Tracing in 2025 | Platform Eng Summit"</code> becomes
 <code>/distributed-tracing-platform-engineering-2025</code> readable, keyword-rich, and
 human-friendly.</p><h3 id=5-infer-tags>5. Infer Tags
 <a class=heading-link href=#5-infer-tags><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Tags drive discoverability on the site and power the search index. Gemini
 analyses the summary and produces a set of normalized, lowercase tags covering
-the core topics, technologies, and domains discussed in the talk.</p><p>A talk on eBPF-based network observability might get:
-<code>ebpf</code>, <code>observability</code>, <code>networking</code>, <code>linux-kernel</code>, <code>cloud-native</code> all
-inferred automatically without any manual curation.</p><hr><h2 id=-gemini-on-the-free-tier-round-robin-load-balancing>🤖 Gemini on the Free Tier: Round-Robin Load Balancing
+the core topics, technologies, and domains discussed in the talk.</p><p>A talk on eBPF-based network observability might get: <code>ebpf</code>, <code>observability</code>,
+<code>networking</code>, <code>linux-kernel</code>, <code>cloud-native</code> all inferred automatically without
+any manual curation.</p><hr><h2 id=-gemini-on-the-free-tier-round-robin-load-balancing>🤖 Gemini on the Free Tier: Round-Robin Load Balancing
 <a class=heading-link href=#-gemini-on-the-free-tier-round-robin-load-balancing><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>Running generative AI at scale is expensive unless you&rsquo;re clever about it.
 Google&rsquo;s Gemini series offers generous free tier limits, but those limits are
 <strong>per model per minute</strong>. The solution: spread the load.</p><p>I use a <strong>round-robin load balancing strategy across multiple Gemini model
-generations</strong>. Each incoming video is assigned to the next model in the rotation:</p><table><thead><tr><th>Round</th><th>Model</th></tr></thead><tbody><tr><td>1</td><td>Gemini 2.5 Flash Lite</td></tr><tr><td>2</td><td>Gemini 2.5 Flash</td></tr><tr><td>3</td><td>Gemini 3.0 Flash Lite</td></tr><tr><td>4</td><td>Gemini 3.1 Flash</td></tr><tr><td>&mldr;</td><td>&mldr;</td></tr></tbody></table><p>Because the summarization prompt is <strong>deterministic</strong> a consistent output
-schema regardless of model the recap quality remains uniform across all model
+generations</strong>. Each incoming video is assigned to the next model in the
+rotation:</p><table><thead><tr><th>Round</th><th>Model</th></tr></thead><tbody><tr><td>1</td><td>Gemini 2.5 Flash Lite</td></tr><tr><td>2</td><td>Gemini 2.5 Flash</td></tr><tr><td>3</td><td>Gemini 3.0 Flash Lite</td></tr><tr><td>4</td><td>Gemini 3.1 Flash</td></tr><tr><td>&mldr;</td><td>&mldr;</td></tr></tbody></table><p>Because the summarization prompt is <strong>deterministic</strong> a consistent output schema
+regardless of model the recap quality remains uniform across all model
 generations.</p><p>This approach keeps <strong>token utilization well within free tier limits</strong> and costs
 exactly zero rupees in AI API fees.</p><hr><h2 id=-nocodb-the-data-lake>🗄️ NocoDB: The Data Lake
 <a class=heading-link href=#-nocodb-the-data-lake><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Every processed recap summary, slug, tags, metadata, transcript is written
-to <a href=https://nocodb.com/ class=external-link target=_blank rel=noopener><strong>NocoDB</strong></a>, an open-source Airtable alternative that
-sits on top of a relational database.</p><p>NocoDB serves as the <strong>data lake</strong> for the entire platform:</p><ul><li><strong>Source of truth</strong> for all recap content</li><li><strong>Queryable</strong> via a clean REST API that n8n uses for writing and reading</li><li><strong>Visual interface</strong> for browsing, filtering, and manually overriding any
+<span class=sr-only>Link to heading</span></a></h2><p>Every processed recap summary, slug, tags, metadata, transcript is written to
+<a href=https://nocodb.com/ class=external-link target=_blank rel=noopener><strong>NocoDB</strong></a>, an open-source Airtable alternative that sits
+on top of a relational database.</p><p>NocoDB serves as the <strong>data lake</strong> for the entire platform:</p><ul><li><strong>Source of truth</strong> for all recap content</li><li><strong>Queryable</strong> via a clean REST API that n8n uses for writing and reading</li><li><strong>Visual interface</strong> for browsing, filtering, and manually overriding any
 AI-generated content before publication</li><li><strong>Audit trail</strong> every recap has its raw transcript, generated summary, and
 final published version stored side-by-side</li></ul><p>The manual override capability is essential. AI summaries are good but
 occasionally a talk has highly specific domain context that the model
-mischaracterises. NocoDB makes it trivial to spot and correct these before
-they go live.</p><hr><h2 id=-python--jinja2-rendering-the-markdown>📝 Python + Jinja2: Rendering the Markdown
+mischaracterises. NocoDB makes it trivial to spot and correct these before they
+go live.</p><hr><h2 id=-python--jinja2-rendering-the-markdown>📝 Python + Jinja2: Rendering the Markdown
 <a class=heading-link href=#-python--jinja2-rendering-the-markdown><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Python script queries the API and renders
-the final Hugo-compatible markdown file using a <strong>predefined Jinja2 template</strong>.</p><p>The template is fixed. The AI-generated content flows into it. This separation
-is deliberate it means:</p><ul><li><strong>Layout changes</strong> happen in the template, not in AI prompts</li><li><strong>Consistent front matter</strong> title, date, tags, slug, and summary are always
-in the right positions</li><li><strong>Hugo compatibility</strong> is guaranteed since the template is designed specifically
-around Hugo&rsquo;s content model</li></ul><p>A single script run pulls all pending recaps from NocoDB and emits a <code>.md</code> file
+<span class=sr-only>Link to heading</span></a></h2><p>Python script queries the API and renders the final Hugo-compatible markdown
+file using a <strong>predefined Jinja2 template</strong>.</p><p>The template is fixed. The AI-generated content flows into it. This separation
+is deliberate it means:</p><ul><li><strong>Layout changes</strong> happen in the template, not in AI prompts</li><li><strong>Consistent front matter</strong> title, date, tags, slug, and summary are always in
+the right positions</li><li><strong>Hugo compatibility</strong> is guaranteed since the template is designed
+specifically around Hugo&rsquo;s content model</li></ul><p>A single script run pulls all pending recaps from NocoDB and emits a <code>.md</code> file
 per recap into the Hugo <code>content/</code> directory. From there, Hugo takes over.</p><hr><h2 id=-deployment-hugo--cloudflare-pages>🚀 Deployment: Hugo + Cloudflare Pages
 <a class=heading-link href=#-deployment-hugo--cloudflare-pages><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>The frontend is a <strong>static site built with <a href=https://gohugo.io/ class=external-link target=_blank rel=noopener>Hugo</a></strong> fast,
 minimal, and perfectly matched to a site that&rsquo;s fundamentally a collection of
-markdown documents.</p><p>The deployment pipeline:</p><ol><li><strong>Markdown files are committed</strong> to the GitHub repository (either manually
-or via an automated commit from the Python rendering script)</li><li>The <strong>static output is deployed to Cloudflare Pages</strong> global CDN edge
+markdown documents.</p><p>The deployment pipeline:</p><ol><li><strong>Markdown files are committed</strong> to the GitHub repository (either manually or
+via an automated commit from the Python rendering script)</li><li>The <strong>static output is deployed to Cloudflare Pages</strong> global CDN edge
 delivery, free tier, automatic HTTPS, and zero server management</li></ol><p>The entire infrastructure cost of serving tldrecap.tech globally is
 <strong>effectively zero</strong>: free tier Gemini, free tier Cloudflare Pages, self-hosted
 n8n and NocoDB, and a phone I already owned.</p><hr><h2 id=-putting-it-all-together-the-full-flow>🧩 Putting It All Together: The Full Flow
@@ -118,11 +120,12 @@ n8n and NocoDB, and a phone I already owned.</p><hr><h2 id=-putting-it-all-toget
 <span class=sr-only>Link to heading</span></a></h2><p>TLDRecap Tech is a project built entirely at the intersection of constraints:
 free-tier AI, residential proxies from repurposed hardware, self-hosted open
 source tooling, and a static site that costs next to nothing to run globally.</p><p>The result is a pipeline that processes tech talks into polished recaps
-automatically, consistently, and at zero marginal cost which means I can
-keep the site growing without worrying about infrastructure bills scaling with
+automatically, consistently, and at zero marginal cost which means I can keep
+the site growing without worrying about infrastructure bills scaling with
 content volume.</p><p>If you&rsquo;ve ever felt overwhelmed by the sheer volume of great tech content out
-there, I hope TLDRecap Tech helps. And if you&rsquo;re building something similar,
-I hope this breakdown saves you some of the trial and error I went through.</p><p>Check it out at <a href=https://tldrecap.tech class=external-link target=_blank rel=noopener>tldrecap.tech</a> and if you have
-<a href=https://nocodb.anshulpatel.in/dashboard/#/nc/form/c5e728c1-7260-444a-a55b-509c0f5c9f32/survey class=external-link target=_blank rel=noopener>feedback</a>, there&rsquo;s a form on the site. I read every submission.</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
+there, I hope TLDRecap Tech helps. And if you&rsquo;re building something similar, I
+hope this breakdown saves you some of the trial and error I went through.</p><p>Check it out at <a href=https://tldrecap.tech class=external-link target=_blank rel=noopener>tldrecap.tech</a> and if you have
+<a href=https://nocodb.anshulpatel.in/dashboard/#/nc/form/c5e728c1-7260-444a-a55b-509c0f5c9f32/survey class=external-link target=_blank rel=noopener>feedback</a>,
+there&rsquo;s a form on the site. I read every submission.</p></div><footer></footer></article></section></div><footer class=footer><section>ॐ भूर्भुवः स्वः। तत्सवितुर्वरेण्यं। भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥</section><section class=container>© 2026 Anshul Patel · Powered by
 <a href=https://gohugo.io/>Hugo</a> &
 <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/cookieconsent.min.min.640def47472a85694886ce0c6ce862dc679272fe53ca0dabc37ea5bbf1574ea8.js integrity="sha256-ZA3vR0cqhWlIhs4MbOhi3GeScv5Tyg2rw36lu/FXTqg="></script><script src=/js/consent.min.ca1da6fd3c8d5f661e49690a73a05eaebcab132b8409483620e769f8c983de77.js integrity="sha256-yh2m/TyNX2YeSWkKc6BerryrEyuECUg2IOdp+MmD3nc="></script><script src=/js/search.min.324a59517084fcd111ba73ff76159f978146cfba0fe47453876ab79ecac017b1.js integrity="sha256-MkpZUXCE/NERunP/dhWfl4FGz7oP5HRTh2q3nsrAF7E="></script><script src=/js/lunr.min.a2fdd4e494c630ca682ec816b827065412a48e1277b1b6ce8cff1a94ffdc1d9e.js integrity="sha256-ov3U5JTGMMpoLsgWuCcGVBKkjhJ3sbbOjP8alP/cHZ4="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-62JLR4L8L8"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-62JLR4L8L8")}</script></body></html>
