@@ -44,18 +44,17 @@ operations to maximize the business value.
 
 - **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF
   Ecosystem.
-- **Infrastructure-as-Code:** Terraform, Ansible, Packer, Helm.
-- **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS, GCP Cloud
-  run.
-- **Artificial Intelligence:** Scikit-learn, Langchain, Langgraph, DVC
+- **Infrastructure-as-Code:** Terraform/OpenTofu, Ansible, Packer, Helm.
+- **Container Technologies:** Docker, Kubernetes [GKE, EKS], AWS ECS.
+- **Artificial Intelligence:** Scikit-learn, Langchain, Langgraph, DVC.
 - **Agile Methodologies:** Scrum, Kanban
 - **CI/CD:** Github Actions, GitLab CI/CD, Jenkins, GitOps.
-- **Observability:** AWS Cloudwatch, GCP Logging and Monitoring, Prometheus,
-  OpenTelemetry.
+- **Observability:** AWS Cloudwatch, Azure Monitor, GCP Logging and Monitoring, Prometheus,
+  OpenTelemetry, Grafana, Loki.
 - **Security and Compliance:** Wiz, AWS Config, AWS Control Tower.
-- **Scripting Languages:** Python, Bash Shell.
-- **Programming Languages:** Go [Intermediate], Javascript [Intermediate].
+- **Scripting Languages:** Python, Bash Shell, Javascript/Typescript [Intermediate]
+- **Programming Languages:** Go [Intermediate].
 - **Database Systems:** PostgreSQL, MongoDB.
-- **Caching Engine:** Redis, Valkey.
+- **Caching Engine:** Redis/Valkey.
 - **Big Data:** Apache Kafka, Apache Airflow.
 - **No Code Platforms:** N8N.
