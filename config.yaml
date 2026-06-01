@@ -89,3 +89,5 @@ module:
   mounts:
     - source: assets
       target: assets
+    - source: llms.txt
+      target: static/llms.txt
