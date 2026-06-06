@@ -1,21 +1,21 @@
-{{ $src := .Get "src" }}
-{{ $width := .Get "width" | default "100%" }}
-{{ $height := .Get "height" | default "500px" }}
-{{ $bgColor := .Get "bg-color" | default "#eeeeee" }}
-{{ $modelColor := .Get "model-color" | default "#888888" }}
+{{ $src := .Get "src" }} {{ $width := .Get "width" | default "100%" }} {{
+$height := .Get "height" | default "500px" }} {{ $bgColor := .Get "bg-color" |
+default "#eeeeee" }} {{ $modelColor := .Get "model-color" | default "#888888" }}
+{{ if not (.Page.Scratch.Get "stlViewerAssetsLoaded") }} {{ $style :=
+resources.Get "css/stl-viewer.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-{{ if not (.Page.Scratch.Get "stlViewerAssetsLoaded") }}
-    {{ $style := resources.Get "css/stl-viewer.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<script
+  type="module"
+  src='{{ (resources.Get "js/stl-viewer.js" | minify | fingerprint).RelPermalink }}'
+></script>
 
-    <script type="module" src="{{ (resources.Get "js/stl-viewer.js" | minify | fingerprint).RelPermalink }}"></script>
+{{ .Page.Scratch.Set "stlViewerAssetsLoaded" true }} {{ end }}
 
-    {{ .Page.Scratch.Set "stlViewerAssetsLoaded" true }}
-{{ end }}
-
-<div class="stl-viewer"
-     data-src="{{ $src }}"
-     data-bg-color="{{ $bgColor }}"
-     data-model-color="{{ $modelColor }}"
-     style="width: {{ $width }}; height: {{ $height }};">
-</div>
+<div
+  class="stl-viewer"
+  data-src="{{ $src }}"
+  data-bg-color="{{ $bgColor }}"
+  data-model-color="{{ $modelColor }}"
+  style="width: {{ $width }}; height: {{ $height }};"
+></div>

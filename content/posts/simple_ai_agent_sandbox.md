@@ -1,6 +1,5 @@
 ---
-title:
-  "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
+title: "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
 date: 2026-05-26
 tags:
   - ai
@@ -107,8 +106,8 @@ When a new REPL session begins, the manager calls `docker run` with
 
 - **`--rm`**: container is automatically removed when it stops
 - **`detach=True`**: runs in the background; the host process isn't blocked
-- **`stdin_open=True` / `tty=True`**: keeps the container alive so the agent
-  can `exec` commands into it repeatedly without spawning a new container per
+- **`stdin_open=True` / `tty=True`**: keeps the container alive so the agent can
+  `exec` commands into it repeatedly without spawning a new container per
   command
 
 The container is running and waiting. Nothing has happened yet.
@@ -129,7 +128,7 @@ handler** at startup. Whether the session exits cleanly, crashes with an
 unhandled exception, or gets interrupted with `Ctrl-C`, the container is
 destroyed. This is the guarantee that makes the sandbox trustworthy.
 
-```
+```text
 Normal exit   → atexit handler fires → container.stop() + container.remove()
 Ctrl-C        → SIGINT handler fires → container.stop() + container.remove()
 Crash         → atexit handler fires → container.stop() + container.remove()
@@ -160,21 +159,21 @@ loop.
           START
             |
             v
-     +-----------+
-     |   agent   | <---------+
-     +-----------+           |
-            |                |
-    tool_calls?              |
-       |        |            |
-      YES       NO           |
-       |        |            |
-       v        v            |
-   +-------+  END            |
-   | tools |                 |
-   +-------+                 |
-       |                     |
-       +---------------------+
-         (results fed back)
+      +-----------+
+      |   agent   | <---------+
+      +-----------+           |
+            |                 |
+    tool_calls?               |
+        |        |            |
+      YES       NO            |
+        |        |            |
+        v        v            |
+    +-------+  END            |
+    | tools |                 |
+    +-------+                 |
+        |                     |
+        +---------------------+
+          (results fed back)
 ```
 
 The graph is built in `build_graph()`, a pure factory function that accepts the
@@ -205,11 +204,11 @@ The `SkillRegistry` holds all registered skills and exposes them to LangGraph as
 tool definitions. The LLM sees the skill names and descriptions; when it decides
 to act, the registry dispatches the call to the right skill.
 
-The only skill shipped today is `BashSkill`, which runs arbitrary shell
-commands inside the container and returns the combined stdout/stderr. That
-single skill is surprisingly capable: install packages, write scripts, fetch
-URLs with `curl`, run Python, compile code, process files. A bash shell is a
-remarkably expressive primitive.
+The only skill shipped today is `BashSkill`, which runs arbitrary shell commands
+inside the container and returns the combined stdout/stderr. That single skill
+is surprisingly capable: install packages, write scripts, fetch URLs with
+`curl`, run Python, compile code, process files. A bash shell is a remarkably
+expressive primitive.
 
 Adding a new skill requires **zero changes to existing code**. Write a new
 class, register it, and the LLM can use it on the next run. The architecture
@@ -248,9 +247,8 @@ first prompt.
 
 ## 🏁 Why This Architecture Matters
 
-Sandboxing isn't just a safety feature, it's an **architectural primitive**
-that unlocks a whole class of agentic workloads you'd be nervous to run
-otherwise.
+Sandboxing isn't just a safety feature, it's an **architectural primitive** that
+unlocks a whole class of agentic workloads you'd be nervous to run otherwise.
 
 With per-session container isolation you can:
 
