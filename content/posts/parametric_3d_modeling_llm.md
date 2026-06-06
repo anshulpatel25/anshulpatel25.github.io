@@ -92,8 +92,8 @@ FDM printers to get a snug, satisfying snap-fit.
 ## 🤖 The Agentic Workflow
 
 What made this project special wasn't just the final STL file, but the process.
-Using the [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) skill, I could verify the geometry
-autonomously. My "Agent" could:
+Using the [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad)
+skill, I could verify the geometry autonomously. My "Agent" could:
 
 1. **Generate** the `build123d` Python script.
 2. **Compile** it into STEP and STL formats.
@@ -106,17 +106,16 @@ It felt less like "drawing" and more like "directing" a master craftsman.
 
 ![Diecast Modular Display](/images/diecast_modular_display.jpg)
 
-## 🚀 Get the Files!
+## 🚀 Get the Files
 
 The entire project is Open Source. Whether you want to print some cases for your
 own collection or dive into the Python code to see how the parametric geometry
 is built, you can find everything below:
 
-👉
-GitHub: [**anshulpatel25/diecast-modular-display**](https://github.com/anshulpatel25/diecast-modular-display)
+👉 GitHub:
+[**anshulpatel25/diecast-modular-display**](https://github.com/anshulpatel25/diecast-modular-display)
 
 👉 3D Files: [**Diecast Display**](https://than.gs/m/1560820)
-
 
 ## 🏁 Final Thoughts
 

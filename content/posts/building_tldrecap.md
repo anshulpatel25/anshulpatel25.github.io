@@ -53,13 +53,13 @@ Before diving into the details, here's the full pipeline end to end:
     +-----+------+-------+-------+
     |            |       |       |
     v            v       v       v
- Infer       Summarize  Slug   Tags
- Speakers    (Gemini)   Gen    Gen
+  Infer      Summarize  Slug   Tags
+  Speakers   (Gemini)   Gen    Gen
                 |
-         Round-robin load
-         balance (free tier)
+          Round-robin load
+          balance (free tier)
           |         |
-       Gemini 2.5  Gemini 3.0, etc
+        Gemini 2.5  Gemini 3.0, etc
           Flash     Flash
           |
           v
@@ -301,7 +301,7 @@ n8n and NocoDB, and a phone I already owned.
 |   (Data Lake)      |
 +--------------------+
           |
-     Manual review
+      Manual review
       (optional)
           |
           v

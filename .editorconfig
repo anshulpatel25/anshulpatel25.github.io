@@ -11,6 +11,8 @@ max_line_length = 250
 [*.md]
 trim_trailing_whitespace = false
 max_line_length = 180
+indent_style = unset
+indent_size = unset
 
 [*.sum]
 max_line_length = 200

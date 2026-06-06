@@ -1,6 +1,5 @@
 ---
-title:
-  "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
+title: "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
 date: 2026-05-26
 tags:
   - ai
@@ -129,7 +128,7 @@ handler** at startup. Whether the session exits cleanly, crashes with an
 unhandled exception, or gets interrupted with `Ctrl-C`, the container is
 destroyed. This is the guarantee that makes the sandbox trustworthy.
 
-```
+```text
 Normal exit   → atexit handler fires → container.stop() + container.remove()
 Ctrl-C        → SIGINT handler fires → container.stop() + container.remove()
 Crash         → atexit handler fires → container.stop() + container.remove()
@@ -160,21 +159,21 @@ loop.
           START
             |
             v
-     +-----------+
-     |   agent   | <---------+
-     +-----------+           |
-            |                |
-    tool_calls?              |
-       |        |            |
-      YES       NO           |
-       |        |            |
-       v        v            |
-   +-------+  END            |
-   | tools |                 |
-   +-------+                 |
-       |                     |
-       +---------------------+
-         (results fed back)
+      +-----------+
+      |   agent   | <---------+
+      +-----------+           |
+            |                 |
+    tool_calls?               |
+        |        |            |
+      YES       NO            |
+        |        |            |
+        v        v            |
+    +-------+  END            |
+    | tools |                 |
+    +-------+                 |
+        |                     |
+        +---------------------+
+          (results fed back)
 ```
 
 The graph is built in `build_graph()`, a pure factory function that accepts the
