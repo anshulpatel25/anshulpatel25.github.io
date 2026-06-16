@@ -42,6 +42,7 @@ operations to maximize the business value.
 
 ## Skillset
 
+- **AI Assisted Development**: GitHub Copilot (CLI + Agentic), Gemini (CLI + Agentic), Jules (Agentic)
 - **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF
   Ecosystem.
 - **Infrastructure-as-Code:** Terraform/OpenTofu, Ansible, Packer, Helm.
