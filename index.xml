@@ -198,6 +198,7 @@ operations to maximize the business value.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI Assisted Development&lt;/strong&gt;: GitHub Copilot (CLI + Agentic), Gemini (CLI + Agentic), Jules (Agentic)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cloud Platforms:&lt;/strong&gt; Amazon Web Services, Google Cloud Platform, CNCF
 Ecosystem.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Infrastructure-as-Code:&lt;/strong&gt; Terraform/OpenTofu, Ansible, Packer, Helm.&lt;/li&gt;
