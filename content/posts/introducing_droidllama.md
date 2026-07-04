@@ -45,7 +45,7 @@ edge inference:
 2. **High Memory Bandwidth**: LLM token generation speed is heavily bottlenecked
    by memory bandwidth. Modern flagship smartphones ship with LPDDR4 or LPDDR5
    RAM, offering memory bandwidths in the range of **40 to 50 Gbps**. For edge
-   models around 2.5 GB in size (such as Gemma 2B), this bandwidth enables
+   models around 2.5 GB in size (such as Gemma 4 E2B), this bandwidth enables
    generating between **15 to 20 tokens per second** directly on the device!
 3. **Dedicated Silicon**: Modern mobile chips include powerful GPUs specifically
    optimized for low-precision tensor operations.
