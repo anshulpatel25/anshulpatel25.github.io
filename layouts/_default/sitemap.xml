@@ -1,15 +1,23 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {{ range .Data.Pages }}
-    {{- $shouldInclude := false -}}
-    {{- if or (eq .Section "posts") (eq .Section "meetups") -}}
-      {{- $shouldInclude = true -}}
-    {{- else if in (slice "/about/" "/oss/" "/search/") .RelPermalink -}}
-      {{- $shouldInclude = true -}}
-    {{- end -}}
+  {{- $about := .Site.GetPage "/about" -}}
+  {{- $oss := .Site.GetPage "/oss" -}}
+  {{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse | first 3 -}}
+  {{- $meetups := (where .Site.RegularPages "Section" "meetups").ByDate.Reverse | first 3 -}}
+  {{- $search := .Site.GetPage "/search" -}}
 
-    {{- if $shouldInclude -}}
+  {{- $pages := slice $about $oss -}}
+  {{- range $posts -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+  {{- range $meetups -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+  {{- $pages = $pages | append $search -}}
+
+  {{- range $pages -}}
+    {{- if . -}}
     <url>
       <loc>{{ .Permalink }}</loc>
       {{ if not .Lastmod.IsZero -}}
@@ -23,5 +31,5 @@
       {{- end }}
     </url>
     {{- end -}}
-  {{ end }}
+  {{- end -}}
 </urlset>
