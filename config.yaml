@@ -56,6 +56,8 @@ params:
       icon: "fa-solid fa-2x fa-wrench"
       weight: 5
       url: "https://thangs.com/designer/er.anshul.patel"
+  posthog:
+    token: "phc_zXGtSRy8C2pyLHpPxpuYCzBdiXQeTgHZDqXxCubLeXDo"
 outputs:
   home:
     - HTML
