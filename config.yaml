@@ -10,9 +10,8 @@ pagination:
 
 enableEmoji: true
 
-googleAnalytics: "G-62JLR4L8L8"
-
 params:
+  gtmId: "GTM-5T623Z3M"
   author: "Anshul Patel"
   description: "Anshul Patel's personal website"
   keywords: "geek, tinkerer, techie, blog, engineer"
