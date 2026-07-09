@@ -16,7 +16,7 @@ params:
   description: "Anshul Patel's personal website"
   keywords: "geek, tinkerer, techie, blog, engineer"
   info:
-    - Geek 🤓, Tinkerer 👨‍🔧, Techie 👨‍💻
+    - Geek 🤓, Tinkerer 👨‍🔧, Technologist 👨‍💻, Generalist 🛠️
   avatarURL: "images/anshul.jpg"
   dateFormat: "January 02, 2006"
   colorScheme: "auto"
