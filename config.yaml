@@ -11,7 +11,6 @@ pagination:
 enableEmoji: true
 
 params:
-  gtmId: "GTM-5T623Z3M"
   author: "Anshul Patel"
   description: "Anshul Patel's personal website"
   keywords: "geek, tinkerer, techie, blog, engineer"
@@ -25,10 +24,7 @@ params:
   customCSS:
     - "css/custom.css"
     - "css/fork-awesome.css"
-    - "css/cookieconsent.min.css"
   customJS:
-    - "js/cookieconsent.min.js"
-    - "js/consent.js"
     - "js/search.js"
     - "js/lunr.js"
   footerQuote:

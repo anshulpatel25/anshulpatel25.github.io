@@ -8,16 +8,7 @@ draft: false
 
 Welcome to my personal website. Your privacy is critically important to me.
 
-## Tools Used and Their Purpose
-
-This website uses the following tools:
-- **Google Tag Manager & Google Analytics**: Used to collect basic traffic analytics to understand how visitors interact with the website. This data helps in improving the user experience and content of the site.
-
-## Consent
-
-Tracking scripts, such as Google Tag Manager, will only load if you explicitly accept the cookie consent banner. If you reject the cookies, no tracking scripts will be loaded.
-
-You can change your preferences at any time by clicking the floating cookie icon in the bottom corner of the website.
+This website is designed with privacy in mind and does not use any third-party tracking cookies or analytics tools (such as Google Analytics or Google Tag Manager). No personal data or tracking information is collected from you when you visit this site.
 
 ## Grievance Contact
 
