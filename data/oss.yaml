@@ -1,0 +1,59 @@
+projects:
+  - name: Yukti
+    url: https://github.com/anshulpatel25/yukti
+    description: Battery charging manager for rooted Android devices.
+    repo: anshulpatel25/yukti
+  - name: termux-api-exporter
+    url: https://github.com/anshulpatel25/termux-api-exporter
+    description: Prometheus exporter for termux-api services like battery, wifi, etc.
+    repo: anshulpatel25/termux-api-exporter
+  - name: copilot-sdk-gateway
+    url: https://github.com/anshulpatel25/copilot-sdk-gateway
+    description: OpenAI API compatible gateway for copilot-sdk.
+    repo: anshulpatel25/copilot-sdk-gateway
+
+contributions:
+  - title: Correction of Policy in the example
+    url: https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125
+    repo: awsdocs/aws-systems-manager-user-guide
+    type: Pull Request
+  - title: Fix Incorrect Bracket Matching and Empty space characters on lifecycle-hooks.md page
+    url: https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17
+    repo: awsdocs/amazon-ec2-auto-scaling-user-guide
+    type: Pull Request
+  - title: Feature request to detect whether executed TaskRun is part of finally section
+    url: https://github.com/tektoncd/pipeline/issues/3721
+    repo: tektoncd/pipeline
+    type: Issue
+  - title: mongodbatlas_private_endpoint and mongodbatlas_private_endpoint_interface_link gets re-created everytime
+    url: https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464
+    repo: mongodb/terraform-provider-mongodbatlas
+    type: Issue
+  - title: Add go project layout
+    url: https://github.com/avelino/awesome-go/pull/2365
+    repo: avelino/awesome-go
+    type: Pull Request
+  - title: Support XML API for Resumable Upload
+    url: https://github.com/googleapis/google-resumable-media-python/issues/60
+    repo: googleapis/google-resumable-media-python
+    type: Issue
+  - title: google_cloudbuild_trigger should support disabled option
+    url: https://github.com/hashicorp/terraform-provider-google/issues/1952
+    repo: hashicorp/terraform-provider-google
+    type: Issue
+  - title: Update Readme to show how to use librdkafka configuration
+    url: https://github.com/edenhill/kcat/issues/73
+    repo: edenhill/kcat
+    type: Issue
+  - title: Issue #2287 in terraform-aws-github-runner
+    url: https://github.com/philips-labs/terraform-aws-github-runner/issues/2287
+    repo: philips-labs/terraform-aws-github-runner
+    type: Issue
+  - title: mypy doesn't raise error if boolean is used with Union inside the List
+    url: https://github.com/python/mypy/issues/9223
+    repo: python/mypy
+    type: Issue
+  - title: Issue #915 in keycloak-admin-ui
+    url: https://github.com/keycloak/keycloak-admin-ui/issues/915
+    repo: keycloak/keycloak-admin-ui
+    type: Issue
