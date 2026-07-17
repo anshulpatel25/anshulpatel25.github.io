@@ -88,3 +88,9 @@ module:
       target: static
     - source: llms.txt
       target: static/llms.txt
+    - source: data
+      target: data
+    - source: content
+      target: content
+    - source: layouts
+      target: layouts
