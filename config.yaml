@@ -77,9 +77,6 @@ languages:
         - name: "About"
           weight: 5
           url: "/about/"
-        - name: "Privacy"
-          weight: 6
-          url: "/privacy/"
 
 module:
   imports:
