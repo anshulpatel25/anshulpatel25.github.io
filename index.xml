@@ -226,19 +226,196 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Caching Engine:&lt;/strong&gt; Redis/Valkey.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Big Data:&lt;/strong&gt; Apache Kafka, Apache Airflow.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;No Code Platforms:&lt;/strong&gt; N8N.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/anshulpatel25/yukti" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/anshulpatel25/yukti&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/anshulpatel25/termux-api-exporter" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/anshulpatel25/termux-api-exporter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/anshulpatel25/copilot-sdk-gateway" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/anshulpatel25/copilot-sdk-gateway&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/tektoncd/pipeline/issues/3721" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/tektoncd/pipeline/issues/3721&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/avelino/awesome-go/pull/2365" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/avelino/awesome-go/pull/2365&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/googleapis/google-resumable-media-python/issues/60" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/googleapis/google-resumable-media-python/issues/60&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/hashicorp/terraform-provider-google/issues/1952" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/hashicorp/terraform-provider-google/issues/1952&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/edenhill/kcat/issues/73" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/edenhill/kcat/issues/73&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/philips-labs/terraform-aws-github-runner/issues/2287" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/philips-labs/terraform-aws-github-runner/issues/2287&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/python/mypy/issues/9223" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/python/mypy/issues/9223&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/keycloak/keycloak-admin-ui/issues/915" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/keycloak/keycloak-admin-ui/issues/915&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;div class="oss-container"&gt;
+ 
+
+ 
+ &lt;h2 class="oss-section-title"&gt;My Projects&lt;/h2&gt;
+ &lt;div class="oss-grid"&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;a href="https://github.com/anshulpatel25/yukti" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Yukti&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;p class="oss-card-description"&gt;Battery charging manager for rooted Android devices.&lt;/p&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;anshulpatel25/yukti&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;a href="https://github.com/anshulpatel25/termux-api-exporter" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;termux-api-exporter&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;p class="oss-card-description"&gt;Prometheus exporter for termux-api services like battery, wifi, etc.&lt;/p&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;anshulpatel25/termux-api-exporter&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;a href="https://github.com/anshulpatel25/copilot-sdk-gateway" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;copilot-sdk-gateway&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;p class="oss-card-description"&gt;OpenAI API compatible gateway for copilot-sdk.&lt;/p&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;anshulpatel25/copilot-sdk-gateway&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;/div&gt;
+ 
+
+ 
+ &lt;h2 class="oss-section-title"&gt;Contributions&lt;/h2&gt;
+ &lt;div class="oss-grid"&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Correction of Policy in the example&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;awsdocs/aws-systems-manager-user-guide&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Fix Incorrect Bracket Matching and Empty space characters on lifecycle-hooks.md page&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;awsdocs/amazon-ec2-auto-scaling-user-guide&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/tektoncd/pipeline/issues/3721" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Feature request to detect whether executed TaskRun is part of finally section&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;tektoncd/pipeline&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;mongodbatlas_private_endpoint and mongodbatlas_private_endpoint_interface_link gets re-created everytime&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;mongodb/terraform-provider-mongodbatlas&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/avelino/awesome-go/pull/2365" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Add go project layout&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;avelino/awesome-go&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/googleapis/google-resumable-media-python/issues/60" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Support XML API for Resumable Upload&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;googleapis/google-resumable-media-python&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/hashicorp/terraform-provider-google/issues/1952" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;google_cloudbuild_trigger should support disabled option&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;hashicorp/terraform-provider-google&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/edenhill/kcat/issues/73" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Update Readme to show how to use librdkafka configuration&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;edenhill/kcat&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/philips-labs/terraform-aws-github-runner/issues/2287" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;philips-labs/terraform-aws-github-runner&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/python/mypy/issues/9223" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;mypy doesn&amp;#39;t raise error if boolean is used with Union inside the List&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;python/mypy&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ 
+ &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
+ 
+ &lt;a href="https://github.com/keycloak/keycloak-admin-ui/issues/915" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;keycloak/keycloak-admin-ui&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;/div&gt;
+ 
+&lt;/div&gt;</description></item></channel></rss>
