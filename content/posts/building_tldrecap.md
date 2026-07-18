@@ -1,5 +1,5 @@
 ---
-title: "Building TLDRecap Tech: AI-Powered Summaries of Tech Talks with Zero
+title: "Building TLDRecap FYI: AI-Powered Summaries of Tech Talks with Zero
 Operational Cost"
 date: 2026-04-10
 tags:
@@ -17,7 +17,7 @@ talks, podcast episodes which is a firehose of knowledge that no one,
 realistically, has time to fully consume. I felt this acutely. I'd save videos
 to watch later, and "later" would never come.
 
-The idea behind [**TLDRecap Tech**](https://tldrecap.tech) was simple: _what if
+The idea behind [**TLDRecap FYI**](https://tldrecap.fyi) was simple: _what if
 the best insight from any tech talk could reach you in two minutes instead of
 two hours?_ So I built it. This post is about how.
 
@@ -267,9 +267,9 @@ The deployment pipeline:
 2. The **static output is deployed to Cloudflare Pages** global CDN edge
    delivery, free tier, automatic HTTPS, and zero server management
 
-The entire infrastructure cost of serving tldrecap.tech globally is
-**effectively zero**: free tier Gemini, free tier Cloudflare Pages, self-hosted
-n8n and NocoDB, and a phone I already owned.
+The entire infrastructure cost of serving tldrecap.fyi globally is **effectively
+zero**: free tier Gemini, free tier Cloudflare Pages, self-hosted n8n and
+NocoDB, and a phone I already owned.
 
 ---
 
@@ -326,7 +326,7 @@ n8n and NocoDB, and a phone I already owned.
           |
           v
 +--------------------+
-| tldrecap.tech live |
+| tldrecap.fyi live  |
 +--------------------+
 ```
 
@@ -334,7 +334,7 @@ n8n and NocoDB, and a phone I already owned.
 
 ## 🏁 Closing Thoughts
 
-TLDRecap Tech is a project built entirely at the intersection of constraints:
+TLDRecap FYI is a project built entirely at the intersection of constraints:
 free-tier AI, residential proxies from repurposed hardware, self-hosted open
 source tooling, and a static site that costs next to nothing to run globally.
 
@@ -344,9 +344,9 @@ the site growing without worrying about infrastructure bills scaling with
 content volume.
 
 If you've ever felt overwhelmed by the sheer volume of great tech content out
-there, I hope TLDRecap Tech helps. And if you're building something similar, I
+there, I hope TLDRecap FYI helps. And if you're building something similar, I
 hope this breakdown saves you some of the trial and error I went through.
 
-Check it out at [tldrecap.tech](https://tldrecap.tech) and if you have
+Check it out at [tldrecap.fyi](https://tldrecap.fyi) and if you have
 [feedback](https://nocodb.anshulpatel.in/dashboard/#/nc/form/c5e728c1-7260-444a-a55b-509c0f5c9f32/survey),
 there's a form on the site. I read every submission.

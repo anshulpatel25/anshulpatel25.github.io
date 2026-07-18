@@ -5,7 +5,8 @@ projects:
     repo: anshulpatel25/yukti
   - name: termux-api-exporter
     url: https://github.com/anshulpatel25/termux-api-exporter
-    description: Prometheus exporter for termux-api services like battery, wifi, etc.
+    description:
+      Prometheus exporter for termux-api services like battery, wifi, etc.
     repo: anshulpatel25/termux-api-exporter
   - name: copilot-sdk-gateway
     url: https://github.com/anshulpatel25/copilot-sdk-gateway
@@ -17,15 +18,21 @@ contributions:
     url: https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125
     repo: awsdocs/aws-systems-manager-user-guide
     type: Pull Request
-  - title: Fix Incorrect Bracket Matching and Empty space characters on lifecycle-hooks.md page
+  - title:
+      Fix Incorrect Bracket Matching and Empty space characters on
+      lifecycle-hooks.md page
     url: https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17
     repo: awsdocs/amazon-ec2-auto-scaling-user-guide
     type: Pull Request
-  - title: Feature request to detect whether executed TaskRun is part of finally section
+  - title:
+      Feature request to detect whether executed TaskRun is part of finally
+      section
     url: https://github.com/tektoncd/pipeline/issues/3721
     repo: tektoncd/pipeline
     type: Issue
-  - title: mongodbatlas_private_endpoint and mongodbatlas_private_endpoint_interface_link gets re-created everytime
+  - title:
+      mongodbatlas_private_endpoint and
+      mongodbatlas_private_endpoint_interface_link gets re-created everytime
     url: https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464
     repo: mongodb/terraform-provider-mongodbatlas
     type: Issue
@@ -49,7 +56,8 @@ contributions:
     url: https://github.com/philips-labs/terraform-aws-github-runner/issues/2287
     repo: philips-labs/terraform-aws-github-runner
     type: Issue
-  - title: mypy doesn't raise error if boolean is used with Union inside the List
+  - title:
+      mypy doesn't raise error if boolean is used with Union inside the List
     url: https://github.com/python/mypy/issues/9223
     repo: python/mypy
     type: Issue

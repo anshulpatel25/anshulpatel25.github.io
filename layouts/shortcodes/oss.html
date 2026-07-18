@@ -1,14 +1,14 @@
 <div class="oss-container">
-  {{ $data := hugo.Data.oss }}
-
-  {{ if $data.projects }}
+  {{ $data := hugo.Data.oss }} {{ if $data.projects }}
   <h2 class="oss-section-title">My Projects</h2>
   <div class="oss-grid">
     {{ range $data.projects }}
     <div class="oss-card">
       <div class="oss-card-header">
         <i class="fa fa-github" aria-hidden="true"></i>
-        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><h3>{{ .name }}</h3></a>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          ><h3>{{ .name }}</h3></a
+        >
       </div>
       <p class="oss-card-description">{{ .description }}</p>
       <div class="oss-card-footer">
@@ -17,9 +17,7 @@
     </div>
     {{ end }}
   </div>
-  {{ end }}
-
-  {{ if $data.contributions }}
+  {{ end }} {{ if $data.contributions }}
   <h2 class="oss-section-title">Contributions</h2>
   <div class="oss-grid">
     {{ range $data.contributions }}
@@ -32,11 +30,15 @@
         {{ else }}
         <i class="fa fa-github" aria-hidden="true"></i>
         {{ end }}
-        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><h3>{{ .title }}</h3></a>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          ><h3>{{ .title }}</h3></a
+        >
       </div>
       <div class="oss-card-footer">
         <span class="oss-repo">{{ .repo }}</span>
-        <span class="oss-type oss-type-{{ lower (replace .type " " "-") }}">{{ .type }}</span>
+        <span class="oss-type oss-type-{{ lower (replace .type ` ` `-`) }}"
+          >{{ .type }}</span
+        >
       </div>
     </div>
     {{ end }}

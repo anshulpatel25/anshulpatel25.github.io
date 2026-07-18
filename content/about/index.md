@@ -10,7 +10,7 @@ operations to maximize the business value.
 
 ## Past
 
-- AI Builder @ [TLDRecap Tech](https://tldrecap.tech),
+- AI Builder @ [TLDRecap FYI](https://tldrecap.fyi),
   [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
 - Software Engineering Consultant,
   [Ahmedabad](https://en.wikipedia.org/wiki/Ahmedabad)
@@ -42,7 +42,8 @@ operations to maximize the business value.
 
 ## Skillset
 
-- **AI Assisted Development**: GitHub Copilot [CLI + Agentic], Gemini [CLI + Agentic], Jules [Agentic].
+- **AI Assisted Development**: GitHub Copilot [CLI + Agentic], Gemini [CLI +
+  Agentic], Jules [Agentic].
 - **Cloud Platforms:** Amazon Web Services, Google Cloud Platform, CNCF
   Ecosystem.
 - **Infrastructure-as-Code:** Terraform/OpenTofu, Ansible, Packer, Helm.
@@ -50,10 +51,11 @@ operations to maximize the business value.
 - **Artificial Intelligence:** Scikit-learn, Langchain, Langgraph, DVC.
 - **Agile Methodologies:** Scrum, Kanban
 - **CI/CD:** Github Actions, GitLab CI/CD, Jenkins, GitOps.
-- **Observability:** AWS Cloudwatch, Azure Monitor, GCP Logging and Monitoring, Prometheus,
-  OpenTelemetry, Grafana, Loki.
+- **Observability:** AWS Cloudwatch, Azure Monitor, GCP Logging and Monitoring,
+  Prometheus, OpenTelemetry, Grafana, Loki.
 - **Security and Compliance:** Wiz, AWS Config, AWS Control Tower.
-- **Scripting Languages:** Python, Bash Shell, Javascript/Typescript [Intermediate]
+- **Scripting Languages:** Python, Bash Shell, Javascript/Typescript
+  [Intermediate]
 - **Programming Languages:** Go [Intermediate].
 - **Database Systems:** PostgreSQL, MongoDB.
 - **Caching Engine:** Redis/Valkey.
