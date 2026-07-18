@@ -29,11 +29,11 @@ Prompts are soft constraints. A Docker container is a hard one.&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s the idea behind
 &lt;a href="https://github.com/anshulpatel25/simple-ai-agent-sandbox" class="external-link" target="_blank" rel="noopener"&gt;&lt;strong&gt;simple-ai-agent-sandbox&lt;/strong&gt;&lt;/a&gt;:
 &lt;em&gt;every agent session gets its own fresh, ephemeral Ubuntu container&lt;/em&gt;. When the
-session ends, the container is destroyed. Clean slate, every time.&lt;/p&gt;</description></item><item><title>Building TLDRecap Tech: AI-Powered Summaries of Tech Talks with Zero Operational Cost</title><link>http://www.anshulpatel.in/posts/building_tldrecap/</link><pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/building_tldrecap/</guid><description>&lt;p&gt;Every week, hundreds of remarkable technology talks land on YouTube. Keynotes,
+session ends, the container is destroyed. Clean slate, every time.&lt;/p&gt;</description></item><item><title>Building TLDRecap FYI: AI-Powered Summaries of Tech Talks with Zero Operational Cost</title><link>http://www.anshulpatel.in/posts/building_tldrecap/</link><pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/building_tldrecap/</guid><description>&lt;p&gt;Every week, hundreds of remarkable technology talks land on YouTube. Keynotes,
 talks, podcast episodes which is a firehose of knowledge that no one,
 realistically, has time to fully consume. I felt this acutely. I&amp;rsquo;d save videos
 to watch later, and &amp;ldquo;later&amp;rdquo; would never come.&lt;/p&gt;
-&lt;p&gt;The idea behind &lt;a href="https://tldrecap.tech" class="external-link" target="_blank" rel="noopener"&gt;&lt;strong&gt;TLDRecap Tech&lt;/strong&gt;&lt;/a&gt; was simple: &lt;em&gt;what if
+&lt;p&gt;The idea behind &lt;a href="https://tldrecap.fyi" class="external-link" target="_blank" rel="noopener"&gt;&lt;strong&gt;TLDRecap FYI&lt;/strong&gt;&lt;/a&gt; was simple: &lt;em&gt;what if
 the best insight from any tech talk could reach you in two minutes instead of
 two hours?&lt;/em&gt; So I built it. This post is about how.&lt;/p&gt;</description></item><item><title>Opensourcing termux-api-exporter: Monitoring Your Mobile Lab the Prometheus Way</title><link>http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/</link><pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/posts/opensourcing_termux_api_exporter/</guid><description>&lt;p&gt;In my &lt;a href="../mobile_soc_for_homelab/" &gt;previous post&lt;/a&gt;, I made the case that old
 flagship smartphones are fantastic lab hardware. A &lt;code&gt;Snapdragon 835&lt;/code&gt; from &lt;code&gt;2016&lt;/code&gt;
@@ -164,7 +164,7 @@ operations to maximize the business value.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;AI Builder @ &lt;a href="https://tldrecap.tech" class="external-link" target="_blank" rel="noopener"&gt;TLDRecap Tech&lt;/a&gt;,
+&lt;li&gt;AI Builder @ &lt;a href="https://tldrecap.fyi" class="external-link" target="_blank" rel="noopener"&gt;TLDRecap FYI&lt;/a&gt;,
 &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener"&gt;Ahmedabad&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Software Engineering Consultant,
 &lt;a href="https://en.wikipedia.org/wiki/Ahmedabad" class="external-link" target="_blank" rel="noopener"&gt;Ahmedabad&lt;/a&gt;
@@ -209,7 +209,8 @@ operations to maximize the business value.&lt;/p&gt;
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AI Assisted Development&lt;/strong&gt;: GitHub Copilot [CLI + Agentic], Gemini [CLI + Agentic], Jules [Agentic].&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Assisted Development&lt;/strong&gt;: GitHub Copilot [CLI + Agentic], Gemini [CLI +
+Agentic], Jules [Agentic].&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cloud Platforms:&lt;/strong&gt; Amazon Web Services, Google Cloud Platform, CNCF
 Ecosystem.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Infrastructure-as-Code:&lt;/strong&gt; Terraform/OpenTofu, Ansible, Packer, Helm.&lt;/li&gt;
@@ -217,10 +218,11 @@ Ecosystem.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Artificial Intelligence:&lt;/strong&gt; Scikit-learn, Langchain, Langgraph, DVC.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Agile Methodologies:&lt;/strong&gt; Scrum, Kanban&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CI/CD:&lt;/strong&gt; Github Actions, GitLab CI/CD, Jenkins, GitOps.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Observability:&lt;/strong&gt; AWS Cloudwatch, Azure Monitor, GCP Logging and Monitoring, Prometheus,
-OpenTelemetry, Grafana, Loki.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Observability:&lt;/strong&gt; AWS Cloudwatch, Azure Monitor, GCP Logging and Monitoring,
+Prometheus, OpenTelemetry, Grafana, Loki.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Security and Compliance:&lt;/strong&gt; Wiz, AWS Config, AWS Control Tower.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Scripting Languages:&lt;/strong&gt; Python, Bash Shell, Javascript/Typescript [Intermediate]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scripting Languages:&lt;/strong&gt; Python, Bash Shell, Javascript/Typescript
+[Intermediate]&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Programming Languages:&lt;/strong&gt; Go [Intermediate].&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Database Systems:&lt;/strong&gt; PostgreSQL, MongoDB.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Caching Engine:&lt;/strong&gt; Redis/Valkey.&lt;/li&gt;
@@ -228,15 +230,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;No Code Platforms:&lt;/strong&gt; N8N.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Opensource Contributions</title><link>http://www.anshulpatel.in/oss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://www.anshulpatel.in/oss/</guid><description>&lt;div class="oss-container"&gt;
  
-
- 
  &lt;h2 class="oss-section-title"&gt;My Projects&lt;/h2&gt;
  &lt;div class="oss-grid"&gt;
  
  &lt;div class="oss-card"&gt;
  &lt;div class="oss-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
- &lt;a href="https://github.com/anshulpatel25/yukti" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Yukti&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/anshulpatel25/yukti" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Yukti&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;p class="oss-card-description"&gt;Battery charging manager for rooted Android devices.&lt;/p&gt;
  &lt;div class="oss-card-footer"&gt;
@@ -247,7 +249,9 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &lt;div class="oss-card"&gt;
  &lt;div class="oss-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
- &lt;a href="https://github.com/anshulpatel25/termux-api-exporter" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;termux-api-exporter&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/anshulpatel25/termux-api-exporter" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;termux-api-exporter&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;p class="oss-card-description"&gt;Prometheus exporter for termux-api services like battery, wifi, etc.&lt;/p&gt;
  &lt;div class="oss-card-footer"&gt;
@@ -258,7 +262,9 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &lt;div class="oss-card"&gt;
  &lt;div class="oss-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
- &lt;a href="https://github.com/anshulpatel25/copilot-sdk-gateway" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;copilot-sdk-gateway&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/anshulpatel25/copilot-sdk-gateway" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;copilot-sdk-gateway&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;p class="oss-card-description"&gt;OpenAI API compatible gateway for copilot-sdk.&lt;/p&gt;
  &lt;div class="oss-card-footer"&gt;
@@ -268,8 +274,6 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;/div&gt;
  
-
- 
  &lt;h2 class="oss-section-title"&gt;Contributions&lt;/h2&gt;
  &lt;div class="oss-grid"&gt;
  
@@ -278,11 +282,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Correction of Policy in the example&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/awsdocs/aws-systems-manager-user-guide/pull/125" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Correction of Policy in the example&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;awsdocs/aws-systems-manager-user-guide&lt;/span&gt;
- &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"
+ &gt;Pull Request&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -291,11 +299,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Fix Incorrect Bracket Matching and Empty space characters on lifecycle-hooks.md page&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/awsdocs/amazon-ec2-auto-scaling-user-guide/pull/17" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Fix Incorrect Bracket Matching and Empty space characters on lifecycle-hooks.md page&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;awsdocs/amazon-ec2-auto-scaling-user-guide&lt;/span&gt;
- &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"
+ &gt;Pull Request&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -304,11 +316,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/tektoncd/pipeline/issues/3721" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Feature request to detect whether executed TaskRun is part of finally section&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/tektoncd/pipeline/issues/3721" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Feature request to detect whether executed TaskRun is part of finally section&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;tektoncd/pipeline&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -317,11 +333,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;mongodbatlas_private_endpoint and mongodbatlas_private_endpoint_interface_link gets re-created everytime&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/mongodb/terraform-provider-mongodbatlas/issues/464" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;mongodbatlas_private_endpoint and mongodbatlas_private_endpoint_interface_link gets re-created everytime&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;mongodb/terraform-provider-mongodbatlas&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -330,11 +350,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-code-fork" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/avelino/awesome-go/pull/2365" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Add go project layout&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/avelino/awesome-go/pull/2365" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Add go project layout&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;avelino/awesome-go&lt;/span&gt;
- &lt;span class="oss-type oss-type-pull-request"&gt;Pull Request&lt;/span&gt;
+ &lt;span class="oss-type oss-type-pull-request"
+ &gt;Pull Request&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -343,11 +367,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/googleapis/google-resumable-media-python/issues/60" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Support XML API for Resumable Upload&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/googleapis/google-resumable-media-python/issues/60" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Support XML API for Resumable Upload&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;googleapis/google-resumable-media-python&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -356,11 +384,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/hashicorp/terraform-provider-google/issues/1952" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;google_cloudbuild_trigger should support disabled option&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/hashicorp/terraform-provider-google/issues/1952" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;google_cloudbuild_trigger should support disabled option&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;hashicorp/terraform-provider-google&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -369,11 +401,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/edenhill/kcat/issues/73" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Update Readme to show how to use librdkafka configuration&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/edenhill/kcat/issues/73" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Update Readme to show how to use librdkafka configuration&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;edenhill/kcat&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -382,11 +418,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/philips-labs/terraform-aws-github-runner/issues/2287" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/philips-labs/terraform-aws-github-runner/issues/2287" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;philips-labs/terraform-aws-github-runner&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -395,11 +435,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/python/mypy/issues/9223" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;mypy doesn&amp;#39;t raise error if boolean is used with Union inside the List&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/python/mypy/issues/9223" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;mypy doesn&amp;#39;t raise error if boolean is used with Union inside the List&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;python/mypy&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
@@ -408,11 +452,15 @@ OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  
  &lt;i class="fa fa-exclamation-circle" aria-hidden="true"&gt;&lt;/i&gt;
  
- &lt;a href="https://github.com/keycloak/keycloak-admin-ui/issues/915" target="_blank" rel="noopener noreferrer"&gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a&gt;
+ &lt;a href="https://github.com/keycloak/keycloak-admin-ui/issues/915" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;Issue&lt;/h3&gt;&lt;/a
+ &gt;
  &lt;/div&gt;
  &lt;div class="oss-card-footer"&gt;
  &lt;span class="oss-repo"&gt;keycloak/keycloak-admin-ui&lt;/span&gt;
- &lt;span class="oss-type oss-type-issue"&gt;Issue&lt;/span&gt;
+ &lt;span class="oss-type oss-type-issue"
+ &gt;Issue&lt;/span
+ &gt;
  &lt;/div&gt;
  &lt;/div&gt;
  
