@@ -15,16 +15,18 @@ presentations, and 3D model visualizations.
 - **Static Site Generator:** [Hugo](https://gohugo.io/)
 - **Theme:** [Hugo Coder](https://github.com/luizdepra/hugo-coder) (as a Hugo
   module)
+- **Icons:** [Fork Awesome](https://forkaweso.me/) (Web fonts located in `static/fonts/`)
 - **3D Visualization:** [Three.js](https://threejs.org/) for rendering STL
   models.
 - **Search:** [Lunr.js](https://lunrjs.com/)
 - **CDN:** [esm.sh](https://esm.sh/) for ESM library imports.
+- **Privacy First:** Free of third-party tracking cookies (No Google Analytics, GTM, etc.)
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Hugo](https://gohugo.io/installation/) (extended version recommended)
+- [Hugo](https://gohugo.io/installation/) (extended version >= 0.124.0 required)
 - [Go](https://golang.org/doc/install) (for Hugo modules)
 
 ### Development
@@ -50,6 +52,7 @@ Use the included `perform` script for common tasks:
 - `assets/`: Custom CSS and JavaScript (e.g., STL viewer).
 - `static/`: Static assets like images and favicons.
 - `layouts/`: Custom Hugo layouts and shortcodes.
+- `data/`: Dynamic data sources (e.g., `oss.yaml` for Open Source contributions).
 - `config.yaml`: Hugo configuration file.
 - `llms.txt`: Machine-readable summary for LLMs (served at root).
 
