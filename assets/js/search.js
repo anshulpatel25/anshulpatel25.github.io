@@ -1,7 +1,9 @@
 // https://ruddra.com/add-search-functionality-hugo/
 
 let url = "/index.json";
-let posts = {};
+let posts = [];
+let postsByTitle = {};
+let searchIndex = null;
 
 function getIndexData(url, callback) {
   let xhr = new XMLHttpRequest();
@@ -22,6 +24,11 @@ function getIndexData(url, callback) {
 
 function updatePosts(payload) {
   posts = payload;
+  postsByTitle = posts.reduce((acc, curr) => {
+    acc[curr.title] = curr;
+    return acc;
+  }, {});
+  searchIndex = buildIndex(posts);
 }
 
 getIndexData(url, updatePosts);
@@ -39,17 +46,11 @@ function buildIndex(posts) {
 function showSearchResults() {
   let rawQuery = document.getElementById("search-input").value || "";
   let searchQuery = rawQuery.replace(/[^\w\s]/gi, "");
-  let postsByTitle = posts.reduce((acc, curr) => {
-    acc[curr.title] = curr;
-    return acc;
-  }, {});
-
-  let index = buildIndex(posts);
 
   let listRelevantPost = document.getElementById("list");
 
   if (searchQuery && searchQuery != "") {
-    let searchResults = index.search(searchQuery);
+    let searchResults = searchIndex ? searchIndex.search(searchQuery) : [];
     let relevantPosts = [];
     searchResults.forEach((post) => {
       relevantPosts.push(postsByTitle[post.ref]);
