@@ -262,6 +262,19 @@ Prometheus, OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &lt;div class="oss-card"&gt;
  &lt;div class="oss-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;a href="https://github.com/anshulpatel25/droidllama" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3&gt;droidllama&lt;/h3&gt;&lt;/a
+ &gt;
+ &lt;/div&gt;
+ &lt;p class="oss-card-description"&gt;Simple Ollama API compatible inference proxy for smartphone GPUs.&lt;/p&gt;
+ &lt;div class="oss-card-footer"&gt;
+ &lt;span class="oss-repo"&gt;anshulpatel25/droidllama&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="oss-card"&gt;
+ &lt;div class="oss-card-header"&gt;
+ &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
  &lt;a href="https://github.com/anshulpatel25/copilot-sdk-gateway" target="_blank" rel="noopener noreferrer"
  &gt;&lt;h3&gt;copilot-sdk-gateway&lt;/h3&gt;&lt;/a
  &gt;
