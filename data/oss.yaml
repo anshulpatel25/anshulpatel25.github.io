@@ -8,6 +8,11 @@ projects:
     description:
       Prometheus exporter for termux-api services like battery, wifi, etc.
     repo: anshulpatel25/termux-api-exporter
+  - name: droidllama
+    url: https://github.com/anshulpatel25/droidllama
+    description:
+      Simple Ollama API compatible inference proxy for smartphone GPUs.
+    repo: anshulpatel25/droidllama
   - name: copilot-sdk-gateway
     url: https://github.com/anshulpatel25/copilot-sdk-gateway
     description: OpenAI API compatible gateway for copilot-sdk.
