@@ -28,15 +28,30 @@ When writing or editing blog posts in `content/posts/`:
 
 ## Technical Context
 
-- **Hugo Configuration & Mounts:** The `config.yaml` uses Hugo modules and custom mounts.
-  - **Important:** Defining any `module.mounts` in `config.yaml` overrides all default Hugo mounts for the project root. Default directories like `content`, `layouts`, `static`, and `data` must be explicitly re-added to the mounts list if any custom mount is used.
-  - If you add files to `static/`, ensure the `module.mounts` in `config.yaml` includes the `static` directory.
+- **Hugo Configuration & Mounts:** The `config.yaml` uses Hugo modules and
+  custom mounts.
+  - **Important:** Defining any `module.mounts` in `config.yaml` overrides all
+    default Hugo mounts for the project root. Default directories like
+    `content`, `layouts`, `static`, and `data` must be explicitly re-added to
+    the mounts list if any custom mount is used.
+  - If you add files to `static/`, ensure the `module.mounts` in `config.yaml`
+    includes the `static` directory.
   - `llms.txt` is mounted to `static/llms.txt` to be served at the root.
-- **Privacy & Tracking:** The website does not use any third-party tracking cookies, Google Analytics, Google Tag Manager (GTM), or cookie consent banners. **Do not add** any associated assets, styles, configuration keys, or scripts.
+- **Privacy & Tracking:** The website does not use any third-party tracking
+  cookies, Google Analytics, Google Tag Manager (GTM), or cookie consent
+  banners. **Do not add** any associated assets, styles, configuration keys, or
+  scripts.
 - **Styling & Icons:**
-  - The project uses **Fork Awesome** (`css/fork-awesome.css`) instead of Font Awesome. The required web font files must be placed in `static/fonts/` to resolve relative pathing (`../fonts/`) correctly.
+  - The project uses **Fork Awesome** (`css/fork-awesome.css`) instead of Font
+    Awesome. The required web font files must be placed in `static/fonts/` to
+    resolve relative pathing (`../fonts/`) correctly.
+  - CSS linting is configured via `.csslintrc` in the root directory to support
+    modern CSS features and vendor styles.
+
 - **Dynamic Content & Overrides:**
-  - The Open Source (OSS) contributions page is dynamically rendered using a custom Hugo shortcode (`layouts/shortcodes/oss.html`) that reads metadata from `data/oss.yaml`.
+  - The Open Source (OSS) contributions page is dynamically rendered using a
+    custom Hugo shortcode (`layouts/shortcodes/oss.html`) that reads metadata
+    from `data/oss.yaml`.
   - Custom sitemap overrides are placed in `layouts/_default/sitemap.xml`.
 - **3D Models:** Use the custom `stl` shortcode for rendering 3D models.
   - Assets are in `assets/js/stl-viewer.js` and `assets/css/stl-viewer.css`.
@@ -46,7 +61,10 @@ When writing or editing blog posts in `content/posts/`:
 
 ## Standard Procedures
 
-1. **Documentation Updates:** Whenever any feature is added, removed, or updated in this repository, **you must modify this `AGENTS.md` and the `README.md`** files accordingly to keep documentation synchronized with the current status of the codebase.
+1. **Documentation Updates:** Whenever any feature is added, removed, or updated
+   in this repository, **you must modify this `AGENTS.md` and the `README.md`**
+   files accordingly to keep documentation synchronized with the current status
+   of the codebase.
 2. **Verify Changes:** Always use `hugo server` (or equivalent check) to verify
    that your changes build correctly and don't break the site.
 3. **Read-Only Verification:** After modifying any file, read it back to ensure

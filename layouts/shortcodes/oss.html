@@ -7,7 +7,7 @@
       <div class="oss-card-header">
         <i class="fa fa-github" aria-hidden="true"></i>
         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-          ><h3>{{ .name }}</h3></a
+          ><h3 class="oss-card-title">{{ .name }}</h3></a
         >
       </div>
       <p class="oss-card-description">{{ .description }}</p>
@@ -31,7 +31,7 @@
         <i class="fa fa-github" aria-hidden="true"></i>
         {{ end }}
         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-          ><h3>{{ .title }}</h3></a
+          ><h3 class="oss-card-title">{{ .title }}</h3></a
         >
       </div>
       <div class="oss-card-footer">

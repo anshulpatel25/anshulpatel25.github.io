@@ -1,6 +1,5 @@
 ---
-title:
-  "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
+title: "Simple AI Agent Sandbox: Ephemeral Docker Isolation for Every AI Session"
 date: 2026-05-26
 tags:
   - ai
