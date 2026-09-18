@@ -1,3 +1,9 @@
+services:
+  - name: TLDRecap FYI
+    url: https://tldrecap.fyi/
+    description: AI-powered summaries of tech talks and podcasts.
+    domain: tldrecap.fyi
+
 projects:
   - name: Yukti
     url: https://github.com/anshulpatel25/yukti
