@@ -71,9 +71,9 @@ languages:
         - name: "Meetups"
           weight: 3
           url: "/meetups/"
-        - name: "OSS"
+        - name: "Portfolio"
           weight: 4
-          url: "/oss/"
+          url: "/portfolio/"
         - name: "About"
           weight: 5
           url: "/about/"

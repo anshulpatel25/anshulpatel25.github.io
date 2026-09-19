@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{- $about := .Site.GetPage "/about" -}}
-  {{- $oss := .Site.GetPage "/oss" -}}
+  {{- $portfolio := .Site.GetPage "/portfolio" -}}
   {{- $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse | first 3 -}}
   {{- $meetups := (where .Site.RegularPages "Section" "meetups").ByDate.Reverse | first 3 -}}
   {{- $search := .Site.GetPage "/search" -}}
 
-  {{- $pages := slice $about $oss -}}
+  {{- $pages := slice $about $portfolio -}}
   {{- range $posts -}}
     {{- $pages = $pages | append . -}}
   {{- end -}}

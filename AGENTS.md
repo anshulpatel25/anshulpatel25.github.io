@@ -49,8 +49,8 @@ When writing or editing blog posts in `content/posts/`:
     modern CSS features and vendor styles.
 
 - **Dynamic Content & Overrides:**
-  - The Open Source (OSS) contributions and services page is dynamically rendered using a
-    custom Hugo shortcode (`layouts/shortcodes/oss.html`) that reads metadata
+  - The Portfolio page is dynamically rendered using a
+    custom Hugo shortcode (`layouts/shortcodes/portfolio.html`) that reads metadata
     from `data/projects.yaml`.
   - Custom sitemap overrides are placed in `layouts/_default/sitemap.xml`.
 - **3D Models:** Use the custom `stl` shortcode for rendering 3D models.

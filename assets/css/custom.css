@@ -15,25 +15,25 @@
   width: 100%;
 }
 
-/* OSS Cards Styling */
-.oss-container {
+/* Portfolio Cards Styling */
+.portfolio-container {
   margin-top: 20px;
 }
 
-.oss-section-title {
+.portfolio-section-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
 
-.oss-grid {
+.portfolio-grid {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 }
 
-.oss-card {
+.portfolio-card {
   background-color: #ffffff;
   background-color: var(--bg-color, #ffffff);
   border: 1px solid #e1e4e8;
@@ -48,61 +48,61 @@
     box-shadow 0.2s ease;
 }
 
-body.colorscheme-dark .oss-card {
+body.colorscheme-dark .portfolio-card {
   background-color: #212121;
   border-color: #424242;
 }
 
-.oss-card:hover {
+.portfolio-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-body.colorscheme-dark .oss-card:hover {
+body.colorscheme-dark .portfolio-card:hover {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 }
 
-.oss-card-header {
+.portfolio-card-header {
   align-items: flex-start;
   display: flex;
   gap: 10px;
   margin-bottom: 8px;
 }
 
-.oss-card-header i {
+.portfolio-card-header i {
   color: #0366d6;
   color: var(--primary-color, #0366d6);
   margin-top: 4px;
 }
 
-body.colorscheme-dark .oss-card-header i {
+body.colorscheme-dark .portfolio-card-header i {
   color: #58a6ff;
 }
 
-.oss-card-header a {
+.portfolio-card-header a {
   color: inherit;
   flex: 1;
   text-decoration: none;
 }
 
-.oss-card-title {
+.portfolio-card-title {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
 }
 
-.oss-card-header a:hover .oss-card-title {
+.portfolio-card-header a:hover .portfolio-card-title {
   color: #0366d6;
   color: var(--primary-color, #0366d6);
   text-decoration: underline;
 }
 
-body.colorscheme-dark .oss-card-header a:hover .oss-card-title {
+body.colorscheme-dark .portfolio-card-header a:hover .portfolio-card-title {
   color: #58a6ff;
 }
 
-.oss-card-description {
+.portfolio-card-description {
   color: #586069;
   color: var(--text-color-light, #586069);
   flex-grow: 1;
@@ -110,11 +110,11 @@ body.colorscheme-dark .oss-card-header a:hover .oss-card-title {
   margin: 0 0 12px 0;
 }
 
-body.colorscheme-dark .oss-card-description {
+body.colorscheme-dark .portfolio-card-description {
   color: #8b949e;
 }
 
-.oss-card-footer {
+.portfolio-card-footer {
   align-items: center;
   color: #586069;
   color: var(--text-color-light, #586069);
@@ -124,38 +124,38 @@ body.colorscheme-dark .oss-card-description {
   margin-top: auto;
 }
 
-body.colorscheme-dark .oss-card-footer {
+body.colorscheme-dark .portfolio-card-footer {
   color: #8b949e;
 }
 
-.oss-repo {
+.portfolio-repo {
   font-family: monospace;
 }
 
-.oss-type {
+.portfolio-type {
   border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 500;
   padding: 2px 6px;
 }
 
-.oss-type-pull-request {
+.portfolio-type-pull-request {
   background-color: #ddf4ff;
   color: #0969da;
 }
 
-body.colorscheme-dark .oss-type-pull-request {
+body.colorscheme-dark .portfolio-type-pull-request {
   background-color: #ddf4ff;
   background-color: rgba(56, 139, 253, 0.1);
   color: #58a6ff;
 }
 
-.oss-type-issue {
+.portfolio-type-issue {
   background-color: #dafbe1;
   color: #1a7f37;
 }
 
-body.colorscheme-dark .oss-type-issue {
+body.colorscheme-dark .portfolio-type-issue {
   background-color: #dafbe1;
   background-color: rgba(46, 160, 67, 0.1);
   color: #3fb950;
