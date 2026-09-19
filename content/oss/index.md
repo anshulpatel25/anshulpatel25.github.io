@@ -1,5 +1,0 @@
----
-title: Opensource Contributions
----
-
-{{< oss >}}

@@ -1,0 +1,57 @@
+<div class="portfolio-container">
+  {{ $data := hugo.Data.projects }} {{ if $data.services }}
+  <h2 class="portfolio-section-title">Services</h2>
+  <div class="portfolio-grid">
+    {{ range $data.services }}
+    <div class="portfolio-card">
+      <div class="portfolio-card-header">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><h3 class="portfolio-card-title">{{ .name }}</h3></a>
+      </div>
+      <p class="portfolio-card-description">{{ .description }}</p>
+      <div class="portfolio-card-footer">
+        <span class="portfolio-repo">{{ if .domain }}{{ .domain }}{{ else }}{{ .url }}{{ end }}</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }} {{ if $data.projects }}
+  <h2 class="portfolio-section-title">My Projects</h2>
+  <div class="portfolio-grid">
+    {{ range $data.projects }}
+    <div class="portfolio-card">
+      <div class="portfolio-card-header">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><h3 class="portfolio-card-title">{{ .name }}</h3></a>
+      </div>
+      <p class="portfolio-card-description">{{ .description }}</p>
+      <div class="portfolio-card-footer">
+        <span class="portfolio-repo">{{ .repo }}</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }} {{ if $data.contributions }}
+  <h2 class="portfolio-section-title">Contributions</h2>
+  <div class="portfolio-grid">
+    {{ range $data.contributions }}
+    <div class="portfolio-card">
+      <div class="portfolio-card-header">
+        {{ if eq .type "Pull Request" }}
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        {{ else if eq .type "Issue" }}
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        {{ else }}
+        <i class="fa fa-github" aria-hidden="true"></i>
+        {{ end }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><h3 class="portfolio-card-title">{{ .title }}</h3></a>
+      </div>
+      <div class="portfolio-card-footer">
+        <span class="portfolio-repo">{{ .repo }}</span>
+        <span class="portfolio-type portfolio-type-{{ lower (replace .type ` ` `-`) }}">{{ .type }}</span>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

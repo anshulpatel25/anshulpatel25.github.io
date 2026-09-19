@@ -56,7 +56,7 @@ Use the included `perform` script for common tasks:
 - `static/`: Static assets like images and favicons.
 - `layouts/`: Custom Hugo layouts and shortcodes.
 - `data/`: Dynamic data sources (e.g., `projects.yaml` for services, projects,
-  and Open Source contributions).
+  and Open Source contributions displayed on the Portfolio page).
 - `config.yaml`: Hugo configuration file.
 - `.csslintrc`: CSSLint configuration for style enforcement.
 - `llms.txt`: Machine-readable summary for LLMs (served at root).

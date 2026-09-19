@@ -8,7 +8,7 @@ This site contains information about Anshul's professional experience, open-sour
 
 - [About](http://www.anshulpatel.in/about/): Experience summary and skillsets of Anshul Patel.
 - [Posts](http://www.anshulpatel.in/posts/): A collection of technical blog posts.
-- [Open Source](http://www.anshulpatel.in/oss/): Anshul's contributions to the open-source community.
+- [Portfolio](http://www.anshulpatel.in/portfolio/): Anshul's services, projects, and open-source contributions.
 - [Meetups](http://www.anshulpatel.in/meetups/): Presentations and talks given by Anshul at various meetups.
 
 ## Selected Posts
