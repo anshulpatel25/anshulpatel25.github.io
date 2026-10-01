@@ -34,8 +34,8 @@ operations to maximize the business value.
 
 <!-- markdownlint-disable-file MD013 -->
 
-- [Nvidia Certified Associate: Generative AI and LLMs](https://www.credly.com/badges/43981442-12a5-45b5-a122-d6efc7134225/public_url)
-- [Nvidia Certified Associate: AI Infrastructure and Operations](https://www.credly.com/badges/3f6b44d1-6176-46a2-bf9a-5718c7b21832/public_url)
+- [Nvidia Certified Associate: Generative AI and LLMs](https://credential.nvidia.com/8ab93930-727c-4fb9-ab22-56b52501725c#acc.TQmXSxGs)
+- [Nvidia Certified Associate: AI Infrastructure and Operations](https://credential.nvidia.com/dc5a0e0b-d846-4f8f-afa7-ba1b504dc80a#acc.C9kIdiN3)
 - [Cloud Native Computing Foundation certified Kubernetes and Cloud Native Associate](https://www.credly.com/badges/36964fb7-0e40-4bc7-8c2e-eb45ff1ae97c/public_url)
 - [Google Cloud Certified Associate Cloud Engineer](https://www.credly.com/badges/a1c2f8fb-72a4-415d-828f-473f5b09a90f/public_url)
 - [CloudBees Certified Jenkins Engineer](https://certificates.cloudbees.com/0e423f1d-81e1-4014-8187-9c38b5fb5488)
