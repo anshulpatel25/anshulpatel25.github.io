@@ -25,6 +25,10 @@ projects:
     url: https://github.com/anshulpatel25/copilot-sdk-gateway
     description: OpenAI API compatible gateway for copilot-sdk.
     repo: anshulpatel25/copilot-sdk-gateway
+  - name: Paridhi
+    url: https://github.com/anshulpatel25/paridhi
+    description: Spatial Model Context Protocol (MCP) server for discovering unbiased local points of interest.
+    repo: anshulpatel25/paridhi
 
 contributions:
   - title: Correction of Policy in the example

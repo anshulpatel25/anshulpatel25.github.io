@@ -56,6 +56,12 @@ When writing or editing blog posts in `content/posts/`:
 - **3D Models:** Use the custom `stl` shortcode for rendering 3D models.
   - Assets are in `assets/js/stl-viewer.js` and `assets/css/stl-viewer.css`.
   - It uses Three.js via `esm.sh`.
+- **Diagrams & Charts:** Mermaid diagrams are supported natively in Markdown
+  using standard ` ```mermaid ` code fences via a Hugo code block render hook
+  (`layouts/_default/_markup/render-codeblock-mermaid.html`). Assets are
+  conditionally loaded via `layouts/partials/body/extensions.html` only on
+  pages containing diagrams, with dynamic Hugo Coder dark/light theme
+  matching.
 - **Automation:** Use `./perform server` to test changes and
   `./perform update_modules` to update dependencies.
 

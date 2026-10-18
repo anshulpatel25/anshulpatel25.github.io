@@ -160,3 +160,11 @@ body.colorscheme-dark .portfolio-type-issue {
   background-color: rgba(46, 160, 67, 0.1);
   color: #3fb950;
 }
+
+/* Mermaid Diagrams */
+pre.mermaid {
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: center;
+}

@@ -20,6 +20,8 @@ presentations, and 3D model visualizations.
 - **3D Visualization:** [Three.js](https://threejs.org/) for rendering STL
   models.
 - **Search:** [Lunr.js](https://lunrjs.com/)
+- **Diagrams:** [Mermaid.js](https://mermaid.js.org/) via Hugo code block
+  render hooks and dynamic theme matching.
 - **CDN:** [esm.sh](https://esm.sh/) for ESM library imports.
 - **Privacy First:** Free of third-party tracking cookies (No Google Analytics,
   GTM, etc.)
