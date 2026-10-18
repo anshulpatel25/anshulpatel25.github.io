@@ -139,14 +139,43 @@ thresholds to protect against surprise API bills.</li><li><strong>Unified Observ
 and latency metric is logged in a centralized dashboard, giving you complete
 visibility into how your agent interacts with tools.</li></ol><hr><h2 id=-mcp-configuration--agent-integration>🛠️ MCP Configuration & Agent Integration
 <a class=heading-link href=#-mcp-configuration--agent-integration><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>Connecting Paridhi to your favorite agentic harness is straightforward. You can
-find the ready-to-use MCP configuration, endpoints, and setup instructions at:</p><p>👉 <a href=https://gateway.anshulpatel.in/ class=external-link target=_blank rel=noopener><strong>gateway.anshulpatel.in</strong></a></p><hr><h2 id=-what-the-output-looks-like>💡 What the Output Looks Like
-<a class=heading-link href=#-what-the-output-looks-like><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><p>When an agent invokes <code>discover_pois</code>, Paridhi returns structured Markdown that
-the LLM can parse and present directly to the user:</p><h3 id=discovered-vadapav-shops-within-1000m-of-bhatta-paldi>Discovered &lsquo;vadapav shops&rsquo; within 1000m of &lsquo;Bhatta, Paldi&rsquo;
-<a class=heading-link href=#discovered-vadapav-shops-within-1000m-of-bhatta-paldi><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h3><p>Here are the vadapav shops located within a 1,000-meter radius of Bhatta, Paldi, Ahmedabad:</p><table><thead><tr><th style=text-align:left>Place Name</th><th style=text-align:left>Address</th><th style=text-align:left>Location</th><th style=text-align:left>Ratings</th></tr></thead><tbody><tr><td style=text-align:left><strong>Jay Bhavani Vadapav</strong></td><td style=text-align:left>Shop 11, Shivani Avenue, Jawahar Chowk, Bhatta, Paldi</td><td style=text-align:left><a href="https://maps.google.com/?cid=8668964387669630760&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" class=external-link target=_blank rel=noopener>Google Maps</a></td><td style=text-align:left>4.2 ★ (435 reviews)</td></tr><tr><td style=text-align:left><strong>MMV Mumbaiya Misal & Vadapav</strong></td><td style=text-align:left>Shop 2, Anand Shopping Centre, Paldi Road, Bhatta</td><td style=text-align:left><a href="https://maps.google.com/?cid=3618164326637620351&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" class=external-link target=_blank rel=noopener>Google Maps</a></td><td style=text-align:left>4.0 ★ (126 reviews)</td></tr><tr><td style=text-align:left><strong>Bole To Vadapav</strong></td><td style=text-align:left>Bhatta, Paldi</td><td style=text-align:left><a href="https://maps.google.com/?cid=10446068800560901682&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" class=external-link target=_blank rel=noopener>Google Maps</a></td><td style=text-align:left>3.7 ★ (62 reviews)</td></tr></tbody></table><p>With one click, you have the exact pin, directions, verified community ratings,
-and direct contact details—free of aggregator markups or sponsored placement.</p><hr><h2 id=-get-started>🚀 Get Started
+<span class=sr-only>Link to heading</span></a></h2><p>Setting up Paridhi on your local machine takes just a couple of minutes. Because
+it uses <a href=https://docs.astral.sh/uv/ class=external-link target=_blank rel=noopener><code>uv</code></a> for project and dependency
+management, you don&rsquo;t have to fiddle with manual virtual environments.</p><h3 id=1-clone--install-dependencies>1. Clone & Install Dependencies
+<a class=heading-link href=#1-clone--install-dependencies><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Ensure you have Python 3.11+ and <code>uv</code> installed, then clone the repository:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>git clone https://github.com/anshulpatel25/paridhi.git
+</span></span><span style=display:flex><span>cd paridhi
+</span></span><span style=display:flex><span>uv sync
+</span></span></code></pre></div><h3 id=2-configure-environment-variables>2. Configure Environment Variables
+<a class=heading-link href=#2-configure-environment-variables><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Copy the example environment template and add your Google Maps Platform API key
+(ensure <em>Geocoding API</em> and <em>Places API (New)</em> are enabled):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>cp .env.example .env
+</span></span></code></pre></div><p>Inside <code>.env</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-env data-lang=env><span style=display:flex><span>GOOGLE_MAPS_API_KEY<span style=color:#f92672>=</span>AIzaSyYourActualGoogleMapsApiKey
+</span></span><span style=display:flex><span>PARIDHI_SPATIAL_PROVIDER<span style=color:#f92672>=</span>google
+</span></span></code></pre></div><h3 id=3-run-paridhi-via-streamable-http>3. Run Paridhi via Streamable HTTP
+<a class=heading-link href=#3-run-paridhi-via-streamable-http><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Start the Paridhi server with the HTTP transport:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>uv run paridhi --transport http --host 0.0.0.0 --port <span style=color:#ae81ff>8000</span>
+</span></span></code></pre></div><p>Alternatively, you can run it as an isolated Docker container:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-bash data-lang=bash><span style=display:flex><span>docker run -d <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  --name paridhi <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  -p 8000:8000 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  -e GOOGLE_MAPS_API_KEY<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;AIzaSyYourActualGoogleMapsApiKey&#34;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  -e PARIDHI_SPATIAL_PROVIDER<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;google&#34;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  -e PARIDHI_TRANSPORT<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;http&#34;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span>  paridhi:latest
+</span></span></code></pre></div><p>The MCP endpoint will be live at <code>http://localhost:8000/mcp</code>, with a lightweight
+health verification page at <code>http://localhost:8000/</code>.</p><h3 id=4-connect-your-agent-harness-remote-http>4. Connect Your Agent Harness (Remote HTTP)
+<a class=heading-link href=#4-connect-your-agent-harness-remote-http><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Modern agentic harnesses and IDE extensions support remote HTTP MCP servers. Add
+the endpoint to your client configuration:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;mcpServers&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;paridhi&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;url&#34;</span>: <span style=color:#e6db74>&#34;http://localhost:8000/mcp&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Streamable HTTP decouples the server lifecycle from individual client processes,
+allowing multiple agent instances across your workspace or local network to
+share the same spatial discovery service.</p><hr><h2 id=-get-started>🚀 Get Started
 <a class=heading-link href=#-get-started><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p>Paridhi is fully open-source and ready for you to plug into your favorite agentic
 workflows. You can find the full source code, architecture documentation, and
