@@ -185,34 +185,77 @@ benefits to everyday agent workflows:
 
 ## 🛠️ MCP Configuration & Agent Integration
 
-Connecting Paridhi to your favorite agentic harness is straightforward. You can
-find the ready-to-use MCP configuration, endpoints, and setup instructions at:
+Setting up Paridhi on your local machine takes just a couple of minutes. Because
+it uses [`uv`](https://docs.astral.sh/uv/) for project and dependency
+management, you don't have to fiddle with manual virtual environments.
 
-👉 [**gateway.anshulpatel.in**](https://gateway.anshulpatel.in/)
+### 1. Clone & Install Dependencies
 
----
+Ensure you have Python 3.11+ and `uv` installed, then clone the repository:
 
-## 💡 What the Output Looks Like
+```bash
+git clone https://github.com/anshulpatel25/paridhi.git
+cd paridhi
+uv sync
+```
 
-When an agent invokes `discover_pois`, Paridhi returns structured Markdown that
-the LLM can parse and present directly to the user:
+### 2. Configure Environment Variables
 
-### Discovered 'vadapav shops' within 1000m of 'Bhatta, Paldi'
+Copy the example environment template and add your Google Maps Platform API key
+(ensure _Geocoding API_ and _Places API (New)_ are enabled):
 
-Here are the vadapav shops located within a 1,000-meter radius of Bhatta, Paldi, Ahmedabad:
+```bash
+cp .env.example .env
+```
 
-| Place Name                       | Address                                               | Location               | Ratings             |
-| :------------------------------- | :---------------------------------------------------- | :--------------------- | :------------------ |
-| **Jay Bhavani Vadapav**          | Shop 11, Shivani Avenue, Jawahar Chowk, Bhatta, Paldi | [Google Maps][map-jb]  | 4.2 ★ (435 reviews) |
-| **MMV Mumbaiya Misal & Vadapav** | Shop 2, Anand Shopping Centre, Paldi Road, Bhatta     | [Google Maps][map-mmv] | 4.0 ★ (126 reviews) |
-| **Bole To Vadapav**              | Bhatta, Paldi                                         | [Google Maps][map-btv] | 3.7 ★ (62 reviews)  |
+Inside `.env`:
 
-[map-jb]: https://maps.google.com/?cid=8668964387669630760&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA
-[map-mmv]: https://maps.google.com/?cid=3618164326637620351&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA
-[map-btv]: https://maps.google.com/?cid=10446068800560901682&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA
+```env
+GOOGLE_MAPS_API_KEY=AIzaSyYourActualGoogleMapsApiKey
+PARIDHI_SPATIAL_PROVIDER=google
+```
 
-With one click, you have the exact pin, directions, verified community ratings,
-and direct contact details—free of aggregator markups or sponsored placement.
+### 3. Run Paridhi via Streamable HTTP
+
+Start the Paridhi server with the HTTP transport:
+
+```bash
+uv run paridhi --transport http --host 0.0.0.0 --port 8000
+```
+
+Alternatively, you can run it as an isolated Docker container:
+
+```bash
+docker run -d \
+  --name paridhi \
+  -p 8000:8000 \
+  -e GOOGLE_MAPS_API_KEY="AIzaSyYourActualGoogleMapsApiKey" \
+  -e PARIDHI_SPATIAL_PROVIDER="google" \
+  -e PARIDHI_TRANSPORT="http" \
+  paridhi:latest
+```
+
+The MCP endpoint will be live at `http://localhost:8000/mcp`, with a lightweight
+health verification page at `http://localhost:8000/`.
+
+### 4. Connect Your Agent Harness (Remote HTTP)
+
+Modern agentic harnesses and IDE extensions support remote HTTP MCP servers. Add
+the endpoint to your client configuration:
+
+```json
+{
+  "mcpServers": {
+    "paridhi": {
+      "url": "http://localhost:8000/mcp"
+    }
+  }
+}
+```
+
+Streamable HTTP decouples the server lifecycle from individual client processes,
+allowing multiple agent instances across your workspace or local network to
+share the same spatial discovery service.
 
 ---
 
