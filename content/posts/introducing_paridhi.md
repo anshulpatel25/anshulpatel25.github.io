@@ -1,5 +1,5 @@
 ---
-title: "Introducing Paridhi: Discovering Authentic Local Gems Beyond Delivery App Markups with MCP"
+title: "Introducing Paridhi: Discovering Authentic Local Gems with MCP"
 date: 2026-10-17
 tags:
   - ai
