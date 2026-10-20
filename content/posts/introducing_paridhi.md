@@ -164,22 +164,13 @@ demonstrate using this MCP server alongside **Google Gemini**:
 ### Why Cloudflare MCP Gateway?
 
 In this setup, API traffic between the agentic harness and Gemini routes
-through via [_Anshul Patel Gateway_](https://gateway.anshulpatel.in/) which is actually **Cloudflare MCP Gateway**. This architecture brings several enterprise-grade
-benefits to everyday agent workflows:
+through [_Anshul Patel Gateway_](https://gateway.anshulpatel.in/), which leverages **Cloudflare MCP Gateway / MCP Portals**. This architecture brings several key advantages to modern agent workflows:
 
-1. **Authentication & Authorization**: Cloudflare MCP Gateway acts as a secure
-   reverse proxy, allowing you to centralize API credential management and apply
-   zero-trust access policies without baking sensitive secrets into client
-   runtimes.
-2. **Caching & Lower Latency**: Repeated spatial lookups or intermediate agent
-   reasoning steps can be cached at the Cloudflare MCP Gateway edge, reducing both latency
-   and token costs.
-3. **Rate Limiting & Cost Guardrails**: Autonomous agents can occasionally enter
-   unintended retry loops. The MCP Gateway enforces hard rate limits and budget
-   thresholds to protect against surprise API bills.
-4. **Unified Observability**: Every request, prompt token, completion token,
-   and latency metric is logged in a centralized dashboard, giving you complete
-   visibility into how your agent interacts with tools.
+- **Centralized Access & Zero Trust**: Single endpoint access for multiple MCP servers with Cloudflare Access, SSO, and secure credential management without exposing sensitive secrets to client runtimes.
+- **Context Window Optimization**: Modes like `minimize_tools` and `search_and_execute` strip heavy tool schemas and definitions upfront, significantly reducing token usage.
+- **Tool Customization & Aliases**: Admins can rename tools/prompts, refine descriptions for better LLM tool selection, and turn off unused tools without touching upstream servers.
+- **Code Mode**: Runs generated JavaScript in an isolated Worker environment to search and execute tool calls in parallel with minimal prompt context overhead.
+- **Security & Observability**: Features granular tool-call logging, Data Loss Prevention (DLP) scanning via Cloudflare Gateway, and service token support for machine-to-machine authentication.
 
 ---
 
