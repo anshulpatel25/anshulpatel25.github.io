@@ -62,6 +62,11 @@ When writing or editing blog posts in `content/posts/`:
   conditionally loaded via `layouts/partials/body/extensions.html` only on
   pages containing diagrams, with dynamic Hugo Coder dark/light theme
   matching.
+- **Architectural Documentation (EGM Contracts):** Directory-level architectural
+  contracts adhere to the Elephant-and-Goldfish Model (EGM). Contract blocks are
+  encapsulated within `<!-- EGM_BLUEPRINT_START ... -->` and `<!-- EGM_BLUEPRINT_END -->`
+  sentinels across repository blueprints and component packages (`assets/README.md`,
+  `assets/js/README.md`).
 - **Automation:** Use `./perform server` to test changes and
   `./perform update_modules` to update dependencies.
 
