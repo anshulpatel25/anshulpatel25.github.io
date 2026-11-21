@@ -274,6 +274,19 @@ Prometheus, OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &lt;div class="portfolio-card"&gt;
  &lt;div class="portfolio-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
+ &lt;a href="https://github.com/anshulpatel25/paridhi" target="_blank" rel="noopener noreferrer"
+ &gt;&lt;h3 class="portfolio-card-title"&gt;Paridhi&lt;/h3&gt;&lt;/a
+ &gt;
+ &lt;/div&gt;
+ &lt;p class="portfolio-card-description"&gt;Spatial Model Context Protocol (MCP) server for discovering unbiased local points of interest.&lt;/p&gt;
+ &lt;div class="portfolio-card-footer"&gt;
+ &lt;span class="portfolio-repo"&gt;anshulpatel25/paridhi&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ 
+ &lt;div class="portfolio-card"&gt;
+ &lt;div class="portfolio-card-header"&gt;
+ &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
  &lt;a href="https://github.com/anshulpatel25/yukti" target="_blank" rel="noopener noreferrer"
  &gt;&lt;h3 class="portfolio-card-title"&gt;Yukti&lt;/h3&gt;&lt;/a
  &gt;
@@ -300,19 +313,6 @@ Prometheus, OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &lt;div class="portfolio-card"&gt;
  &lt;div class="portfolio-card-header"&gt;
  &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
- &lt;a href="https://github.com/anshulpatel25/droidllama" target="_blank" rel="noopener noreferrer"
- &gt;&lt;h3 class="portfolio-card-title"&gt;droidllama&lt;/h3&gt;&lt;/a
- &gt;
- &lt;/div&gt;
- &lt;p class="portfolio-card-description"&gt;Simple Ollama API compatible inference proxy for smartphone GPUs.&lt;/p&gt;
- &lt;div class="portfolio-card-footer"&gt;
- &lt;span class="portfolio-repo"&gt;anshulpatel25/droidllama&lt;/span&gt;
- &lt;/div&gt;
- &lt;/div&gt;
- 
- &lt;div class="portfolio-card"&gt;
- &lt;div class="portfolio-card-header"&gt;
- &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
  &lt;a href="https://github.com/anshulpatel25/skills" target="_blank" rel="noopener noreferrer"
  &gt;&lt;h3 class="portfolio-card-title"&gt;skills&lt;/h3&gt;&lt;/a
  &gt;
@@ -330,17 +330,4 @@ Prometheus, OpenTelemetry, Grafana, Loki.&lt;/li&gt;
  &gt;&lt;h3 class="portfolio-card-title"&gt;copilot-sdk-gateway&lt;/h3&gt;&lt;/a
  &gt;
  &lt;/div&gt;
- &lt;p class="portfolio-card-description"&gt;OpenAI API compatible gateway for copilot-sdk.&lt;/p&gt;
- &lt;div class="portfolio-card-footer"&gt;
- &lt;span class="portfolio-repo"&gt;anshulpatel25/copilot-sdk-gateway&lt;/span&gt;
- &lt;/div&gt;
- &lt;/div&gt;
- 
- &lt;div class="portfolio-card"&gt;
- &lt;div class="portfolio-card-header"&gt;
- &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
- &lt;a href="https://github.com/anshulpatel25/paridhi" target="_blank" rel="noopener noreferrer"
- &gt;&lt;h3 class="portfolio-card-title"&gt;Paridhi&lt;/h3&gt;&lt;/a
- &gt;
- &lt;/div&gt;
- &lt;p class="portfolio-card-description"&gt;Spatial Model Context Protocol (MCP) server for discovering unbiased local points of interest.&lt;/p&gt;</description></item></channel></rss>
+ &lt;p class="portfolio-card-description"&gt;OpenAI API compatible gateway for copilot-sdk.&lt;/p&gt;</description></item></channel></rss>
