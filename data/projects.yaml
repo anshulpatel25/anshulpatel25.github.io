@@ -5,6 +5,10 @@ services:
     domain: tldrecap.fyi
 
 projects:
+  - name: Paridhi
+    url: https://github.com/anshulpatel25/paridhi
+    description: Spatial Model Context Protocol (MCP) server for discovering unbiased local points of interest.
+    repo: anshulpatel25/paridhi
   - name: Yukti
     url: https://github.com/anshulpatel25/yukti
     description: Battery charging manager for rooted Android devices.
@@ -13,10 +17,6 @@ projects:
     url: https://github.com/anshulpatel25/termux-api-exporter
     description: Prometheus exporter for termux-api services like battery, wifi, etc.
     repo: anshulpatel25/termux-api-exporter
-  - name: droidllama
-    url: https://github.com/anshulpatel25/droidllama
-    description: Simple Ollama API compatible inference proxy for smartphone GPUs.
-    repo: anshulpatel25/droidllama
   - name: skills
     url: https://github.com/anshulpatel25/skills
     description: Collection of useful skills for various tasks.
@@ -25,10 +25,10 @@ projects:
     url: https://github.com/anshulpatel25/copilot-sdk-gateway
     description: OpenAI API compatible gateway for copilot-sdk.
     repo: anshulpatel25/copilot-sdk-gateway
-  - name: Paridhi
-    url: https://github.com/anshulpatel25/paridhi
-    description: Spatial Model Context Protocol (MCP) server for discovering unbiased local points of interest.
-    repo: anshulpatel25/paridhi
+  - name: droidllama
+    url: https://github.com/anshulpatel25/droidllama
+    description: Simple Ollama API compatible inference proxy for smartphone GPUs.
+    repo: anshulpatel25/droidllama
 
 contributions:
   - title: Correction of Policy in the example
