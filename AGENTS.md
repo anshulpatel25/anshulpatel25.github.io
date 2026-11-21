@@ -47,6 +47,9 @@ When writing or editing blog posts in `content/posts/`:
     resolve relative pathing (`../fonts/`) correctly.
   - CSS linting is configured via `.csslintrc` in the root directory to support
     modern CSS features and vendor styles.
+  - Markdown linting is configured via `.markdownlint.yaml` in the root
+    directory (disables `MD013` line length, aligning with `.editorconfig` at
+    180 characters to prevent conflicts with EGM contract sentinels and links).
 
 - **Dynamic Content & Overrides:**
   - The Portfolio page is dynamically rendered using a

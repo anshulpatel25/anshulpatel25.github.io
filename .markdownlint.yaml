@@ -1,0 +1,5 @@
+# markdownlint configuration
+# Line length (MD013) is managed by .editorconfig (max_line_length = 180) and disabled here
+# to avoid conflicts with long links, code references, and EGM contract sentinels.
+default: true
+MD013: false
