@@ -64,11 +64,14 @@ When writing or editing blog posts in `content/posts/`:
   matching.
 - **Architectural Documentation (EGM Contracts):** Directory-level architectural
   contracts adhere to the Elephant-and-Goldfish Model (EGM). Contract blocks are
-  encapsulated within `<!-- EGM_BLUEPRINT_START ... -->` and `<!-- EGM_BLUEPRINT_END -->`
-  sentinels across repository blueprints and component packages (`assets/README.md`,
-  `assets/js/README.md`).
+  encapsulated within `<!-- EGM_BLUEPRINT_START ... -->` and
+  `<!-- EGM_BLUEPRINT_END -->` sentinels across repository blueprints and
+  component packages (`assets/README.md`, `assets/js/README.md`).
 - **Automation:** Use `./perform server` to test changes and
   `./perform update_modules` to update dependencies.
+- **Pre-commit:** Node hooks in `.pre-commit-config.yaml` use
+  `default_language_version: node: lts` to ensure `nodeenv` provisions a stable
+  LTS Node.js runtime and avoids resolving to unstable alpha releases.
 
 ## Standard Procedures
 

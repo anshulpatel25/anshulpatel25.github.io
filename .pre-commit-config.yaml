@@ -1,3 +1,5 @@
+default_language_version:
+  node: lts
 repos:
   - repo: local
     hooks:
@@ -8,7 +10,7 @@ repos:
         pass_filenames: false
       - id: hugo-modules-update
         name: hugo-modules-update
-        entry: perform update_modules
+        entry: ./perform update_modules
         language: system
         pass_filenames: false
   - repo: https://github.com/pre-commit/pre-commit-hooks
